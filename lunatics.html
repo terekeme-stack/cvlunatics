@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CVLunatics × r/LinkedinLunaticsTR</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --border: #1e1e1e;
+      --text: #f0f0f0;
+      --muted: #666;
+      --accent: #00e676;
+      --accent-dim: #00e67620;
+      --red: #ff4444;
+      --mono: 'DM Mono', monospace;
+      --sans: 'Syne', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10,10,10,0.9);
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      font-family: var(--mono);
+      font-size: 1rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+
+    .logo span { color: var(--muted); }
+
+    nav a {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 8rem 2rem 4rem;
+    }
+
+    .secret-tag {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--red);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .secret-tag::before {
+      content: '●';
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .intro {
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 3rem;
+      border-left: 2px solid var(--accent);
+      padding-left: 1.5rem;
+    }
+
+    .intro strong { color: var(--text); }
+
+    /* CAMPAIGN BOX */
+    .campaign {
+      border: 1px solid var(--accent);
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .campaign::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, var(--accent-dim), transparent 70%);
+      pointer-events: none;
+    }
+
+    .campaign-title {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .tiers {
+      display: grid;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .tier {
+      background: var(--bg);
+      padding: 1rem 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .tier-label {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .tier-label strong { color: var(--text); }
+
+    .tier-badge {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.2rem 0.7rem;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-green { background: var(--accent); color: #000; }
+    .badge-yellow { background: #ffd740; color: #000; }
+    .badge-muted { background: var(--border); color: var(--muted); }
+
+    .campaign-note {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* FORM */
+    .form-section {
+      margin-bottom: 3rem;
+    }
+
+    .form-section h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .form-section p {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      padding: 0.8rem 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+    }
+
+    textarea { resize: vertical; min-height: 100px; }
+
+    .file-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border: 1px dashed var(--border);
+      padding: 2rem;
+      cursor: pointer;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+
+    .file-label:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    input[type="file"] { display: none; }
+
+    .file-name {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      margin-top: 0.4rem;
+      display: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--accent);
+      color: #000;
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 1rem;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+      margin-top: 0.5rem;
+    }
+
+    .submit-btn:hover { background: #fff; }
+
+    .form-note {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    /* SUCCESS */
+    .success {
+      display: none;
+      text-align: center;
+      padding: 3rem;
+      border: 1px solid var(--accent);
+    }
+
+    .success h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .success p {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer p {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    main > * {
+      animation: fadeUp 0.5s ease forwards;
+      opacity: 0;
+    }
+
+    main > *:nth-child(1) { animation-delay: 0.1s; }
+    main > *:nth-child(2) { animation-delay: 0.2s; }
+    main > *:nth-child(3) { animation-delay: 0.3s; }
+    main > *:nth-child(4) { animation-delay: 0.4s; }
+    main > *:nth-child(5) { animation-delay: 0.5s; }
+
+    @media (max-width: 600px) {
+      .tier { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">cv<span>//</span>lunatics</div>
+  <a href="/">Ana Sayfa ←</a>
+</nav>
+
+<main>
+  <div class="secret-tag">Sadece sizin için</div>
+
+  <h1>
+    r/LinkedinLunaticsTR<br>
+    üyelerine <em>özel.</em>
+  </h1>
+
+  <div class="intro">
+    Subreddit'i beraber büyüttük. Oradaki CV incelemelerini gördünüz, kaliteyi biliyorsunuz.
+    Şimdi bu hizmeti profesyonel bir platforma taşıyoruz ve
+    <strong>lansman kampanyasında sizi öne alıyoruz.</strong>
+    Bu sayfa sadece sizin için, Google'da çıkmıyor.
+  </div>
+
+  <div class="campaign">
+    <div class="campaign-title">// lansman kampanyası</div>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tier-label"><strong>İlk 10 başvuru</strong> — sıra sizde</div>
+        <div class="tier-badge badge-green">ÜCRETSİZ</div>
+      </div>
+      <div class="tier">
+        <div class="tier-label"><strong>11-20. başvuru</strong> — hâlâ erken</div>
+        <div class="tier-badge badge-yellow">%50 İNDİRİM</div>
+      </div>
+      <div class="tier">
+        <div class="tier-label"><strong>21+. başvuru</strong> — normal fiyat</div>
+        <div class="tier-badge badge-muted">₺299 / ₺499 / ₺799</div>
+      </div>
+    </div>
+    <div class="campaign-note">
+      Hangi paketi aldığınız fark etmez, indirim uygulanır.
+      Formdan başvurun, size döndüğümde hangi dilimde olduğunuzu söyleriz.
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h2>Başvuru formu</h2>
+    <p>CV'nizi yükleyin, geri kalanı biz halledelim.</p>
+
+    <form id="applyForm">
+      <div class="form-group">
+        <label>Reddit kullanıcı adı</label>
+        <input type="text" name="reddit" placeholder="u/kullaniciadiniz" required>
+      </div>
+
+      <div class="form-group">
+        <label>E-posta adresiniz</label>
+        <input type="email" name="email" placeholder="raporu buraya göndeririz" required>
+      </div>
+
+      <div class="form-group">
+        <label>Hedef pozisyon veya sektör (isteğe bağlı)</label>
+        <input type="text" name="target" placeholder="Örn: Backend Developer, Finans sektörü...">
+      </div>
+
+      <div class="form-group">
+        <label>CV dosyanız (PDF veya Word)</label>
+        <label class="file-label" for="cvFile">
+          ↑ Dosya seçmek için tıklayın
+        </label>
+        <input type="file" id="cvFile" name="cv" accept=".pdf,.doc,.docx" onchange="showFileName(this)">
+        <div class="file-name" id="fileName"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Eklemek istediğiniz bir şey var mı?</label>
+        <textarea name="note" placeholder="Özellikle bakılmasını istediğiniz bölüm, hedef şirket, başvuru tarihi vs."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Başvuruyu Gönder →</button>
+      <div class="form-note">Başvurunuz lunaticsreddit.tr@gmail.com adresine iletilir. 48 saat içinde dönüş yapılır.</div>
+    </form>
+
+    <div class="success" id="successMsg">
+      <h3>Başvurunuz alındı ✓</h3>
+      <p>
+        48 saat içinde lunaticsreddit.tr@gmail.com adresinden<br>
+        size dönüş yapılacak. Reddit DM'den de ulaşabilirsiniz.<br><br>
+        Teşekkürler, iyi şanslar.
+      </p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 CVLunatics · <a href="/">Ana sayfaya dön</a> · r/LinkedinLunaticsTR</p>
+</footer>
+
+<script>
+  function showFileName(input) {
+    const label = document.getElementById('fileName');
+    if (input.files && input.files[0]) {
+      label.textContent = '✓ ' + input.files[0].name;
+      label.style.display = 'block';
+    }
+  }
+
+  document.getElementById('applyForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const data = {
+      reddit: formData.get('reddit'),
+      email: formData.get('email'),
+      target: formData.get('target'),
+      note: formData.get('note'),
+      cv: document.getElementById('cvFile').files[0]?.name || 'Dosya yüklenmedi'
+    };
+
+    // Formspree veya Tally entegrasyonu buraya gelecek
+    // Şimdilik success mesajı göster
+    document.getElementById('applyForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
