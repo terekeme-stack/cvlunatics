@@ -49,11 +49,6 @@
     .tag-dusuk { background: #4ade8020; color: #4ade80; }
     .footer { text-align: center; color: #2a2a2a; font-size: 11px; margin-top: 24px; }
     @keyframes fadeUp { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
-    @media print {
-      .lock-overlay { display: none !important; }
-      .locked-content { filter: none !important; opacity: 1 !important; pointer-events: auto !important; }
-      .no-print { display: none !important; }
-    }
   </style>
 </head>
 <body>
@@ -72,17 +67,17 @@
         <svg width="110" height="110">
           <circle cx="55" cy="55" r="45" fill="none" stroke="#1e1e1e" stroke-width="9"/>
           <circle cx="55" cy="55" r="45" fill="none" stroke="#fb923c" stroke-width="9"
-            stroke-dasharray="155.5 282.7" stroke-linecap="round"/>
+            stroke-dasharray="141.4 282.7" stroke-linecap="round"/>
         </svg>
         <div class="score-inner">
-          <span style="font-size:26px;font-weight:900;color:#fb923c;line-height:1">5.5</span>
+          <span style="font-size:26px;font-weight:900;color:#fb923c;line-height:1">5.0</span>
           <span style="font-size:11px;color:#555">/ 10</span>
         </div>
       </div>
       <div style="flex:1">
         <div class="badge" style="background:#fb923c20;color:#fb923c;border:1px solid #fb923c40">Geliştirilebilir</div>
-        <div style="font-size:17px;font-weight:900;line-height:1.3;margin-bottom:8px">ESG uzmanlığı kuvvetli, ama CV onu göstermiyor</div>
-        <div style="font-size:13px;color:#999;line-height:1.65">PwC'de intern'den Senior Associate'e yükselmek kendi başına güçlü bir sinyal. ESG/CSRD ve DACH market kombinasyonu gerçekten nadir. Sorun şu: CV bu değeri okuyucuya taşımıyor. Her madde template gibi, metrik neredeyse sıfır, fotoğraf ve doğum tarihi uluslararası başvurularda otomatik eliyor.</div>
+        <div style="font-size:17px;font-weight:900;line-height:1.3;margin-bottom:8px">İçerik güçlü, zarf yanlış</div>
+        <div style="font-size:13px;color:#999;line-height:1.65">Behance portfolyosu, FDA ve ISO sertifikaları, çok sektörlü deneyim gerçekten değerli kartlar. Sorun şu: bu kartlar ATS'yi atlayamayan bir formatta gömülü. Çift kolon ve grafik çubuklar CV'yi büyük firmalarda ekrana bile getirmiyor.</div>
       </div>
     </div>
   </div>
@@ -91,10 +86,10 @@
   <div class="card">
     <div class="section-label">Güçlü Yanlar</div>
     <ul class="bullet-list">
-      <li><span class="icon" style="color:#4ade80">✓</span> PwC'de intern'den Senior Associate'e net kariyer ilerleyişi, hızlı terfi güçlü bir sinyal</li>
-      <li><span class="icon" style="color:#4ade80">✓</span> ESG/CSRD + DACH market kombinasyonu nadir, gerçek bir differentiator</li>
-      <li><span class="icon" style="color:#4ade80">✓</span> Alteryx, LucaNet, Workiva gibi spesifik araç seti teknik derinlik gösteriyor</li>
-      <li><span class="icon" style="color:#4ade80">✓</span> Çift lisans derecesi ve Big4 deneyimi birleşimi güçlü bir eğitim-deneyim profili oluşturuyor</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> Behance portfolyosu mevcut. Tasarımcı başvurularında CV'den daha değerli, işveren somut iş görebiliyor</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> FDA ve ISO 9001 sertifikaları var. Sağlık sektörü ilanlarında güçlü bir fark yaratan unsur</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> Adobe Creative Suite + Rhinoceros 3D kombinasyonu ambalaj ve ürün tasarımı ilanlarıyla örtüşüyor</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> Baskı, aksesuar, kozmetik, sağlık gibi farklı sektörlerde deneyim. Sektör esnekliği avantaj</li>
     </ul>
   </div>
 
@@ -102,9 +97,9 @@
   <div class="card">
     <div class="section-label">Kritik Sorunlar</div>
     <ul class="bullet-list">
-      <li><span class="icon" style="color:#f87171">✗</span> Fotoğraf ve doğum tarihi uluslararası ATS'lerde otomatik eliyor</li>
-      <li><span class="icon" style="color:#f87171">✗</span> "Assisted / Supported / Contributed" Senior Associate için çok zayıf fiiller</li>
-      <li><span class="icon" style="color:#f87171">✗</span> 4 yılda tek somut rakam: "400-row dataset"</li>
+      <li><span class="icon" style="color:#f87171">✗</span> Çift kolon ve grafik beceri çubukları ATS sistemlerinde CV'yi görünmez kılıyor</li>
+      <li><span class="icon" style="color:#f87171">✗</span> Ağustos 2025'te iki iş çakışıyor, işveren tutarsızlık olarak okuyor</li>
+      <li><span class="icon" style="color:#f87171">✗</span> Kısa süreli işler anlatısız bırakılmış, işveren "neden çıktı?" sorusuna cevap bulamıyor</li>
     </ul>
   </div>
 
@@ -114,20 +109,20 @@
     <div class="locked-wrap">
       <div class="locked-content" id="content2">
         <div class="score-bar-row">
-          <div class="score-bar-label"><span>İçerik Kalitesi</span><span style="color:#fb923c">5/10</span></div>
-          <div class="score-bar-track"><div class="score-bar-fill" style="width:50%;background:#fb923c"></div></div>
+          <div class="score-bar-label"><span>İçerik Kalitesi</span><span style="color:#fb923c">6/10</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:60%;background:#fb923c"></div></div>
         </div>
         <div class="score-bar-row">
-          <div class="score-bar-label"><span>Yapı / Format</span><span style="color:#fb923c">5/10</span></div>
-          <div class="score-bar-track"><div class="score-bar-fill" style="width:50%;background:#fb923c"></div></div>
-        </div>
-        <div class="score-bar-row">
-          <div class="score-bar-label"><span>ATS Uyumluluğu</span><span style="color:#f87171">4/10</span></div>
-          <div class="score-bar-track"><div class="score-bar-fill" style="width:40%;background:#f87171"></div></div>
-        </div>
-        <div class="score-bar-row">
-          <div class="score-bar-label"><span>Doğrulanabilirlik</span><span style="color:#f87171">3/10</span></div>
+          <div class="score-bar-label"><span>Yapı / Format</span><span style="color:#f87171">3/10</span></div>
           <div class="score-bar-track"><div class="score-bar-fill" style="width:30%;background:#f87171"></div></div>
+        </div>
+        <div class="score-bar-row">
+          <div class="score-bar-label"><span>ATS Uyumluluğu</span><span style="color:#f87171">3/10</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:30%;background:#f87171"></div></div>
+        </div>
+        <div class="score-bar-row">
+          <div class="score-bar-label"><span>Doğrulanabilirlik</span><span style="color:#4ade80">7/10</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#4ade80"></div></div>
         </div>
       </div>
       <div class="lock-overlay" id="overlay2">
@@ -145,20 +140,16 @@
     <div class="locked-wrap">
       <div class="locked-content" id="content3">
         <div class="eksik-item">
-          <div class="eksik-title" style="color:#f87171">Fotoğraf ve Doğum Tarihi: Uluslararası Başvurularda Risk</div>
-          <div class="eksik-detail">Uluslararası ATS sistemleri fotoğrafı işleyemiyor, otomatik elemede kayba yol açıyor. Doğum tarihi ise özellikle DACH dışı pazarlarda artık standart değil. DACH başvurularında fotoğraf norm olsa da ATS geçişi için ayrı bir "ATS versiyonu" tutmak en sağlıklı strateji. Her ikisi de CV'nin en az bir versiyonundan kaldırılmalı.</div>
+          <div class="eksik-title" style="color:#f87171">Çift Kolon ve Grafik Çubuklar: ATS Felaketi</div>
+          <div class="eksik-detail">Büyük firmaların kullandığı ATS sistemleri çift kolon ve grafik çubukları okuyamıyor. İçerik ya karışıyor ya boş sayılıyor. Sonuç: CV insan gözüne ulaşmıyor bile. Tek kolon, sade, metin tabanlı formata geçmek şart. Tasarımcı olduğunu göstermek için portfolyo linki zaten var.</div>
         </div>
         <div class="eksik-item">
-          <div class="eksik-title" style="color:#f87171">Pasif Fiil Sorunu: Junior Dili, Senior Pozisyon</div>
-          <div class="eksik-detail">"Assisted", "Supported", "Contributed" kelimeleri Junior profiliyle özdeşleşmiş. Senior Associate olarak her madde "Delivered", "Led", "Drove", "Reduced", "Achieved" gibi güçlü aksiyon fiilleriyle başlamalı. Şu an okuyan kişi "bu insan ne yaptı?" sorusuna net cevap bulamıyor. Bu tek değişiklik CV'nin tüm algısını değiştiriyor.</div>
+          <div class="eksik-title" style="color:#f87171">Ağustos 2025 Çakışması</div>
+          <div class="eksik-detail">Turkuaz Healthcare (Ağu 2025 - Şub 2026) ve King Küçük Ev Aletleri (Ağu 2025 - Eki 2025) aynı dönemde gösteriliyor. Büyük ihtimalle freelance veya yarı zamanlı bir düzenlemeydi ama CV'den anlaşılmıyor. King pozisyonuna "Part-time / Freelance" notu eklemek yeterli.</div>
         </div>
         <div class="eksik-item">
-          <div class="eksik-title" style="color:#f87171">Sıfır Metrik: 4 Yılda Tek Rakam</div>
-          <div class="eksik-detail">4 yıllık kariyer boyunca tek somut rakam "400-row dataset." "Led project teams" kaç kişilik? "On-time delivery" neydi, ne büyüklükte proje? "Streamlined reporting" kaç saat tasarruf sağladı? Her maddeye bir rakam eklemek şart. Tahmin bile olsa "yaklaşık 3 aylık proje", "%20 süre tasarrufu" gibi ifadeler sıfırdan çok daha iyidir.</div>
-        </div>
-        <div class="eksik-item">
-          <div class="eksik-title" style="color:#fb923c">About Me Bölümü Generic Kalmış</div>
-          <div class="eksik-detail">"Project-focused professional... Skilled in coordinating... Fluent in English" her CV'de yazılan şeyler. ESG/CSRD uzmanlığı ve DACH market deneyimi bu profilin gerçek differentiator'ları. About Me bölümünün bu iki unsuru öne çıkaracak şekilde yeniden yazılması gerekiyor.</div>
+          <div class="eksik-title" style="color:#fb923c">Eğitim Durumu Belirsiz</div>
+          <div class="eksik-detail">Beykent Üniversitesi kaydı Eylül 2021'de başlayıp Ocak 2023'te bitiyor. Lisans için bu süre çok kısa. Mezuniyet var mı, eğitim devam ediyor mu, yoksa ayrıldı mı? Bu belirsizlik işvereni rahatsız ediyor. Tek cümleyle netleştirilmeli.</div>
         </div>
       </div>
       <div class="lock-overlay" id="overlay3">
@@ -176,22 +167,25 @@
     <div class="locked-wrap">
       <div class="locked-content" id="content4">
         <div class="action-item kritik">
-          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Fotoğraf ve doğum tarihini kaldır. ATS versiyonu ve DACH versiyonu olmak üzere iki ayrı CV hazırla.</div>
+          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Çift kolon ve grafik çubukları kaldır, tek kolon sade formata geç</div>
         </div>
         <div class="action-item kritik">
-          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Tüm "assisted / supported / contributed" fiillerini güçlü aksiyon fiilleriyle değiştir: Delivered, Led, Drove, Achieved, Reduced.</div>
+          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Ağu 2025 çakışmasını açıkla: King pozisyonuna "Part-time / Freelance" notu ekle</div>
         </div>
         <div class="action-item kritik">
-          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Her deneyim maddesine en az 1 somut metrik ekle. Takım büyüklüğü, proje değeri, zaman tasarrufu, müşteri sayısı.</div>
+          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Kısa süreli işlere birer cümlelik bağlam ekle (proje sonu, şirket küçülmesi vb.)</div>
+        </div>
+        <div class="action-item kritik">
+          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Eğitim durumunu netleştir: tamamlandı mı, devam ediyor mu, ayrıldı mı?</div>
         </div>
         <div class="action-item orta">
-          <div class="action-text"><div class="action-tag tag-orta">ORTA</div><br>About Me bölümünü "ESG/CSRD uzmanı, DACH market deneyimli" pozisyonlamasıyla yeniden yaz. Generic ifadelerden kurtul.</div>
+          <div class="action-text"><div class="action-tag tag-orta">ORTA</div><br>"Yapay Zeka" yerine somut araç isimlerini yaz: Midjourney, Adobe Firefly, Stable Diffusion vb.</div>
         </div>
         <div class="action-item orta">
-          <div class="action-text"><div class="action-tag tag-orta">ORTA</div><br>Hobbies bölümünü kaldır. Skills bölümünü kategorilere ayır: Reporting Tools, Data & Analytics, ESG Tools.</div>
+          <div class="action-text"><div class="action-tag tag-orta">ORTA</div><br>Behance linkini iletişim bilgileri bölümüne taşı, gömülü bırakma</div>
         </div>
         <div class="action-item dusuk">
-          <div class="action-text"><div class="action-tag tag-dusuk">DÜŞÜK</div><br>İki lisans derecesini net sun. "Distance Education" notunu minimize et veya kaldır.</div>
+          <div class="action-text"><div class="action-tag tag-dusuk">DÜŞÜK</div><br>Cinsiyet bilgisini kaldır. Uluslararası başvurularda gereksiz ve risk.</div>
         </div>
       </div>
       <div class="lock-overlay" id="overlay4">
@@ -203,22 +197,14 @@
     </div>
   </div>
 
-  <!-- PDF İndir -->
-  <div class="card no-print" style="text-align:center;padding:16px 24px">
-    <button onclick="window.print()" style="padding:10px 24px;background:#1e1e1e;border:1px solid #333;border-radius:8px;color:#aaa;font-size:13px;font-weight:700;cursor:pointer">
-      📄 Raporu PDF Olarak İndir
-    </button>
-    <div style="font-size:11px;color:#444;margin-top:6px">Yazdır penceresinde "PDF olarak kaydet" seç</div>
-  </div>
-
   <!-- Hızlı Dönüş CTA -->
-  <div class="card no-print" style="text-align:center;padding:20px 24px">
+  <div class="card" style="text-align:center;padding:20px 24px">
     <div style="font-size:13px;color:#555;margin-bottom:10px">Reklamla uğraşmak istemiyor musun?</div>
     <a href="https://bionluk.com/cvlunatic_1" target="_blank" style="display:inline-block;padding:10px 24px;background:#141414;border:1px solid #2a2a2a;border-radius:8px;color:#888;font-size:13px;font-weight:700;text-decoration:none">Hızlı Dönüş Paketi →</a>
   </div>
 
   <!-- Subreddit Banner -->
-  <a href="https://www.reddit.com/r/LinkedinLunaticsTR/" target="_blank" class="no-print" style="display:block;margin-bottom:14px;border-radius:14px;overflow:hidden;text-decoration:none;">
+  <a href="https://www.reddit.com/r/LinkedinLunaticsTR/" target="_blank" style="display:block;margin-bottom:14px;border-radius:14px;overflow:hidden;text-decoration:none;">
     <img src="/banner.png" alt="r/LinkedinLunaticsTR" style="width:100%;display:block;border-radius:14px;">
   </a>
 
@@ -230,6 +216,7 @@
 
   function startTimer(bolum) {
     var overlay = document.getElementById('overlay' + bolum);
+    var content = document.getElementById('content' + bolum);
     var btn = overlay.querySelector('.timer-btn');
     if (btn.disabled) return;
     btn.style.display = 'none';
@@ -254,11 +241,17 @@
       unlocked[bolum] = true;
       if (bolum === 2) {
         var btn3 = document.getElementById('btn3');
-        if (btn3) { btn3.disabled = false; btn3.style.opacity = '1'; btn3.style.cursor = 'pointer'; btn3.textContent = 'Reklamı Gör, Aç →'; }
+        btn3.disabled = false;
+        btn3.style.opacity = '1';
+        btn3.style.cursor = 'pointer';
+        btn3.textContent = 'Reklamı Gör, Aç →';
       }
       if (bolum === 3) {
         var btn4 = document.getElementById('btn4');
-        if (btn4) { btn4.disabled = false; btn4.style.opacity = '1'; btn4.style.cursor = 'pointer'; btn4.textContent = 'Reklamı Gör, Aç →'; }
+        btn4.disabled = false;
+        btn4.style.opacity = '1';
+        btn4.style.cursor = 'pointer';
+        btn4.textContent = 'Reklamı Gör, Aç →';
       }
     }, 300);
   }
