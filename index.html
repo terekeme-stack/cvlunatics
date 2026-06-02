@@ -2,692 +2,296 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CVLunatics — CV'niz neden reddedildi?</title>
-  <meta name="description" content="12 yıl Big4 deneyimiyle CV inceleme. ATS uyumluluğu, içerik kalitesi, aksiyon planı.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>CV Analizi — cvlunatic.com</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1964808502991439" crossorigin="anonymous"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfT_QgtAAAAAIAxyhV7IAH0ZQLiZpR0kC3fWgqS"></script>
   <style>
-    :root {
-      --bg: #0a0a0a;
-      --surface: #111111;
-      --border: #1e1e1e;
-      --text: #f0f0f0;
-      --muted: #666;
-      --accent: #00e676;
-      --accent-dim: #00e67620;
-      --red: #ff4444;
-      --yellow: #ffd740;
-      --mono: 'DM Mono', monospace;
-      --sans: 'Syne', sans-serif;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      line-height: 1.6;
-      overflow-x: hidden;
+      background: #0b0b0b; color: #f0f0f0;
+      font-family: 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh; padding: 32px 16px 60px;
     }
-
-    /* NOISE OVERLAY */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.4;
+    .wrap { max-width: 520px; margin: 0 auto; }
+    .brand { text-align: center; margin-bottom: 32px; }
+    .brand-tag { font-size: 11px; font-weight: 800; color: #FF4500; letter-spacing: 0.2em; text-transform: uppercase; }
+    .brand-title { font-size: 26px; font-weight: 900; margin: 8px 0 4px; letter-spacing: -0.5px; }
+    .brand-sub { font-size: 13px; color: #555; line-height: 1.6; }
+    .card {
+      background: #141414; border: 1px solid #242424;
+      border-radius: 18px; padding: 28px 24px; margin-bottom: 14px;
+      animation: fadeUp 0.4s ease forwards;
     }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      padding: 1.2rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-      background: rgba(10,10,10,0.9);
-      backdrop-filter: blur(12px);
+    .section-label {
+      font-size: 11px; font-weight: 800; letter-spacing: 0.15em;
+      text-transform: uppercase; color: #FF4500; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 8px;
     }
-
-    .logo {
-      font-family: var(--mono);
-      font-size: 1rem;
-      color: var(--accent);
-      letter-spacing: -0.02em;
+    .section-label::after { content: ''; flex: 1; height: 1px; background: #1e1e1e; }
+    .tiers { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .tier {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 14px; border-radius: 10px; border: 1px solid;
     }
-
-    .logo span { color: var(--muted); }
-
-    nav a {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--muted);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: color 0.2s;
+    .tier.free { border-color: #22c55e33; background: #0a1a0a; }
+    .tier.ad   { border-color: #fb923c33; background: #1a0e00; }
+    .tier.paid { border-color: #a78bfa33; background: #100a1a; }
+    .tier-icon { font-size: 20px; flex-shrink: 0; }
+    .tier-text { flex: 1; }
+    .tier-title { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .tier.free .tier-title { color: #4ade80; }
+    .tier.ad .tier-title { color: #fb923c; }
+    .tier.paid .tier-title { color: #a78bfa; }
+    .tier-desc { font-size: 11px; color: #666; }
+    .field { margin-bottom: 18px; }
+    label {
+      display: block; font-size: 12px; font-weight: 700;
+      color: #888; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;
     }
-
-    nav a:hover { color: var(--text); }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 8rem 2rem 4rem;
-      max-width: 900px;
-      margin: 0 auto;
+    input[type="email"], textarea {
+      width: 100%; background: #0b0b0b; border: 1px solid #2a2a2a;
+      border-radius: 10px; color: #f0f0f0; font-size: 15px;
+      padding: 13px 16px; font-family: inherit; outline: none;
     }
-
-    .hero-tag {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--accent);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    input:focus, textarea:focus { border-color: #FF4500; box-shadow: 0 0 0 3px rgba(255,69,0,.1); }
+    textarea { resize: vertical; min-height: 90px; line-height: 1.5; }
+    .file-zone {
+      border: 2px dashed #2a2a2a; border-radius: 12px;
+      padding: 32px 20px; text-align: center; cursor: pointer;
     }
-
-    .hero-tag::before {
-      content: '';
-      width: 24px;
-      height: 1px;
-      background: var(--accent);
+    .file-zone:hover, .file-zone.drag { border-color: #FF4500; background: #1a0800; }
+    .file-zone input { display: none; }
+    .info-box {
+      background: #0f0f0f; border: 1px solid #1e1e1e; border-radius: 10px;
+      padding: 14px 16px; font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 18px;
     }
-
-    h1 {
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
-      font-weight: 800;
-      line-height: 1.0;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.5rem;
-    }
-
-    h1 em {
-      font-style: normal;
-      color: var(--accent);
-    }
-
-    h1 .strike {
-      text-decoration: line-through;
-      color: var(--muted);
-      font-weight: 400;
-    }
-
-    .hero-sub {
-      font-family: var(--mono);
-      font-size: 1rem;
-      color: var(--muted);
-      max-width: 560px;
-      margin-bottom: 3rem;
-      line-height: 1.8;
-    }
-
-    .hero-sub strong { color: var(--text); }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
+    .info-box strong { color: #aaa; }
     .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--accent);
-      color: #000;
-      font-family: var(--mono);
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 0.9rem 1.8rem;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: all 0.2s;
+      width: 100%; padding: 15px; background: #FF4500; color: #fff;
+      border: none; border-radius: 12px; font-size: 16px; font-weight: 800;
+      cursor: pointer; transition: opacity 0.2s;
     }
-
-    .btn-primary:hover {
-      background: #fff;
-      transform: translateY(-2px);
+    .btn-primary:hover { opacity: 0.9; }
+    .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+    .kvkk-label {
+      display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
+      text-transform: none; letter-spacing: 0; font-size: 13px; color: #888; font-weight: 400;
     }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: 0.85rem;
-      padding: 0.9rem 1.8rem;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: all 0.2s;
+    .kvkk-label input {
+      width: 18px; height: 18px; margin-top: 1px;
+      flex-shrink: 0; accent-color: #FF4500; cursor: pointer;
     }
-
-    .btn-ghost:hover {
-      border-color: var(--text);
-      color: var(--text);
+    .kvkk-label a { color: #FF4500; text-decoration: underline; font-weight: 700; }
+    .error-msg {
+      background: #1a0808; border: 1px solid #7f1d1d; color: #f87171;
+      border-radius: 8px; padding: 10px 14px; font-size: 13px; margin-top: 12px; display: none;
     }
-
-    /* STATS STRIP */
-    .stats {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin: 0;
-    }
-
-    .stat {
-      padding: 2rem;
-      border-right: 1px solid var(--border);
-      text-align: center;
-    }
-
-    .stat:last-child { border-right: none; }
-
-    .stat-num {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--accent);
-      display: block;
-      line-height: 1;
-      margin-bottom: 0.4rem;
-    }
-
-    .stat-label {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    /* SECTIONS */
-    section {
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 5rem 2rem;
-    }
-
-    .section-tag {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--muted);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-    }
-
-    /* HOW IT WORKS */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      margin-top: 3rem;
-      border: 1px solid var(--border);
-    }
-
-    .step {
-      background: var(--bg);
-      padding: 2rem;
-    }
-
-    .step-num {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--accent);
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
-    }
-
-    .step h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-    }
-
-    .step p {
-      font-family: var(--mono);
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* PACKAGES */
-    .packages {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      margin-top: 3rem;
-      border: 1px solid var(--border);
-    }
-
-    .package {
-      background: var(--bg);
-      padding: 2rem;
-      transition: background 0.2s;
-      position: relative;
-    }
-
-    .package:hover { background: var(--surface); }
-
-    .package.featured {
-      background: var(--surface);
-      border: 1px solid var(--accent);
-      margin: -1px;
-      z-index: 1;
-    }
-
-    .pkg-badge {
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      color: #000;
-      background: var(--accent);
-      padding: 0.2rem 0.6rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      display: inline-block;
-      margin-bottom: 1.2rem;
-    }
-
-    .pkg-name {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-
-    .pkg-subtitle {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .pkg-price {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-      line-height: 1;
-    }
-
-    .pkg-price span {
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: var(--muted);
-    }
-
-    .pkg-features {
-      list-style: none;
-      margin-bottom: 2rem;
-    }
-
-    .pkg-features li {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--muted);
-      padding: 0.4rem 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .pkg-features li::before {
-      content: '→';
-      color: var(--accent);
-      font-size: 0.7rem;
-    }
-
-    .pkg-features li.inactive { opacity: 0.3; }
-    .pkg-features li.inactive::before { content: '—'; color: var(--muted); }
-
-    .pkg-cta {
-      display: block;
-      text-align: center;
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      padding: 0.8rem;
-      text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: all 0.2s;
-    }
-
-    .pkg-cta:hover {
-      background: var(--accent);
-      color: #000;
-      border-color: var(--accent);
-    }
-
-    .package.featured .pkg-cta {
-      background: var(--accent);
-      color: #000;
-      border-color: var(--accent);
-    }
-
-    .package.featured .pkg-cta:hover {
-      background: #fff;
-      border-color: #fff;
-    }
-
-    /* DELIVERY TIME */
-    .pkg-meta {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-      display: flex;
-      gap: 1rem;
-    }
-
-    .pkg-meta span { color: var(--text); }
-
-    /* WHY */
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--border);
-      margin-top: 3rem;
-      border: 1px solid var(--border);
-    }
-
-    .why-item {
-      background: var(--bg);
-      padding: 2rem;
-    }
-
-    .why-icon {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .why-item h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .why-item p {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* CTA SECTION */
-    .cta-block {
-      border: 1px solid var(--border);
-      padding: 4rem 3rem;
-      text-align: center;
-      margin-top: 3rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-block::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, var(--accent-dim), transparent 70%);
-      pointer-events: none;
-    }
-
-    .cta-block h2 { margin-bottom: 1rem; }
-
-    .cta-block p {
-      font-family: var(--mono);
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 2rem;
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem;
-      text-align: center;
-    }
-
-    footer p {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--muted);
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero > * {
-      animation: fadeUp 0.6s ease forwards;
-      opacity: 0;
-    }
-
-    .hero > *:nth-child(1) { animation-delay: 0.1s; }
-    .hero > *:nth-child(2) { animation-delay: 0.2s; }
-    .hero > *:nth-child(3) { animation-delay: 0.3s; }
-    .hero > *:nth-child(4) { animation-delay: 0.4s; }
-
-    /* RESPONSIVE */
-    @media (max-width: 700px) {
-      .steps, .packages { grid-template-columns: 1fr; }
-      .why-grid { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: 1fr; }
-      .stat { border-right: none; border-bottom: 1px solid var(--border); }
-      .package.featured { margin: 0; }
+    .footer { text-align: center; color: #2a2a2a; font-size: 11px; margin-top: 24px; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner {
+      width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff; border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      display: inline-block; vertical-align: middle; margin-right: 8px;
     }
   </style>
 </head>
 <body>
+<div class="wrap">
 
-<nav>
-  <div class="logo">cv<span>//</span>lunatics</div>
-  <a href="#paketler">Paketler →</a>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-tag">CV İnceleme Servisi</div>
-  <h1>
-    CV'niz neden<br>
-    <em>reddedildi?</em>
-  </h1>
-  <p class="hero-sub">
-    <strong>12 yıl Big4 danışmanlık.</strong> Yüzlerce CV gördüm.
-    Hangisinin ATS'i geçeceğini, hangisinin recruiter masasında
-    kalacağını, hangisinin çöp kutusuna gideceğini net şekilde
-    ayırt edebiliyorum.
-  </p>
-  <div class="hero-cta">
-    <a href="https://bionluk.com" target="_blank" class="btn-primary">Hemen Başvur →</a>
-    <a href="#paketler" class="btn-ghost">Paketleri Gör</a>
+  <div class="brand">
+    <div class="brand-tag">r/LinkedinLunaticsTR</div>
+    <div class="brand-title">CV Analizi</div>
+    <div class="brand-sub">CV'ni yükle, uzman gözden geçirsin.<br>2-3 iş günü içinde raporun hazır.</div>
   </div>
+
+  <div class="card">
+    <div class="section-label">Rapor İçeriği</div>
+    <div class="tiers">
+      <div class="tier free">
+        <div class="tier-icon">🎁</div>
+        <div class="tier-text">
+          <div class="tier-title">Genel Değerlendirme — Ücretsiz</div>
+          <div class="tier-desc">Genel skor, ilk izlenim, özet yorum</div>
+        </div>
+      </div>
+      <div class="tier ad">
+        <div class="tier-icon">▶️</div>
+        <div class="tier-text">
+          <div class="tier-title">Bölüm Puanları — Reklam İzle</div>
+          <div class="tier-desc">ATS, yapı, içerik, doğrulanabilirlik skorları</div>
+        </div>
+      </div>
+      <div class="tier ad">
+        <div class="tier-icon">▶️</div>
+        <div class="tier-text">
+          <div class="tier-title">Kritik Eksikler — Reklam İzle</div>
+          <div class="tier-desc">Ne yanlış, neden yanlış, nasıl düzeltilir</div>
+        </div>
+      </div>
+      <div class="tier paid">
+        <div class="tier-icon">⚡</div>
+        <div class="tier-text">
+          <div class="tier-title">Aksiyon Planı — Tümünü Aç</div>
+          <div class="tier-desc">Önceliklendirilmiş adım adım aksiyon listesi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="form-card">
+    <div class="section-label">Başvuru Formu</div>
+    <div class="info-box">
+      CV'ni yükle, mail adresini bırak. Rapor hazır olduğunda sana bildiririz.
+      Ortalama bekleme süresi <strong>2-3 iş günü.</strong>
+    </div>
+
+    <form id="cv-form">
+      <div class="field">
+        <label>E-posta Adresin</label>
+        <input type="email" id="email" name="email" placeholder="ahmet@ornek.com" required>
+      </div>
+      <div class="field">
+        <label>Kısa Not (İsteğe Bağlı)</label>
+        <textarea id="note" name="message" placeholder="Hedeflediğin sektör, pozisyon, özel bir durum var mı?"></textarea>
+      </div>
+      <div class="field">
+        <label>CV Dosyası (PDF)</label>
+        <div class="file-zone" id="drop-zone" onclick="document.getElementById('cv-file').click()">
+          <input type="file" id="cv-file" accept=".pdf,.doc,.docx">
+          <div id="file-icon" style="font-size:32px;margin-bottom:10px">📄</div>
+          <div id="file-main" style="font-size:15px;font-weight:700">PDF'i seç ya da sürükle</div>
+          <div id="file-sub" style="font-size:12px;color:#555">PDF veya Word (.doc, .docx) • Maks. 5 MB</div>
+        </div>
+      </div>
+      <div class="field" style="margin-bottom:20px">
+        <label class="kvkk-label">
+          <input type="checkbox" id="kvkk" required>
+          <span><a href="/kvkk-aydinlatma.html" target="_blank">Kişisel Verilerin İşlenmesine İlişkin Aydınlatma Metni</a>'ni okudum, kişisel verilerimin belirtilen amaçlarla işlenmesini kabul ediyorum.</span>
+        </label>
+      </div>
+      <div class="error-msg" id="error-msg"></div>
+      <button type="submit" class="btn-primary" id="submit-btn">CV'mi Gönder →</button>
+    </form>
+  </div>
+
+  <div class="card" id="success-card" style="display:none;text-align:center;padding:28px 24px">
+    <div style="font-size:56px;margin-bottom:16px">✅</div>
+    <div style="font-size:22px;font-weight:900;margin-bottom:8px">CV'n Alındı!</div>
+    <div style="font-size:14px;color:#666;line-height:1.7;max-width:320px;margin:0 auto">
+      <strong>2-3 iş günü</strong> içinde raporun hazır olduğunda e-posta ile bildireceğiz.<br><br>
+      r/LinkedinLunaticsTR üzerinden de sorularını iletebilirsin.
+    </div>
+  </div>
+
+  <!-- Subreddit Banner -->
+  <a href="https://www.reddit.com/r/LinkedinLunaticsTR/" target="_blank" style="display:block;margin-bottom:14px;border-radius:14px;overflow:hidden;text-decoration:none;">
+    <img src="/banner.png" alt="r/LinkedinLunaticsTR" style="width:100%;display:block;border-radius:14px;">
+  </a>
+
+  <div class="footer">cvlunatic.com • r/LinkedinLunaticsTR</div>
 </div>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stat">
-    <span class="stat-num">50+</span>
-    <span class="stat-label">İncelenen CV</span>
-  </div>
-  <div class="stat">
-    <span class="stat-num">12</span>
-    <span class="stat-label">Yıl Big4 Deneyimi</span>
-  </div>
-  <div class="stat">
-    <span class="stat-num">48s</span>
-    <span class="stat-label">Maks. Teslim Süresi</span>
-  </div>
-</div>
+<script>
+  var UPLOADCARE_KEY = '46f7c6521622f282bf28';
+  var FORMSPREE_URL  = 'https://formspree.io/f/xqejvwlq';
+  var selectedFile = null;
 
-<!-- HOW IT WORKS -->
-<section>
-  <div class="section-tag">// nasıl çalışır</div>
-  <h2>Üç adım,<br>somut sonuç.</h2>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">01 —</div>
-      <h3>CV'nizi gönderin</h3>
-      <p>PDF veya Word formatında CV'nizi yükleyin. Hedef pozisyon veya sektörü belirtirseniz daha odaklı geri bildirim alırsınız.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">02 —</div>
-      <h3>İnceleme yapılır</h3>
-      <p>ATS uyumluluğu, içerik kalitesi, yapı ve doğrulanabilirlik açısından bölüm bazlı değerlendirme yapılır.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">03 —</div>
-      <h3>Raporu alın</h3>
-      <p>Bölüm skorları, kritik eksikler ve önceliklendirilmiş aksiyon planı içeren yapılandırılmış rapor teslim edilir.</p>
-    </div>
-  </div>
-</section>
+  // File select
+  document.getElementById('cv-file').addEventListener('change', function() {
+    pickFile(this.files[0]);
+  });
 
-<!-- PACKAGES -->
-<section id="paketler">
-  <div class="section-tag">// paketler</div>
-  <h2>Tanı koyuyoruz,<br>reçete yazıyoruz.</h2>
-  <div class="packages">
+  function pickFile(file) {
+    if (!file) return;
+    if (!file.type.includes('pdf') && !file.name.endsWith('.doc') && !file.name.endsWith('.docx')) { showErr('Sadece PDF veya Word dosyası yükleyebilirsiniz.'); return; }
+    if (file.size > 5 * 1024 * 1024) { showErr('Dosya 5 MB\'dan küçük olmalı.'); return; }
+    selectedFile = file;
+    document.getElementById('file-icon').textContent = '✅';
+    document.getElementById('file-main').innerHTML = '<span style="color:#FF4500;font-weight:700">' + file.name + '</span>';
+    document.getElementById('file-sub').textContent = (file.size / 1024).toFixed(0) + ' KB';
+    hideErr();
+  }
 
-    <div class="package">
-      <div class="pkg-name">Muayene</div>
-      <div class="pkg-subtitle">Hızlı tarama</div>
-      <div class="pkg-meta">3 gün teslim · <span>0 revizyon</span></div>
-      <div class="pkg-price">₺299 <span>/ CV</span></div>
-      <ul class="pkg-features">
-        <li>Bölüm bazlı puanlama</li>
-        <li>Kritik eksikler listesi</li>
-        <li>Temel ATS kontrolü</li>
-        <li class="inactive">Güçlü yönler analizi</li>
-        <li class="inactive">Aksiyon planı</li>
-        <li class="inactive">LinkedIn önerileri</li>
-      </ul>
-      <a href="https://bionluk.com" target="_blank" class="pkg-cta">Başvur →</a>
-    </div>
+  // Drag drop
+  var dz = document.getElementById('drop-zone');
+  dz.addEventListener('dragover', function(e) { e.preventDefault(); dz.classList.add('drag'); });
+  dz.addEventListener('dragleave', function() { dz.classList.remove('drag'); });
+  dz.addEventListener('drop', function(e) {
+    e.preventDefault(); dz.classList.remove('drag');
+    if (e.dataTransfer.files[0]) pickFile(e.dataTransfer.files[0]);
+  });
 
-    <div class="package featured">
-      <div class="pkg-badge">En Çok Tercih</div>
-      <div class="pkg-name">Röntgen</div>
-      <div class="pkg-subtitle">Detaylı inceleme</div>
-      <div class="pkg-meta">3 gün teslim · <span>1 revizyon</span></div>
-      <div class="pkg-price">₺499 <span>/ CV</span></div>
-      <ul class="pkg-features">
-        <li>Bölüm bazlı puanlama</li>
-        <li>Kritik eksikler listesi</li>
-        <li>Tam ATS uyumluluk kontrolü</li>
-        <li>Güçlü yönler analizi</li>
-        <li>Önceliklendirilmiş aksiyon planı</li>
-        <li class="inactive">LinkedIn önerileri</li>
-      </ul>
-      <a href="https://bionluk.com" target="_blank" class="pkg-cta">Başvur →</a>
-    </div>
+  // Upload to Uploadcare
+  function uploadFile(file) {
+    var fd = new FormData();
+    fd.append('UPLOADCARE_PUB_KEY', UPLOADCARE_KEY);
+    fd.append('UPLOADCARE_STORE', '1');
+    fd.append('file', file);
+    return fetch('https://upload.uploadcare.com/base/', { method: 'POST', body: fd })
+      .then(function(r) { return r.json(); })
+      .then(function(d) { return 'https://1ug14i6qpr.ucarecd.net/' + d.file + '/' + file.name; });
+  }
 
-    <div class="package">
-      <div class="pkg-name">MRI</div>
-      <div class="pkg-subtitle">Katman katman analiz</div>
-      <div class="pkg-meta">5 gün teslim · <span>2 revizyon</span></div>
-      <div class="pkg-price">₺799 <span>/ CV</span></div>
-      <ul class="pkg-features">
-        <li>Bölüm bazlı puanlama</li>
-        <li>Kritik eksikler listesi</li>
-        <li>Tam ATS uyumluluk kontrolü</li>
-        <li>Güçlü yönler analizi</li>
-        <li>Önceliklendirilmiş aksiyon planı</li>
-        <li>LinkedIn profil önerileri</li>
-      </ul>
-      <a href="https://bionluk.com" target="_blank" class="pkg-cta">Başvur →</a>
-    </div>
+  // Submit
+  document.getElementById('cv-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = document.getElementById('email').value.trim();
+    var note = document.getElementById('note').value.trim();
+    var btn = document.getElementById('submit-btn');
 
-  </div>
-</section>
+    if (!selectedFile) { showErr('Lütfen CV dosyanızı yükleyin.'); return; }
+    if (!document.getElementById('kvkk').checked) { showErr('KVKK onayı gerekli.'); return; }
 
-<!-- WHY -->
-<section>
-  <div class="section-tag">// neden cvlunatics</div>
-  <h2>Genel izlenim değil,<br>gerçek geri bildirim.</h2>
-  <div class="why-grid">
-    <div class="why-item">
-      <div class="why-icon">⚕️</div>
-      <h3>Big4 Perspektifi</h3>
-      <p>9 yıl PwC, 45 kişilik ekip yönetimi. Gerçek işe alım süreçlerinin içinden geçmiş biri olarak bakıyorum.</p>
-    </div>
-    <div class="why-item">
-      <div class="why-icon">🤖</div>
-      <h3>ATS Gerçeği</h3>
-      <p>CV'niz önce bir sisteme giriyor, sonra insana. İlk engeli aşamazsanız ikinciye ulaşamazsınız.</p>
-    </div>
-    <div class="why-item">
-      <div class="why-icon">📋</div>
-      <h3>Aksiyon Planı</h3>
-      <p>Ne yapman gerektiğini söylemekle kalmayız, öncelik sırasına koyarız. Kritik, orta, düşük.</p>
-    </div>
-    <div class="why-item">
-      <div class="why-icon">⚡</div>
-      <h3>Hızlı Teslim</h3>
-      <p>48 saatte teslim. İş başvurusu bekliyor, zaman kaybetmek istemiyorsunuz. Anlıyoruz.</p>
-    </div>
-  </div>
-</section>
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span>Doğrulanıyor...';
+    hideErr();
 
-<!-- CTA -->
-<section>
-  <div class="cta-block">
-    <div class="section-tag">// başlayalım</div>
-    <h2>CV'niz bir sonraki<br>fırsatı kaçırmasın.</h2>
-    <p>Bionluk üzerinden sipariş verin, 48 saat içinde raporunuz hazır.</p>
-    <a href="https://bionluk.com" target="_blank" class="btn-primary">Hemen Başvur →</a>
-  </div>
-</section>
+    // reCAPTCHA v3
+    grecaptcha.ready(function() {
+      grecaptcha.execute('6LfT_QgtAAAAAIAxyhV7IAH0ZQLiZpR0kC3fWgqS', {action: 'submit'}).then(function(token) {
+        submitForm(email, note, btn, token);
+      });
+    });
+  });
 
-<footer>
-  <p>© 2025 CVLunatics · <a href="/lunatics">r/LinkedinLunaticsTR üyesi misiniz?</a></p>
-</footer>
+  function submitForm(email, note, btn, recaptchaToken) {
 
+    uploadFile(selectedFile)
+      .then(function(link) {
+        btn.innerHTML = '<span class="spinner"></span>Gönderiliyor...';
+        return fetch(FORMSPREE_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            email: email,
+            message: note || '—',
+            cv_link: link,
+            cv_dosya: selectedFile.name,
+            tarih: new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' }),
+            'g-recaptcha-response': recaptchaToken
+          })
+        });
+      })
+      .then(function(r) {
+        if (!r.ok) throw new Error('Formspree hatası');
+        return r.json();
+      })
+      .then(function() {
+        document.getElementById('form-card').style.display = 'none';
+        document.getElementById('success-card').style.display = 'block';
+      })
+      .catch(function(err) {
+        showErr('Hata: ' + (err.message || 'Bağlantı sorunu'));
+        btn.disabled = false;
+        btn.innerHTML = 'CV\'mi Gönder →';
+      });
+  }
+
+  function showErr(m) { var e = document.getElementById('error-msg'); e.textContent = m; e.style.display = 'block'; }
+  function hideErr() { document.getElementById('error-msg').style.display = 'none'; }
+</script>
 </body>
 </html>
