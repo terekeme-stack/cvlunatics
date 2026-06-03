@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Raporu — cvlunatic.com</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1964808502991439" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0b0b0b; color: #f0f0f0; font-family: 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif; min-height: 100vh; padding: 32px 16px 60px; }
+    .wrap { max-width: 580px; margin: 0 auto; }
+    .brand { text-align: center; margin-bottom: 28px; }
+    .brand-tag { font-size: 11px; font-weight: 800; color: #FF4500; letter-spacing: 0.2em; text-transform: uppercase; }
+    .brand-title { font-size: 13px; color: #444; margin-top: 4px; }
+    .card { background: #141414; border: 1px solid #242424; border-radius: 18px; padding: 24px; margin-bottom: 14px; animation: fadeUp 0.4s ease forwards; }
+    .section-label { font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: #FF4500; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: #1e1e1e; }
+    .score-row { display: flex; gap: 20px; align-items: center; }
+    .score-ring { position: relative; width: 110px; height: 110px; flex-shrink: 0; }
+    .score-ring svg { transform: rotate(-90deg); }
+    .score-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 8px; }
+    .bullet-list { list-style: none; }
+    .bullet-list li { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 9px; font-size: 14px; color: #ccc; line-height: 1.55; }
+    .bullet-list li span.icon { flex-shrink: 0; margin-top: 1px; }
+    .locked-wrap { position: relative; }
+    .locked-content { filter: blur(5px); user-select: none; pointer-events: none; opacity: 0.6; }
+    .lock-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; border-radius: 14px; }
+    .timer-btn { padding: 11px 24px; background: #FF4500; color: #fff; border: none; border-radius: 9px; font-weight: 800; font-size: 14px; cursor: pointer; }
+    .timer-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .score-bar-row { margin-bottom: 14px; }
+    .score-bar-label { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .score-bar-label span:first-child { font-size: 13px; color: #aaa; }
+    .score-bar-label span:last-child { font-size: 13px; font-weight: 700; }
+    .score-bar-track { height: 5px; background: #1e1e1e; border-radius: 3px; }
+    .score-bar-fill { height: 100%; border-radius: 3px; }
+    .eksik-item { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #1e1e1e; }
+    .eksik-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .eksik-title { font-size: 14px; font-weight: 700; margin-bottom: 5px; }
+    .eksik-detail { font-size: 13px; color: #999; line-height: 1.65; }
+    .action-item { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-radius: 10px; border: 1px solid; margin-bottom: 10px; }
+    .action-item.kritik { border-color: #7f1d1d40; background: #1a0808; }
+    .action-item.orta { border-color: #78350f40; background: #1a0e00; }
+    .action-item.dusuk { border-color: #14532d40; background: #0a1a0a; }
+    .action-text { font-size: 13px; color: #ccc; line-height: 1.55; }
+    .action-tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 700; margin-bottom: 4px; }
+    .tag-kritik { background: #f8717120; color: #f87171; }
+    .tag-orta { background: #fb923c20; color: #fb923c; }
+    .tag-dusuk { background: #4ade8020; color: #4ade80; }
+    .footer { text-align: center; color: #2a2a2a; font-size: 11px; margin-top: 24px; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+    @media print {
+      .lock-overlay { display: none !important; }
+      .locked-content { filter: none !important; opacity: 1 !important; pointer-events: auto !important; }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand">
+    <div class="brand-tag">r/LinkedinLunaticsTR</div>
+    <div class="brand-title">CV Analiz Raporu</div>
+  </div>
+
+  <!-- BÖLÜM 1: GENEL DEĞERLENDİRME -->
+  <div class="card">
+    <div class="section-label">Genel Değerlendirme <span style="font-size:10px;color:#4ade80;font-weight:700">ÜCRETSİZ</span></div>
+    <div class="score-row">
+      <div class="score-ring">
+        <svg width="110" height="110">
+          <circle cx="55" cy="55" r="45" fill="none" stroke="#1e1e1e" stroke-width="9"/>
+          <circle cx="55" cy="55" r="45" fill="none" stroke="#4ade80" stroke-width="9"
+            stroke-dasharray="204.1 282.7" stroke-linecap="round"/>
+        </svg>
+        <div class="score-inner">
+          <span style="font-size:26px;font-weight:900;color:#4ade80;line-height:1">7.2</span>
+          <span style="font-size:11px;color:#555">/ 10</span>
+        </div>
+      </div>
+      <div style="flex:1">
+        <div class="badge" style="background:#4ade8020;color:#4ade80;border:1px solid #4ade8040">İyi</div>
+        <div style="font-size:17px;font-weight:900;line-height:1.3;margin-bottom:8px">Akademik Profil Güçlü, Ufak Temizlik Gerekli</div>
+        <div style="font-size:13px;color:#999;line-height:1.65">4. sınıf eczacılık öğrencisine göre oldukça güçlü bir CV. Araştırma projeleri, grant alma, liderlik deneyimi ve uluslararası tecrübe var. Ama teknik araçlar çok genel yazılmış, gereksiz bölümler ve bazı pasif fiillerle ilgili küçük temizlik yapılırsa çok daha güçlü durur.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Güçlü Yanlar -->
+  <div class="card">
+    <div class="section-label">Güçlü Yanlar</div>
+    <ul class="bullet-list">
+      <li><span class="icon" style="color:#4ade80">✓</span> Grant almış: TÜSEB'den 75,000 TRY kazanmış ve proje onay almış, bu akademik profil için ciddi bir başarı sinyali.</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> Spesifik araştırma projeleri: Microemulsion jel, antidiabetik fonksiyonel gıda, aflatoxin analizi, her biri somut ve metodolojik.</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> Liderlik deneyimi: Toxicology Symposium başkanlığı, 6 kişilik ekip yönetimi, konuşmacı koordinasyonu net ve somut.</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> Uluslararası tecrübe: Erasmus projeleri (Tiflis, Berlin, İstanbul) çok kültürlü ortamda çalışma yetkinliğini gösteriyor.</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> GPA ve yazı kalitesi: 3.75 akademik performans ve professionel yazım tarzı.</li>
+    </ul>
+  </div>
+
+  <!-- Kritik Sorunlar (başlık only) -->
+  <div class="card">
+    <div class="section-label">Kritik Sorunlar</div>
+    <ul class="bullet-list">
+      <li><span class="icon" style="color:#f87171">✗</span> "Soft Skills" bölümü gereksiz ve yapay, zaten CV'de gösteriliyor</li>
+      <li><span class="icon" style="color:#f87171">✗</span> "MS Office Tools" ve "AI Tools" çok genel, spesifik araçlar yazılmalı</li>
+      <li><span class="icon" style="color:#f87171">✗</span> Bazı fiiller pasif, "served", "took part", "contributed"</li>
+    </ul>
+  </div>
+
+  <!-- BÖLÜM 2: BÖLÜM PUANLARI (KİLİTLİ) -->
+  <div class="card">
+    <div class="section-label">Bölüm Puanları <span style="font-size:10px;color:#fb923c;font-weight:700">REKLAM İZLE</span></div>
+    <div class="locked-wrap">
+      <div class="locked-content" id="content2">
+        <div class="score-bar-row">
+          <div class="score-bar-label"><span>İçerik Kalitesi</span><span style="color:#4ade80">7/10</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#4ade80"></div></div>
+        </div>
+        <div class="score-bar-row">
+          <div class="score-bar-label"><span>Yapı / Format</span><span style="color:#fb923c">6/10</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:60%;background:#fb923c"></div></div>
+        </div>
+        <div class="score-bar-row">
+          <div class="score-bar-label"><span>ATS Uyumluluğu</span><span style="color:#4ade80">8/10</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:80%;background:#4ade80"></div></div>
+        </div>
+        <div class="score-bar-row">
+          <div class="score-bar-label"><span>Doğrulanabilirlik</span><span style="color:#4ade80">7/10</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#4ade80"></div></div>
+        </div>
+      </div>
+      <div class="lock-overlay" id="overlay2">
+        <div style="font-size:28px">▶️</div>
+        <div style="font-size:16px;font-weight:900">Bölüm Puanları</div>
+        <div style="font-size:12px;color:#888;text-align:center;max-width:220px;line-height:1.5">Detaylı puanları görmek için reklama tıkla</div>
+        <button class="timer-btn" onclick="startTimer(2)">Reklamı Gör, Aç →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BÖLÜM 3: KRİTİK EKSİKLER (KİLİTLİ) -->
+  <div class="card">
+    <div class="section-label">Kritik Eksikler <span style="font-size:10px;color:#fb923c;font-weight:700">REKLAM İZLE</span></div>
+    <div class="locked-wrap">
+      <div class="locked-content" id="content3">
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#f87171">Soft Skills Bölümü Gereksiz: Göster, Söyleme</div>
+          <div class="eksik-detail">"Leadership, teamwork, adaptability, critical thinking..." listesi sadece boşluk doldurma. CV'de zaten "Toxicology Symposium başkanlığı" var (leadership), "Erasmus projeler" var (teamwork), "araştırma projeleri" var (problem solving). Bu listeyi çıkar, Summary'e veya Projects bölümüne integre et. Gösterilen şeyler bir kere yazılmalı, söylenmemelidir.</div>
+        </div>
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#fb923c">"MS Office Tools" ve "AI Tools": Çok Muğlak, Spesifikleştir</div>
+          <div class="eksik-detail">"MS Office Tools" yazıp Excel, Word, PowerPoint'i aynı seviyede biliyormuş gibi göstermek hata. Muhtemelen biri (belki Excel) daha güçlüsündür. Aynı şekilde "AI Tools" de muğlak. Hangi araçları, hangi seviyede kullandığını yaz: "Excel (veri analizi, pivot table)", "Word (rapor yazımı)", "PowerPoint (sunumlar)", "Claude, ChatGPT (proje tasarımı)" gibi. Spesifiklik güveni artırır.</div>
+        </div>
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#fb923c">Pasif Fiil Kullanımı: "Served", "Contributed", "Took Part"</div>
+          <div class="eksik-detail">Bazı maddeler pasif fiillerle yazılmış: "Served as a member", "Contributed to scientific content", "Took part in a youth exchange". Aktif tonla yeniden yaz: "Led planning for...", "Designed scientific program", "Coordinated youth exchange logistics". Akademik profil için zaten "led" ve "designed" gibi fiiller uygun ve daha güçlü.</div>
+        </div>
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#fb923c">Youthpass Sertifikaları: Detay Eksik</div>
+          <div class="eksik-detail">"Youthpass certificates" yazıyor ama kaç tane olduğu, hangi projelerde kazanıldığı, neyi kapsadığı belli değil. Youthpass EU gençlik değişim programlarının kredisi, ama CV'de okur bunu bilmiyor. Hangi üç Erasmus+ projesinde kazandığını (Tiflis, Berlin, İstanbul) ve her biri neyi kapsadığını ekle. Örn: "Youthpass (3 Erasmus+ projesi: Substance Use Awareness, Gender Equality, Digital Detox)"</div>
+        </div>
+      </div>
+      <div class="lock-overlay" id="overlay3">
+        <div style="font-size:28px">▶️</div>
+        <div style="font-size:16px;font-weight:900">Kritik Eksikler</div>
+        <div style="font-size:12px;color:#888;text-align:center;max-width:220px;line-height:1.5">Her eksiğin detayı ve nasıl düzeltileceği</div>
+        <button class="timer-btn" id="btn3" onclick="startTimer(3)" disabled style="opacity:0.4;cursor:not-allowed">Önce Bölüm 2'yi Aç</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BÖLÜM 4: AKSİYON PLANI (KİLİTLİ) -->
+  <div class="card">
+    <div class="section-label">Aksiyon Planı <span style="font-size:10px;color:#fb923c;font-weight:700">REKLAM İZLE</span></div>
+    <div class="locked-wrap">
+      <div class="locked-content" id="content4">
+        <div class="action-item kritik">
+          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Soft Skills bölümünü tamamen çıkar. Listedeki her beceriyi Summary, Projects veya Social Activities bölümüne integre et, somut örneklerle göster.</div>
+        </div>
+        <div class="action-item orta">
+          <div class="action-text"><div class="action-tag tag-orta">ORTA</div><br>"MS Office Tools" ve "AI Tools" yerine spesifik araç adları ve kontekst yaz. "Excel (veri analizi, pivot table)", "Word (rapor yazımı)", "PowerPoint (sunumlar)" ve "Claude, ChatGPT (proje tasarımı)" gibi.</div>
+        </div>
+        <div class="action-item orta">
+          <div class="action-text"><div class="action-tag tag-orta">ORTA</div><br>"Served", "contributed", "took part" fiillerini "led", "coordinated", "designed", "developed" gibi aktif fiillerle değiştir. Her role özünü kaybetmeyecek şekilde sertleştir.</div>
+        </div>
+        <div class="action-item orta">
+          <div class="action-text"><div class="action-tag tag-orta">ORTA</div><br>Youthpass sertifikalarının yanına hangi Erasmus+ projelerinde kazandığını ve neyi kapsadığını ekle. Örn: "Youthpass (3 projesi: Substance Use, Gender Equality, Digital Detox)"</div>
+        </div>
+        <div class="action-item dusuk">
+          <div class="action-text"><div class="action-tag tag-dusuk">DÜŞÜK</div><br>LinkedIn profilin yoksa açabilirsin. Eczacılık sektöründe ağ kurmak ve iş fırsatları takip etmek için kullanışlı.</div>
+        </div>
+      </div>
+      <div class="lock-overlay" id="overlay4">
+        <div style="font-size:28px">▶️</div>
+        <div style="font-size:16px;font-weight:900">Aksiyon Planı</div>
+        <div style="font-size:12px;color:#888;text-align:center;max-width:220px;line-height:1.5">Önceliklendirilmiş adım adım aksiyon listesi</div>
+        <button class="timer-btn" id="btn4" onclick="startTimer(4)" disabled style="opacity:0.4;cursor:not-allowed">Önce Bölüm 3'ü Aç</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF İndir Butonu -->
+  <div class="card no-print" style="text-align:center;padding:16px 24px">
+    <button onclick="window.print()" style="padding:10px 24px;background:#1e1e1e;border:1px solid #333;border-radius:8px;color:#aaa;font-size:13px;font-weight:700;cursor:pointer">
+      📄 Raporu PDF Olarak İndir
+    </button>
+    <div style="font-size:11px;color:#444;margin-top:6px">Yazdır penceresinde "PDF olarak kaydet" seç</div>
+  </div>
+
+  <!-- Hızlı Dönüş CTA -->
+  <div class="card no-print" style="text-align:center;padding:20px 24px">
+    <div style="font-size:13px;color:#555;margin-bottom:10px">Reklamla uğraşmak istemiyor musun?</div>
+    <a href="https://bionluk.com/cvlunatic_1" target="_blank" style="display:inline-block;padding:10px 24px;background:#141414;border:1px solid #2a2a2a;border-radius:8px;color:#888;font-size:13px;font-weight:700;text-decoration:none">Hızlı Dönüş Paketi →</a>
+  </div>
+
+  <!-- Subreddit Banner -->
+  <a href="https://www.reddit.com/r/LinkedinLunaticsTR/" target="_blank" class="no-print" style="display:block;margin-bottom:14px;border-radius:14px;overflow:hidden;text-decoration:none;">
+    <img src="/banner.png" alt="r/LinkedinLunaticsTR" style="width:100%;display:block;border-radius:14px;">
+  </a>
+
+  <div class="footer">cvlunatic.com • r/LinkedinLunaticsTR</div>
+</div>
+
+<script>
+  var unlocked = { 2: false, 3: false, 4: false };
+
+  function startTimer(bolum) {
+    var overlay = document.getElementById('overlay' + bolum);
+    var btn = overlay.querySelector('.timer-btn');
+    if (btn.disabled) return;
+    btn.style.display = 'none';
+    var adBox = document.createElement('div');
+    adBox.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:12px;width:100%';
+    adBox.innerHTML = '<div style="font-size:11px;color:#555;letter-spacing:0.1em;text-transform:uppercase">Sponsorlu</div>' +
+      '<a href="https://www.reddit.com/r/LinkedinLunaticsTR/" target="_blank" onclick="unlock(' + bolum + ')" style="display:block;width:100%;border-radius:10px;overflow:hidden">' +
+      '<img src="/banner.png" alt="r/LinkedinLunaticsTR" style="width:100%;display:block;border-radius:10px"></a>' +
+      '<div style="font-size:12px;color:#888">Reklama tıkla, içeriği aç</div>';
+    overlay.appendChild(adBox);
+  }
+
+  function unlock(bolum) {
+    setTimeout(function() {
+      var overlay = document.getElementById('overlay' + bolum);
+      var content = document.getElementById('content' + bolum);
+      overlay.style.display = 'none';
+      content.style.filter = 'none';
+      content.style.opacity = '1';
+      content.style.pointerEvents = 'auto';
+      content.style.userSelect = 'auto';
+      unlocked[bolum] = true;
+      if (bolum === 2) {
+        var btn3 = document.getElementById('btn3');
+        if (btn3) { btn3.disabled = false; btn3.style.opacity = '1'; btn3.style.cursor = 'pointer'; btn3.textContent = 'Reklamı Gör, Aç →'; }
+      }
+      if (bolum === 3) {
+        var btn4 = document.getElementById('btn4');
+        if (btn4) { btn4.disabled = false; btn4.style.opacity = '1'; btn4.style.cursor = 'pointer'; btn4.textContent = 'Reklamı Gör, Aç →'; }
+      }
+    }, 300);
+  }
+</script>
+</body>
+</html>
