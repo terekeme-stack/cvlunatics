@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Raporu — cvlunatic.com</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1964808502991439" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0b0b0b; color: #f0f0f0; font-family: 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif; min-height: 100vh; padding: 32px 16px 60px; }
+    .wrap { max-width: 580px; margin: 0 auto; }
+    .brand { text-align: center; margin-bottom: 28px; }
+    .brand-tag { font-size: 11px; font-weight: 800; color: #FF4500; letter-spacing: 0.2em; text-transform: uppercase; }
+    .brand-title { font-size: 13px; color: #444; margin-top: 4px; }
+    .card { background: #141414; border: 1px solid #242424; border-radius: 18px; padding: 24px; margin-bottom: 14px; animation: fadeUp 0.4s ease forwards; }
+    .section-label { font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: #FF4500; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: #1e1e1e; }
+    .score-row { display: flex; gap: 20px; align-items: center; }
+    .score-ring { position: relative; width: 110px; height: 110px; flex-shrink: 0; }
+    .score-ring svg { transform: rotate(-90deg); }
+    .score-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 8px; }
+    .bullet-list { list-style: none; }
+    .bullet-list li { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 9px; font-size: 14px; color: #ccc; line-height: 1.55; }
+    .bullet-list li span.icon { flex-shrink: 0; margin-top: 1px; }
+    .locked-wrap { position: relative; }
+    .locked-content { filter: blur(5px); user-select: none; pointer-events: none; opacity: 0.6; }
+    .lock-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; border-radius: 14px; }
+    .timer-btn { padding: 11px 24px; background: #FF4500; color: #fff; border: none; border-radius: 9px; font-weight: 800; font-size: 14px; cursor: pointer; }
+    .timer-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .score-bar-row { margin-bottom: 14px; }
+    .score-bar-label { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .score-bar-label span:first-child { font-size: 13px; color: #aaa; }
+    .score-bar-label span:last-child { font-size: 13px; font-weight: 700; }
+    .score-bar-track { height: 5px; background: #1e1e1e; border-radius: 3px; }
+    .score-bar-fill { height: 100%; border-radius: 3px; }
+    .eksik-item { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #1e1e1e; }
+    .eksik-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .eksik-title { font-size: 14px; font-weight: 700; margin-bottom: 5px; }
+    .eksik-detail { font-size: 13px; color: #999; line-height: 1.65; }
+    .action-item { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-radius: 10px; border: 1px solid; margin-bottom: 10px; }
+    .action-item.kritik { border-color: #7f1d1d40; background: #1a0808; }
+    .action-item.orta { border-color: #78350f40; background: #1a0e00; }
+    .action-item.dusuk { border-color: #14532d40; background: #0a1a0a; }
+    .action-text { font-size: 13px; color: #ccc; line-height: 1.55; }
+    .action-tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 700; margin-bottom: 4px; }
+    .tag-kritik { background: #f8717120; color: #f87171; }
+    .tag-orta { background: #fb923c20; color: #fb923c; }
+    .tag-dusuk { background: #4ade8020; color: #4ade80; }
+    .footer { text-align: center; color: #2a2a2a; font-size: 11px; margin-top: 24px; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+    @media print {
+      .lock-overlay { display: none !important; }
+      .locked-content { filter: none !important; opacity: 1 !important; pointer-events: auto !important; }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand">
+    <div class="brand-tag">r/LinkedinLunaticsTR</div>
+    <div class="brand-title">CV Analiz Raporu</div>
+  </div>
+
+  <!-- BÖLÜM 1: GENEL DEĞERLENDİRME -->
+  <div class="card">
+    <div class="section-label">Genel Değerlendirme <span style="font-size:10px;color:#4ade80;font-weight:700">ÜCRETSİZ</span></div>
+    <div class="score-row">
+      <div class="score-ring">
+        <svg width="110" height="110">
+          <circle cx="55" cy="55" r="45" fill="none" stroke="#1e1e1e" stroke-width="9"/>
+          <circle cx="55" cy="55" r="45" fill="none" stroke="#fb923c" stroke-width="9"
+            stroke-dasharray="183.8 282.7" stroke-linecap="round"/>
+        </svg>
+        <div class="score-inner">
+          <span style="font-size:26px;font-weight:900;color:#fb923c;line-height:1">6.5</span>
+          <span style="font-size:11px;color:#555">/ 10</span>
+        </div>
+      </div>
+      <div style="flex:1">
+        <div class="badge" style="background:#fb923c20;color:#fb923c;border:1px solid #fb923c40">Geliştirilebilir</div>
+        <div style="font-size:17px;font-weight:900;line-height:1.3;margin-bottom:8px">Güçlü Altyapı, Kayıp Metrikler, Hedefsiz Özet</div>
+        <div style="font-size:13px;color:#999;line-height:1.65">TUM ve büyük teknoloji şirketleri deneyimi sağlam bir zemin kuruyor. Ancak tek bir somut metrik dışında tüm maddeler pasif fiillerle yazılmış ve oyun/teknoloji sektörüne yönelik konumlanma sıfır. CV şu haliyle genel başvurulara ortalama gözüküyor, hedef sektörlere ise konuşmuyor.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Güçlü Yanlar -->
+  <div class="card">
+    <div class="section-label">Güçlü Yanlar</div>
+    <ul class="bullet-list">
+      <li><span class="icon" style="color:#4ade80">✓</span> TUM ve ITU kombinasyonu: Uluslararası master ile köklü yerli mühendislik eğitimi güçlü akademik sinyal veriyor.</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> SAP ERP süre iyileştirmesi (2-3 saat → 5 dakika): CV'deki tek somut, sayısal ve etkisi net görünen başarı; doğru konumlandırıldığında çok değerli.</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> Araç seti genişliği: SQL, Tableau, IBM Cognos, GSCM, SAP ERP bir arada; veri odaklı profil için iyi bir temel.</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> Sektörel çeşitlilik: Tüketici elektroniği, e-ticaret ve FMCG'yi kapsayan kariyer çizgisi hem satış hem ürün yönetimi rollerine esneklik sağlıyor.</li>
+      <li><span class="icon" style="color:#4ade80">✓</span> Uluslararası deneyim: Alman şirketinde part-time çalışma, global iş ortamına alışkınlık sinyali veriyor.</li>
+    </ul>
+  </div>
+
+  <!-- Kritik Sorunlar (başlık only) -->
+  <div class="card">
+    <div class="section-label">Kritik Sorunlar</div>
+    <ul class="bullet-list">
+      <li><span class="icon" style="color:#f87171">✗</span> Neredeyse tüm maddeler pasif fiil, eylem değil görev tanımı görünümünde</li>
+      <li><span class="icon" style="color:#f87171">✗</span> SAP metriği yarım: "nasıl yaptın?" sorusu yanıtsız kalıyor</li>
+      <li><span class="icon" style="color:#f87171">✗</span> Operasyonların satış hedeflerine katkısı hiç rakamlaştırılmamış</li>
+      <li><span class="icon" style="color:#f87171">✗</span> Skills bölümü yanlış yerde: deneyimden önce geliyor</li>
+      <li><span class="icon" style="color:#f87171">✗</span> Hedef sektörler (oyun, teknoloji) CV'de hiç konuşmuyor</li>
+    </ul>
+  </div>
+
+  <!-- BÖLÜM 2: BÖLÜM PUANLARI (KİLİTLİ) -->
+  <div class="card">
+    <div class="section-label">Bölüm Puanları <span style="font-size:10px;color:#fb923c;font-weight:700">REKLAM İZLE</span></div>
+    <div class="locked-wrap">
+      <div class="locked-content" id="content2">
+        <div class="score-bar-row">
+          <div class="score-bar-label"><span>İçerik Kalitesi</span><span style="color:#fb923c">5/10</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:50%;background:#fb923c"></div></div>
+        </div>
+        <div class="score-bar-row">
+          <div class="score-bar-label"><span>Yapı / Format</span><span style="color:#4ade80">7/10</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#4ade80"></div></div>
+        </div>
+        <div class="score-bar-row">
+          <div class="score-bar-label"><span>ATS Uyumluluğu</span><span style="color:#4ade80">8/10</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:80%;background:#4ade80"></div></div>
+        </div>
+        <div class="score-bar-row">
+          <div class="score-bar-label"><span>Doğrulanabilirlik</span><span style="color:#fb923c">6/10</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:60%;background:#fb923c"></div></div>
+        </div>
+      </div>
+      <div class="lock-overlay" id="overlay2">
+        <div style="font-size:28px">▶️</div>
+        <div style="font-size:16px;font-weight:900">Bölüm Puanları</div>
+        <div style="font-size:12px;color:#888;text-align:center;max-width:220px;line-height:1.5">Detaylı puanları görmek için reklama tıkla</div>
+        <button class="timer-btn" onclick="startTimer(2)">Reklamı Gör, Aç →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BÖLÜM 3: KRİTİK EKSİKLER (KİLİTLİ) -->
+  <div class="card">
+    <div class="section-label">Kritik Eksikler <span style="font-size:10px;color:#fb923c;font-weight:700">REKLAM İZLE</span></div>
+    <div class="locked-wrap">
+      <div class="locked-content" id="content3">
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#f87171">Pasif Fiil Salgını: CV Değil, Görev Tanımı Okuyor Musunuz?</div>
+          <div class="eksik-detail">"Supported", "Coordinated", "Assisted", "Managed" fiilleri neredeyse her maddede karşımıza çıkıyor. Bunlar ne yaptığını değil, ne sorumlu olduğunu anlatıyor. Bir işveren CV'yi okurken "peki sonuç ne oldu?" diye soruyor ve yanıt bulamıyor. Her maddeyi "eylem fiili + somut sonuç" formatında yeniden yaz. Örnek: "Coordinated order execution" yerine "Delivery sürecini yeniden yapılandırarak X hesabında gecikme oranını %Y düşürdüm."</div>
+        </div>
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#f87171">SAP Metriği Yarım Kalmış: "Nasıl Yaptın?" Sorusu Yanıtsız</div>
+          <div class="eksik-detail">CV'nin en güçlü maddesi "SAP ERP güncelleme süresini 2-3 saatten 5 dakikaya indirdim" ama hemen ardından gelen soru olan "nasıl?" tamamen yanıtsız. SQL sorgusu mu yazdı, macro mi kurdu, SAP workflow'unu mu yeniden yapılandırdı? Bu soruyu yanıtlamadan metrik yarım kalıyor. Yöntem tek cümleyle bile olsa eklendiğinde bu madde CV'nin en çarpıcı noktası haline gelir.</div>
+        </div>
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#f87171">Operasyonların Satış Hedeflerine Katkısı Gösterilmemiş</div>
+          <div class="eksik-detail">10+ hesabın sell-in planlamasını ve koordinasyonunu yöneten biri için yönetilen süreçlerin satış hedeflerine katkısı hiç rakamlaştırılmamış. Kota doğrudan sende olmasa bile "yönettiğim hesaplarda aylık X TL'lik sell-in hedefini tutturdum", "CarrefourSA hesabında YoY %23 büyüme sağladım" gibi bir veri operasyonun etkisini somutlaştırır. Koordinasyonun sonucu ne oldu sorusu yanıtsız kalıyor.</div>
+        </div>
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#f87171">Skills Bölümü Yanlış Yerde: Deneyimden Önce Geliyor</div>
+          <div class="eksik-detail">Standart CV sıralaması Summary → Experience → Skills → Education şeklindedir. Bu CV'de Skills, deneyimden önce geliyor ve işverenin ilk baktığı alana araç listesi yerleşiyor. Deneyimler çok daha değerli, öne çıkmalı. Skills bölümünü deneyimlerin altına taşı. Ayrıca teknik araçlar (SQL, Tableau, SAP) ile iş becerileri (Account Management, Sales) şu an iç içe geçmiş durumda, ATS bunları ayrıştırmakta zorlanıyor.</div>
+        </div>
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#fb923c">Huawei Rolü Yanlış Çerçevelenmiş: Satış Değil, Kanal Operasyonları</div>
+          <div class="eksik-detail">Rol unvanı "Channel Sales Assistant" ama içeriğe bakınca direct selling yok. Sipariş koordinasyonu, Nielsen pazar payı analizi, görünürlük anlaşmaları desteği ve sell-through takibi var. Bunlar kanal operasyonları ve satış analitiği becerileri, doğrudan satış değil. Bu ayrımı bulanık bırakmak recruiter'ın kafasını karıştırıyor. Maddeleri "kanal operasyonları" ve "analiz" başlıkları altında yeniden çerçevele, ne yaptığın daha net okunur ve aynı zamanda daha güçlü görünür.</div>
+        </div>
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#fb923c">Skills Listesinde Tekrar Eden İfadeler</div>
+          <div class="eksik-detail">Tableau zaten bir BI aracıdır. Yanına ayrıca "Business Intelligence" yazmak aynı şeyi iki kez saymak anlamına geliyor ve listeyi okuyan biri için kafa karışıklığı yaratıyor. Bu tür kategori adları listeyi uzatıyor ama bilgi katmıyor. "Business Intelligence" ifadesini çıkar, yerinde spesifik araç adı kalsın.</div>
+        </div>
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#fb923c">Hedef Sektör Körlüğü: Oyun ve Teknoloji Hiç Konuşmuyor</div>
+          <div class="eksik-detail">Oyun veya teknoloji ürün yönetimine geçmek isteyen bir profilin CV'sinde bu sektörlere dair tek kelime yok. Trendyol ve Harman deneyimleri platform ekonomisi ve dijital ürün diline çevrilmeye en uygun noktalardır. Summary de dahil olmak üzere hedef sektöre başvurulacak her versiyonda bu köprü kurulmalı.</div>
+        </div>
+        <div class="eksik-item">
+          <div class="eksik-title" style="color:#fb923c">Professional Summary: Doldurulan Bir Şablon Gibi Okunuyor</div>
+          <div class="eksik-detail">Mevcut özet "Sales and Marketing professional with Product Management focus across consumer electronics, e-commerce, retail, and FMCG" diyor. Bu cümleyi CV'den kaldırsan hiçbir şey değişmez çünkü hiçbir şey söylemiyor. Hangi sektör, hangi rol, hangi başarı? Neden bu şirkete? Cevap yok. Her başvuruda sıfırdan yazılması gereken, o role ve şirkete özel, en az bir somut başarıyı içeren 2-3 cümlelik bir özet olmalı.</div>
+        </div>
+      </div>
+      <div class="lock-overlay" id="overlay3">
+        <div style="font-size:28px">▶️</div>
+        <div style="font-size:16px;font-weight:900">Kritik Eksikler</div>
+        <div style="font-size:12px;color:#888;text-align:center;max-width:220px;line-height:1.5">Her eksiğin detayı ve nasıl düzeltileceği</div>
+        <button class="timer-btn" id="btn3" onclick="startTimer(3)" disabled style="opacity:0.4;cursor:not-allowed">Önce Bölüm 2'yi Aç</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BÖLÜM 4: AKSİYON PLANI (KİLİTLİ) -->
+  <div class="card">
+    <div class="section-label">Aksiyon Planı <span style="font-size:10px;color:#fb923c;font-weight:700">REKLAM İZLE</span></div>
+    <div class="locked-wrap">
+      <div class="locked-content" id="content4">
+        <div class="action-item kritik">
+          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Tüm "supported / coordinated / assisted" fiillerini listele. Her birini "eylem fiili + somut sonuç" formatında yeniden yaz. Hedef: her maddede ne yaptığın ve ne olduğu net belli olsun.</div>
+        </div>
+        <div class="action-item kritik">
+          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>SAP metriğine "nasıl?" sorusunun cevabını ekle: SQL sorgusu mu, macro mu, workflow yeniden yapılandırması mı? Tek cümle yeterli. Bu olmadan metrik yarım kalıyor.</div>
+        </div>
+        <div class="action-item kritik">
+          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Satış deneyimi için performans verisi bul ve ekle: kota tutturma oranı, bölge sıralaması, hesap bazında büyüme yüzdesi. En az 2-3 rol için bu veriler şart.</div>
+        </div>
+        <div class="action-item kritik">
+          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Skills bölümünü deneyimlerin altına taşı. Sıralama şu haliyle Summary → Skills → Experience, olması gereken: Summary → Experience → Skills → Education.</div>
+        </div>
+        <div class="action-item kritik">
+          <div class="action-text"><div class="action-tag tag-kritik">KRİTİK</div><br>Oyun ve teknoloji sektörüne başvuracaksan CV'ye sektöre özgü bir katman ekle: Trendyol ve Harman deneyimini platform, dijital ürün ve ekosistem diline çevir. Summary'i hedef role göre sıfırdan yaz.</div>
+        </div>
+        <div class="action-item orta">
+          <div class="action-text"><div class="action-tag tag-orta">ORTA</div><br>Professional Summary'yi her başvuru için özelleştir. Genel ifadeler yerine o şirkete dokunan 2-3 cümle yaz, en güçlü metriğini (SAP iyileştirmesi) özette zikret.</div>
+        </div>
+        <div class="action-item orta">
+          <div class="action-text"><div class="action-tag tag-orta">ORTA</div><br>Skills bölümündeki teknik araçları (SQL, Tableau, SAP ERP) ve iş becerilerini (Account Management, Sales) iki ayrı satıra ayır. Şu an iç içe geçmiş durumda, ATS bunları ayrıştırmakta zorlanıyor.</div>
+        </div>
+        <div class="action-item dusuk">
+          <div class="action-text"><div class="action-tag tag-dusuk">DÜŞÜK</div><br>Nike intern deneyimi 2018'e ait. Üst sıralardaki deneyimler güçlenince bu pozisyon kısaltılabilir veya çıkarılabilir.</div>
+        </div>
+        <div class="action-item dusuk">
+          <div class="action-text"><div class="action-tag tag-dusuk">DÜŞÜK</div><br>LinkedIn profilinin CV ile tutarlı olduğunu kontrol et: özet, deneyim sıralaması ve araçlar eşleşmeli.</div>
+        </div>
+      </div>
+      <div class="lock-overlay" id="overlay4">
+        <div style="font-size:28px">▶️</div>
+        <div style="font-size:16px;font-weight:900">Aksiyon Planı</div>
+        <div style="font-size:12px;color:#888;text-align:center;max-width:220px;line-height:1.5">Önceliklendirilmiş adım adım aksiyon listesi</div>
+        <button class="timer-btn" id="btn4" onclick="startTimer(4)" disabled style="opacity:0.4;cursor:not-allowed">Önce Bölüm 3'ü Aç</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF İndir Butonu -->
+  <div class="card no-print" style="text-align:center;padding:16px 24px">
+    <button onclick="window.print()" style="padding:10px 24px;background:#1e1e1e;border:1px solid #333;border-radius:8px;color:#aaa;font-size:13px;font-weight:700;cursor:pointer">
+      📄 Raporu PDF Olarak İndir
+    </button>
+    <div style="font-size:11px;color:#444;margin-top:6px">Yazdır penceresinde "PDF olarak kaydet" seç</div>
+  </div>
+
+  <!-- Hızlı Dönüş CTA -->
+  <div class="card no-print" style="text-align:center;padding:20px 24px">
+    <div style="font-size:13px;color:#555;margin-bottom:10px">Reklamla uğraşmak istemiyor musun?</div>
+    <a href="https://bionluk.com/cvlunatic_1" target="_blank" style="display:inline-block;padding:10px 24px;background:#141414;border:1px solid #2a2a2a;border-radius:8px;color:#888;font-size:13px;font-weight:700;text-decoration:none">Hızlı Dönüş Paketi →</a>
+  </div>
+
+  <!-- Subreddit Banner -->
+  <a href="https://www.reddit.com/r/LinkedinLunaticsTR/" target="_blank" class="no-print" style="display:block;margin-bottom:14px;border-radius:14px;overflow:hidden;text-decoration:none;">
+    <img src="/banner.png" alt="r/LinkedinLunaticsTR" style="width:100%;display:block;border-radius:14px;">
+  </a>
+
+  <div class="footer">cvlunatic.com • r/LinkedinLunaticsTR</div>
+</div>
+
+<script>
+  var unlocked = { 2: false, 3: false, 4: false };
+
+  function startTimer(bolum) {
+    var overlay = document.getElementById('overlay' + bolum);
+    var btn = overlay.querySelector('.timer-btn');
+    if (btn.disabled) return;
+    btn.style.display = 'none';
+    var adBox = document.createElement('div');
+    adBox.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:12px;width:100%';
+    adBox.innerHTML = '<div style="font-size:11px;color:#555;letter-spacing:0.1em;text-transform:uppercase">Sponsorlu</div>' +
+      '<a href="https://www.reddit.com/r/LinkedinLunaticsTR/" target="_blank" onclick="unlock(' + bolum + ')" style="display:block;width:100%;border-radius:10px;overflow:hidden">' +
+      '<img src="/banner.png" alt="r/LinkedinLunaticsTR" style="width:100%;display:block;border-radius:10px"></a>' +
+      '<div style="font-size:12px;color:#888">Reklama tıkla, içeriği aç</div>';
+    overlay.appendChild(adBox);
+  }
+
+  function unlock(bolum) {
+    setTimeout(function() {
+      var overlay = document.getElementById('overlay' + bolum);
+      var content = document.getElementById('content' + bolum);
+      overlay.style.display = 'none';
+      content.style.filter = 'none';
+      content.style.opacity = '1';
+      content.style.pointerEvents = 'auto';
+      content.style.userSelect = 'auto';
+      unlocked[bolum] = true;
+      if (bolum === 2) {
+        var btn3 = document.getElementById('btn3');
+        if (btn3) { btn3.disabled = false; btn3.style.opacity = '1'; btn3.style.cursor = 'pointer'; btn3.textContent = 'Reklamı Gör, Aç →'; }
+      }
+      if (bolum === 3) {
+        var btn4 = document.getElementById('btn4');
+        if (btn4) { btn4.disabled = false; btn4.style.opacity = '1'; btn4.style.cursor = 'pointer'; btn4.textContent = 'Reklamı Gör, Aç →'; }
+      }
+    }, 300);
+  }
+</script>
+</body>
+</html>
