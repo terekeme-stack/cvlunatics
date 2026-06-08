@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İsmet Hakan Leylek - CV Raporu</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0d0d0d;
+      color: #e0e0e0;
+      font-family: 'Trebuchet MS', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 40px 20px 60px;
+    }
+    .container { max-width: 620px; margin: 0 auto; }
+    
+    /* Başlık */
+    .brand-header {
+      text-align: center;
+      margin-bottom: 32px;
+      border-bottom: 2px solid #242424;
+      padding-bottom: 16px;
+    }
+    .brand-tag { font-size: 10px; font-weight: 900; color: #ff6b35; text-transform: uppercase; letter-spacing: 0.2em; }
+    .brand-title { font-size: 12px; color: #666; margin-top: 4px; }
+    
+    /* Kartlar */
+    .card {
+      background: #151515;
+      border: 1px solid #242424;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 16px;
+    }
+    
+    /* Section Label */
+    .section-label {
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #ff6b35;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #222;
+    }
+    
+    /* HERO BÖLÜMÜ */
+    .hero-container {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .score-ring-wrapper {
+      flex-shrink: 0;
+      position: relative;
+      width: 110px;
+      height: 110px;
+    }
+    .score-ring-svg {
+      transform: rotate(-90deg);
+    }
+    .score-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0px;
+    }
+    .score-number {
+      font-size: 32px;
+      font-weight: 900;
+      color: #4ade80;
+      line-height: 1;
+    }
+    .score-label {
+      font-size: 10px;
+      color: #666;
+      margin-top: 2px;
+    }
+    
+    .hero-text {
+      flex: 1;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: #4ade8015;
+      border: 1px solid #4ade8040;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #4ade80;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .hero-subtitle {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.6;
+    }
+    
+    /* Genel Değerlendirme */
+    .thesis {
+      background: #1a1a1a;
+      border-left: 3px solid #4ade80;
+      padding: 16px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+    .thesis strong { color: #fff; font-weight: 700; }
+    
+    p {
+      margin-bottom: 14px;
+      font-size: 13px;
+      color: #ccc;
+      line-height: 1.7;
+    }
+    p:last-child { margin-bottom: 0; }
+    
+    /* Güçlü Yanlar */
+    .strength-list { list-style: none; }
+    .strength-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .strength-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .strength-icon {
+      flex-shrink: 0;
+      width: 20px;
+      text-align: center;
+      color: #4ade80;
+      font-size: 16px;
+      margin-top: 2px;
+    }
+    .strength-content h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .strength-content p {
+      font-size: 13px;
+      color: #999;
+      margin: 0;
+    }
+    
+    /* Kritik Gelişim */
+    .dev-section {
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .dev-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .dev-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .dev-text {
+      font-size: 13px;
+      color: #999;
+      line-height: 1.7;
+    }
+    
+    .highlight-box {
+      background: #1a1a1a;
+      border-left: 3px solid #fb923c;
+      padding: 12px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #ccc;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+    .highlight-box strong { color: #fb923c; }
+    
+    /* Aksiyon */
+    .action-list { list-style: none; }
+    .action-item {
+      margin-bottom: 14px;
+      padding: 14px;
+      background: #1a1a1a;
+      border-left: 3px solid #3b82f6;
+      border-radius: 6px;
+    }
+    .action-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      background: #3b82f620;
+      color: #3b82f6;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .action-text {
+      font-size: 13px;
+      color: #ccc;
+      line-height: 1.7;
+    }
+    
+    /* Kapanış */
+    .closing-box {
+      background: #1a1a1a;
+      border: 1px solid #242424;
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #999;
+      line-height: 1.7;
+      text-align: center;
+    }
+    .closing-box em { color: #ddd; font-style: italic; }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #444;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid #1a1a1a;
+    }
+    
+    /* Print */
+    @media print {
+      body { padding: 20px; }
+      .card { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <!-- Başlık -->
+  <div class="brand-header">
+    <div class="brand-tag">r/LinkedinLunaticsTR</div>
+    <div class="brand-title">CV Analiz Raporu</div>
+  </div>
+
+  <!-- HERO BÖLÜMÜ -->
+  <div class="card">
+    <div class="hero-container">
+      <div class="score-ring-wrapper">
+        <svg width="110" height="110" class="score-ring-svg">
+          <circle cx="55" cy="55" r="45" fill="none" stroke="#1a1a1a" stroke-width="9"/>
+          <circle cx="55" cy="55" r="45" fill="none" stroke="#4ade80" stroke-width="9"
+            stroke-dasharray="226.16 282.7" stroke-linecap="round"/>
+        </svg>
+        <div class="score-inner">
+          <div class="score-number">8.0</div>
+          <div class="score-label">/ 10</div>
+        </div>
+      </div>
+      <div class="hero-text">
+        <div class="hero-badge">İyi</div>
+        <div class="hero-title">Teknik Ofis + Şantiye Dengesi</div>
+        <div class="hero-subtitle">
+          CV'n global firmalarda teknik ofis ve şantiye mühendisliği hedefiyle uyumlu güçlü bir altyapıya sahip görünüyor. Ana gelişim alanın ise bu deneyimin teknik derinliğini, proje ölçeğini, sorumluluk seviyesini ve ölçülebilir çıktılarını daha görünür hale getirmektir.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GENEL DEĞERLENDIRME -->
+  <div class="card">
+    <div class="section-label">Genel Değerlendirme</div>
+    
+    <div class="thesis">
+      <strong>CV'nin temel gelişim alanı deneyim eksikliği değildir.</strong> Adayın METU eğitimi, altyapı projeleri ve teknik ofis-şantiye kesişimindeki deneyimi güçlü bir temel oluşturmaktadır. Ancak global firmalar açısından bu deneyimin <strong>teknik derinliği, proje ölçeği, sorumluluk seviyesi ve ölçülebilir çıktıları</strong> daha görünür hale getirilmelidir.
+    </div>
+
+    <p>
+      METU İnşaat Mühendisliği diploması ve altyapı/karayolu projelerindeki somut saha deneyimi güçlü bir başlangıç zemini oluşturuyor. Progress payment, quantity take-off, resmi yazışmalar ve teknik dokümantasyon gibi alanlara temas etmiş olması; adayın yalnızca saha tarafında değil, teknik ofis süreçlerinde de deneyim kazandığını gösteriyor.
+    </p>
+
+    <p>
+      Adayın profili, sahadan kopuk bir teknik ofis profili yerine; saha deneyimini hakediş, metraj, dokümantasyon ve proje kontrol süreçleriyle birleştiren bir inşaat mühendisi olarak konumlandırılabilir. Bu yaklaşım, özellikle global inşaat firmalarında değerli bir profil oluşturur.
+    </p>
+
+    <p>
+      Bununla birlikte, global inşaat firmalarının değerlendirme sürecinde, adayın hangi teknik kapsamda sorumluluk aldığı, hangi araçları aktif olarak kullandığı ve hangi ölçekli projelerde değer ürettikleri oldukça önemlidir. Şu an CV'de bu bilgiler biraz daha görünür hale getirilebilir.
+    </p>
+  </div>
+
+  <!-- GÜÇLÜ YANLAR -->
+  <div class="card">
+    <div class="section-label">Güçlü Yanlar</div>
+    
+    <ul class="strength-list">
+      <li class="strength-item">
+        <div class="strength-icon">✓</div>
+        <div class="strength-content">
+          <h4>Global Firmalar İçin Güçlü Temel</h4>
+          <p>METU İnşaat Mühendisliği, altyapı/karayolu sektörü ve teknik ofis+saha deneyiminin birleşimi, global inşaat firmalarında teknik ofis ve şantiye mühendisliği rolleri için sağlam bir başlangıç oluşturuyor.</p>
+        </div>
+      </li>
+      
+      <li class="strength-item">
+        <div class="strength-icon">✓</div>
+        <div class="strength-content">
+          <h4>Teknik Ofis ve Saha Arasındaki Köprü</h4>
+          <p>Aday yalnızca saha tarafında konumlanmıyor; progress payment, contract management, government correspondence ve quality control gibi teknik ofis süreçlerine de temas etmiş görünüyor. Bu ikili deneyim, global projeler için değerli bir sinyal oluşturuyor.</p>
+        </div>
+      </li>
+      
+      <li class="strength-item">
+        <div class="strength-icon">✓</div>
+        <div class="strength-content">
+          <h4>Somut Altyapı Projesi Deneyimi</h4>
+          <p>Adana-Kozan-Mansurlu Highway, Kadirli-Osmaniye Highway gibi ciddi ölçekli karayolu projelerine katılmış olması; sektör bilgisini, altyapı projelerine aşinalığını ve yüksek standartlara uyum yeteneğini göstermektedir.</p>
+        </div>
+      </li>
+      
+      <li class="strength-item">
+        <div class="strength-icon">✓</div>
+        <div class="strength-content">
+          <h4>Kamu Kurumlarıyla Koordinasyon Deneyimi</h4>
+          <p>Resmi yazışmalar ve kamu kurumlarıyla koordinasyon deneyimi, adayın yalnızca teknik üretim tarafında değil, kurumsal proje süreçlerinde de sorumluluk aldığını göstermektedir.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- KRİTİK GELİŞİM ALANI -->
+  <div class="card">
+    <div class="section-label">Teknik Derinlik ve Proje Ölçeğinin Görünürlüğü</div>
+    
+    <div class="dev-section">
+      <div class="dev-title">Proje Ölçeği Daha Görünür Hale Getirilmeli</div>
+      <div class="dev-text">
+        Adana-Kozan-Mansurlu Highway projesinde KM: 37+400 to 55+000 aralığı belirtilmiş durumda. Bu yaklaşık 17.6 km'lik bir proje kesimine işaret ediyor. Ancak global firmalar açısından projenin bütçesi, süresi, ekip/taşeron yapısı, adayın sorumlu olduğu iş paketleri ve hakediş hacmi gibi bilgiler daha görünür hale getirilebilir.
+      </div>
+      <div class="highlight-box">
+        <strong>Örnek soru:</strong> Site Chief rolünde kaç taşeron veya saha ekibi koordine edildi? Progress payment hacmi ne seviyedeydi? Earthworks, BHM, drainage, landslide remediation veya superstructure gibi hangi imalat kalemlerinde aktif sorumluluk alındı?
+      </div>
+    </div>
+
+    <div class="dev-section">
+      <div class="dev-title">Teknik Ofis ve Site Chief Rolleri Net Ayrıştırılmalı</div>
+      <div class="dev-text">
+        CV'de "Technical Office Engineer" ve "Construction Site Chief" görevleri yer alıyor; ancak bu iki rolün sorumluluk seviyesi daha net ayrıştırılabilir. Global firmalardaki işe alım ekipleri için adayın sahada neyi yönettiği, teknik ofiste hangi çıktıları ürettiği ve hangi süreçlerde karar/sorumluluk aldığı daha açık görünmelidir.
+      </div>
+      <div class="highlight-box">
+        <strong>Örnek soru:</strong> Site Chief rolünde saha koordinasyonu, kalite, iş güvenliği, zaman planı veya bütçe takibi açısından hangi sorumluluklar vardı? Technical Office Engineer rolünde hakediş, sözleşme, belge yönetimi ve resmi yazışma süreçlerinde hangi çıktılar üretildi?
+      </div>
+    </div>
+
+    <div class="dev-section">
+      <div class="dev-title">Teknik Araç Kullanımı Daha Somut Gösterilmeli</div>
+      <div class="dev-text">
+        CV'de AutoCAD, MATLAB, Microsoft Office, Advanced Excel ve CPM Scheduling Concepts gibi teknik araçlar belirtilmiş. Bu bölüm düzenli görünse de, araçların hangi projelerde ve hangi kapsamda kullanıldığı daha görünür hale getirilebilir. Örneğin AutoCAD'in quantity take-off veya proje okuma süreçlerinde, Excel'in hakediş, metraj, maliyet takibi veya raporlama süreçlerinde nasıl kullanıldığı kısa ifadelerle desteklenebilir.
+      </div>
+      <div class="highlight-box">
+        <strong>Önerilen perspektif:</strong> "Quantity take-off süreçlerinde AutoCAD ve Excel kullanımı", "progress payment calculations and reporting with Advanced Excel" gibi ifadeler, araç yetkinliklerinin gerçek kullanım bağlamını daha net gösterir.
+      </div>
+    </div>
+  </div>
+
+  <!-- AKSIYON PLANI -->
+  <div class="card">
+    <div class="section-label">Aksiyon Planı</div>
+    
+    <ul class="action-list">
+      <li class="action-item">
+        <div class="action-tag">KRİTİK</div>
+        <div class="action-text">
+          <strong>Professional Summary'i Global Hedef Rolüne Göre Revize Edebilirsin</strong><br>
+          Şu an çok genel yazılmış. "Global firmalarda site engineer / technical office engineer olarak proje kontrolü, teknik dokümantasyon ve saha koordinasyonunda uzmanlaşmış" gibi daha spesifik ve hedef-odaklı bir özet yazabilirsin. Böylece Trend Construction'daki deneyimin hedef rol açısından daha net anlaşılır.
+        </div>
+      </li>
+      
+      <li class="action-item">
+        <div class="action-tag">KRİTİK</div>
+        <div class="action-text">
+          <strong>Adana-Kozan-Mansurlu Projesi'ne Ölçek ve Sonuç Bilgisi Ekleyebilirsin</strong><br>
+          "Site Chief" başlığının altında, bullet'lara proje ölçeği (bütçe, timeline, team size), sorumlu olduğun kesim (17.6 km), hangi imalat kalemlerine (earthworks, landslide remediation, superstructure) katkı yaptığını, kaç taşeron veya saha ekibiyle koordinasyon yürüttüğünü ve elde edilen sonuçları yazabilirsin. Bu CV'yi çok daha işlevsel hale getirir.
+        </div>
+      </li>
+      
+      <li class="action-item">
+        <div class="action-tag">ORTA</div>
+        <div class="action-text">
+          <strong>Skills Bölümünü Teknik Ofis Hedefine Göre Kuvvetlendirebilirsin</strong><br>
+          Technical Skills bölümü genel olarak düzenli ve okunabilir görünüyor. Ancak global teknik ofis ve şantiye mühendisliği hedefi için bazı yetkinlikler daha fazla öne çıkarılabilir. Özellikle Advanced Excel, quantity take-off, progress payment management, cost control ve technical documentation gibi başlıklar bu hedef açısından güçlü sinyaller veriyor. AutoCAD ve MATLAB gibi araçların ise hangi projelerde ve hangi kapsamda kullanıldığı kısa ifadelerle desteklenirse, yetkinliklerin gerçek kullanım seviyesi daha net görünür hale gelir.
+        </div>
+      </li>
+      
+      <li class="action-item">
+        <div class="action-tag">ORTA</div>
+        <div class="action-text">
+          <strong>Bullet Cümlelerini Daha Teknik ve Somut Yazabilirsin</strong><br>
+          "Orchestrating comprehensive site management" yerine "Managed progress payment cycles and quantity take-off documentation for a 17.6 km highway section, covering earthworks, landslide remediation and superstructure works" gibi yazabilirsin. Daha teknik, daha somut ve daha etkileyici olur.
+        </div>
+      </li>
+      
+      <li class="action-item">
+        <div class="action-tag">DÜŞÜK</div>
+        <div class="action-text">
+          <strong>İngilizce İfadeleri Daha Teknik ve Proje-Odaklı Hale Getirebilirsin</strong><br>
+          CV'nin İngilizce hazırlanmış olması hedefle uyumludur ve genel format okunabilir görünüyor. Ancak bazı bullet cümleleri fazla genel veya "corporate-speak" kalıyor. "Orchestrating comprehensive site management" gibi ifadeler yerine, hangi iş paketinde, hangi sorumlulukla, hangi çıktı üretildiğini anlatan daha sade ve teknik cümleler kullanılabilir.
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- KAPANIŞ -->
+  <div class="card">
+    <div class="closing-box">
+      Bu raporun amacı mevcut deneyimlerin değerini sorgulamak değil, bu birikimin daha görünür ve etkili şekilde sunulabilmesine yardımcı olmaktır. Global inşaat firmaları, teknik kapsam, proje ölçeği, sorumluluk seviyesi ve kullanılan araçlar konusunda daha net bilgi görmek ister. Raporda yer alan gözlemler, bu bilgilerin CV'de daha belirgin hale getirilmesine yardımcı olmayı amaçlamaktadır.
+    </div>
+  </div>
+
+  <!-- PDF İNDİR BUTONU -->
+  <div class="card" style="text-align: center; padding: 16px 24px;">
+    <button onclick="window.print()" style="padding: 10px 24px; background: #4ade80; border: none; border-radius: 8px; color: #000; font-size: 13px; font-weight: 700; cursor: pointer;">
+      📄 Raporu PDF Olarak İndir
+    </button>
+    <div style="font-size: 11px; color: #666; margin-top: 6px;">Yazıcı seç → "PDF olarak kaydet"</div>
+  </div>
+
+  <!-- BIONLUK BANNER -->
+  <div class="card" style="text-align: center; padding: 20px 24px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%); border: 1px solid rgba(168, 85, 247, 0.2);">
+    <div style="font-size: 13px; color: #ddd; margin-bottom: 10px;">CV'ni güncellerken yardım ister misin?</div>
+    <div style="font-size: 12px; color: #999; margin-bottom: 12px;">Bire bir danışmanlık ve hızlı dönüş için</div>
+    <a href="https://bionluk.com/cvlunatic_tr" target="_blank" style="display: inline-block; padding: 10px 24px; background: #a855f7; color: #fff; border: none; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; cursor: pointer;">Bionluk'ta Görüş →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    cvlunatic.com • r/LinkedinLunaticsTR
+  </div>
+
+</div>
+
+</body>
+</html>
