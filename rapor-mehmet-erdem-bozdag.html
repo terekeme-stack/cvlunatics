@@ -34,6 +34,16 @@
     .bionluk-btn { display: inline-block; background: #a855f7; color: #ffffff; padding: 0.75rem 1.5rem; border-radius: 12px; text-decoration: none; font-weight: 500; border: none; cursor: pointer; font-size: 16px; }
     .bionluk-btn:hover { background: #9333ea; }
     strong { font-weight: 500; }
+    @media print {
+      body { background: #ffffff; color: #000000; }
+      .container { max-width: 100%; padding: 0; }
+      .hero { border-bottom: 2px solid #000; }
+      .section { page-break-inside: avoid; }
+      .pdf-download, .bionluk-banner { display: none; }
+      .hero h1, .section h2, .subsection h3 { color: #000; }
+      .hero p, .section p, .subsection li, .closing-box p { color: #000; }
+      .closing-box { background: #f5f5f5; border-left: 4px solid #000; }
+    }
   </style>
 </head>
 <body>
@@ -179,7 +189,8 @@
     </div>
 
     <div class="pdf-download">
-      <button class="pdf-btn" onclick="downloadPDF()">📄 Raporu PDF Olarak İndir</button>
+      <button class="pdf-btn" onclick="window.print()">📄 Raporu PDF Olarak İndir</button>
+      <div style="font-size: 12px; color: #999; margin-top: 0.5rem;">Yazıcı seç → "PDF olarak kaydet"</div>
     </div>
 
     <div class="bionluk-banner">
@@ -189,20 +200,5 @@
     </div>
 
   </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script>
-    function downloadPDF() {
-      const element = document.querySelector('.container');
-      const opt = {
-        margin: 10,
-        filename: 'rapor-mehmet-erdem-bozdag.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
-      };
-      html2pdf().set(opt).from(element).save();
-    }
-  </script>
 </body>
 </html>
