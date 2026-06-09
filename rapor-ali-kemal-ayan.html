@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Kemal Ayan - CV Raporu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #333;
+        }
+
+        .score-ring {
+            flex-shrink: 0;
+        }
+
+        svg {
+            width: 120px;
+            height: 120px;
+        }
+
+        .circle-background {
+            fill: none;
+            stroke: #2a2a2a;
+            stroke-width: 8;
+        }
+
+        .circle-progress {
+            fill: none;
+            stroke: #4ade80;
+            stroke-width: 8;
+            stroke-linecap: round;
+            transform-origin: 60px 60px;
+            transform: rotate(-90deg);
+        }
+
+        .score-text {
+            text-anchor: middle;
+            dominant-baseline: middle;
+            fill: #4ade80;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .score-label {
+            text-anchor: middle;
+            dominant-baseline: middle;
+            fill: #a0a0a0;
+            font-size: 12px;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .header-content h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .header-content p {
+            font-size: 16px;
+            color: #b0b0b0;
+            line-height: 1.5;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            color: #b0b0b0;
+        }
+
+        .evaluation {
+            background-color: #151515;
+            border-left: 3px solid #4ade80;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+
+        .evaluation p {
+            margin-bottom: 10px;
+        }
+
+        .evaluation strong {
+            color: #4ade80;
+        }
+
+        .strengths {
+            margin-bottom: 30px;
+        }
+
+        .strength-item {
+            margin-bottom: 18px;
+        }
+
+        .strength-item h3 {
+            color: #4ade80;
+            margin-bottom: 8px;
+        }
+
+        .strength-item p {
+            font-size: 15px;
+            color: #c0c0c0;
+        }
+
+        .critical-section {
+            margin-bottom: 30px;
+        }
+
+        .critical-heading {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .subsection {
+            margin-bottom: 25px;
+        }
+
+        .subsection h4 {
+            font-size: 15px;
+            color: #b0b0b0;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background-color: #1a1a1a;
+            border-left: 3px solid #fb923c;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #d0d0d0;
+            line-height: 1.5;
+        }
+
+        .highlight-box strong {
+            color: #fb923c;
+        }
+
+        .action-plan {
+            margin-bottom: 30px;
+        }
+
+        .action-item {
+            background-color: #151515;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border-left: 3px solid #4ade80;
+        }
+
+        .action-item.critical {
+            border-left-color: #f87171;
+        }
+
+        .action-item.medium {
+            border-left-color: #fb923c;
+        }
+
+        .action-item.low {
+            border-left-color: #60a5fa;
+        }
+
+        .action-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 3px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .label-critical {
+            background-color: #f87171;
+            color: #ffffff;
+        }
+
+        .label-medium {
+            background-color: #fb923c;
+            color: #ffffff;
+        }
+
+        .label-low {
+            background-color: #60a5fa;
+            color: #ffffff;
+        }
+
+        .action-item p {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .closing {
+            background-color: #151515;
+            border-left: 3px solid #a78bfa;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-style: italic;
+            color: #c0c0c0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-print {
+            background-color: #4ade80;
+            color: #000000;
+        }
+
+        .btn-print:hover {
+            background-color: #22c55e;
+            transform: translateY(-2px);
+        }
+
+        .bionluk-banner {
+            background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            padding-top: 40px;
+        }
+
+        .bionluk-banner p {
+            color: #ffffff;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .bionluk-banner a {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #a855f7;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .bionluk-banner a:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+
+            .container {
+                background-color: #ffffff;
+                color: #000000;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .button-group {
+                display: none;
+            }
+
+            h1, h2, h3, h4 {
+                color: #000000;
+            }
+
+            .evaluation,
+            .action-item,
+            .highlight-box,
+            .closing {
+                background-color: #f5f5f5;
+                border-left-color: #333;
+            }
+
+            .evaluation strong,
+            .strength-item h3,
+            .action-label,
+            .highlight-box strong {
+                color: #000000;
+            }
+
+            .action-label {
+                background-color: #e0e0e0;
+                color: #000000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="header">
+            <div class="score-ring">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-background" cx="60" cy="60" r="50"></circle>
+                    <circle class="circle-progress" cx="60" cy="60" r="50" style="stroke-dasharray: 197.89; stroke-dashoffset: 0;"></circle>
+                    <text class="score-text" x="60" y="55">7</text>
+                    <text class="score-label" x="60" y="72">/10</text>
+                </svg>
+            </div>
+            <div class="header-content">
+                <h1>Ali Kemal Ayan</h1>
+                <p>Tercüme/tercümanlık ve üretim operasyonunda değerli deneyimi olan aday. TSK Language Officer, Shinheung Production Supervisor, konferans tercümanlığı ve ileri dil bilgisi güçlü bir temel oluşturuyor. Ancak CV, bu iki farklı profilin (tercüman vs üretim) hedef role göre stratejik bağlanması konusunda netlik kazanmalı. Bu iki deneyim hattının görünürlüğü ve derinliği arttığında, çok daha güçlü bir pozisyon ortaya çıkacak.</p>
+            </div>
+        </div>
+
+        <!-- GENEL DEĞERLENDİRME -->
+        <h2>Genel Değerlendirme</h2>
+        <div class="evaluation">
+            <p><strong>Ali Kemal'in CV'sinin temel gelişim alanı deneyim eksikliği değildir. Tercüme/tercümanlık, uluslararası iletişim ve üretim operasyonu alanlarında değerli bir zemini vardır.</strong> Aday, Kırıkkale University'den English Translation and Interpreting alanında mezun olmuş (GPA: 3.32/4.00), Turkish Armed Forces'da Language Officer olarak görev yapmış, Shinheung TR'de 3 yıl Production Supervisor olarak çalışmış ve XV. Uluslararası Konferensta escort interpreterlik yapmıştır. Bu deneyimler, çok dillilik, tercüme/tercümanlık ve operasyonel koordinasyon becerilerini göstermektedir.</p>
+            <p style="margin-top: 15px;">Ancak CV, English–Turkish Translator & Interpreter ve Production Supervisor olmak üzere iki farklı kimlik taşıdığı için hedef rol ilk bakışta netleşmemektedir. Aday hangi yöne gitmek istiyor, bu iki deneyim hattının neden paralelleştirildiği ve profesyonel hedefinin ne olduğu açıklanmalıdır. Buna ek olarak, Shinheung ve TSK'daki görevlerin kapsamı, sorumluluk seviyeleri ve ölçülebilir çıktıları daha görünür hale getirilmelidir. Bu iki alan düzeltildiğinde, aday çok daha güçlü ve hedef odaklı bir profil sunacaktır.</p>
+        </div>
+
+        <!-- GÜÇLÜ YANLAR -->
+        <h2>Güçlü Yanlar</h2>
+        <div class="strengths">
+            <div class="strength-item">
+                <h3>Turkish Armed Forces Language Officer Deneyimi</h3>
+                <p>TSK'da Language Officer olarak yapılan işler (resmi toplantılarda tercüme, yazılı/sözlü çeviri, uluslararası delegasyonlar, operasyonel raporlama), aday en yüksek düzeyde profesyonellik ve gizlilik gerektiren bir ortamda çalıştığını göstermektedir. Bu tür askeri tercümanlık deneyimi, çok sektörlü şirketlerde ve uluslararası operasyonlarda yüksek değerli bir sinyal verir.</p>
+            </div>
+            <div class="strength-item">
+                <h3>Üretim Operasyonunda 3 Yıl Deneyim (Production Supervisor)</h3>
+                <p>Shinheung TR'de 3 yıl boyunca daily production workflow, interdepartment coordination, workforce coordination ve quality control alanlarında sorumluluk almış olması, operasyonel yönetim alanında pratik tecrübe göstermektedir. Üretim sahasının disiplinini ve hızını bilen bir tercüman/operator profili, uluslararası tedarik zinciri veya operasyon koordinasyonunda değerli bir avantaj olabilir.</p>
+            </div>
+            <div class="strength-item">
+                <h3>İleri Dil Bilgisi (Turkish, English Advanced, French Intermediate)</h3>
+                <p>Türkçe (native), İngilizce (advanced), Fransızca (intermediate) seviyesinde dil becerisi, uluslararası iletişim gerektiren roller için olumlu bir sinyal vermektedir. Bu dil kombinasyonu, global işletme ortamlarında etkili tercümanlık ve koordinasyon yapabilme yeteneğini göstermektedir.</p>
+            </div>
+            <div class="strength-item">
+                <h3>Konferans Tercümanlığı ve Uluslararası Deneyim</h3>
+                <p>XV. Uluslararası Konferensta escort interpreterlik yapmış olması, adayın uluslararası ve resmi ortamlarda tercümanlık yapabildiğine dair güçlü bir sinyal vermektedir. Bu, casual tercümanlıktan çok farklı bir tecrübedir.</p>
+            </div>
+        </div>
+
+        <!-- KRİTİK GELİŞİM ALANI -->
+        <h2>Kritik Gelişim Alanı</h2>
+        <div class="critical-section">
+            <div class="critical-heading">Hedef Rol Netliği, Deneyim Ölçeği ve Format Netliği</div>
+
+            <div class="subsection">
+                <h4>1. Hedef Rol Netliği ve Çift Profil Konumlandırması</h4>
+                <p>CV'nin başlığında "English–Turkish Translator & Interpreter | Production Supervisor" yazılmıştır. Bu, iki tamamen farklı kariyer yolunu eşit ağırlıkla sunmaktadır. Mülakat yapan bir HR uzmanı, hızlıca karar veremez: aday tercüman mı, operasyon müdürü mü, yoksa ikisini birleştiren uluslararası operasyon koordinatörü mü hedeflemektedir?</p>
+                <div class="highlight-box">
+                    <strong>Soru:</strong> Aday hangi yöne gitmek istiyor? Tercümanlığa devam mı, operasyona mı, yoksa bu iki alanı birleştiren bir role mi (ör: International Operations Coordinator, Global Supply Chain with Language Support)?
+                </div>
+                <p style="margin-top: 15px;">Bu açıklanmadığı sürece, CV iki yarım profil olarak kalır. Hedef belirlendikten sonra, her deneyim hattı o hedefi destekleyen şekilde yeniden paketlenmelidir.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>2. Deneyim Ölçeği ve Derinlik Eksikliği</h4>
+                <p>TSK ve Shinheung deneyimleri yazılı; ancak kapsamı ve sorumluluk seviyeleri yeterince belirtilmemiştir. Örneğin:</p>
+                <div class="highlight-box">
+                    <strong>Shinheung TR (2022–2025):</strong> "Coordinated daily production workflow" yazılı ama kaç kişilik ekip, hangi vardiya modeli, kaç tane hatta çalışmıştır? Üretim raporlamadaki KPI'lar nelerdi? Iyileştirme çalışmalarında ne kadar başarı sağladı?
+                </div>
+                <div class="highlight-box">
+                    <strong>TSK Language Officer (2025–2026):</strong> Kaç tür resmi toplantı, hangi tür delegasyonlar, yazılı çeviri kaç sayfa, sözlü tercümanlık saati? Hangi özel konular (teknik, diplomasi, operasyonel)?
+                </div>
+                <p style="margin-top: 15px;">Bu metrikler eklendiğinde, adayın deneyimin gerçek ölçeği ve derinliği çok daha net görülecektir.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>3. Format Netliği ve Tarih Bilgisi</h4>
+                <p>CV genel olarak temiz ve okunabilir bir yapıya sahip olsa da, bazı format tercihleri profesyonel netliği azaltmaktadır:</p>
+                <div class="highlight-box">
+                    <strong>Deneyim tarihleri:</strong> "2025–2026" ve "2022–2025" yazılı; ancak ay bilgisi yok. TSK görevinin ne zaman başladığı, kaç ay devam edeceği açık değil.
+                </div>
+                <div class="highlight-box">
+                    <strong>Düşük öncelikli bilgiler:</strong> "M, A1, A2, A, B1, B, F" gibi tüm ehliyet sınıflarının listelenmesi hedef rol için gereğinden detaylı görünebilir. Eğer pozisyon özel olarak sürüş gerektirmiyorsa bu bölüm tamamen kaldırılabilir; gerekiyorsa "Driving License: Class B / Active Driver" şeklinde sadeleştirilebilir. Benzer şekilde "References available upon request" satırı da zorunlu değildir ve alan kazanmak için kaldırılabilir.
+                </div>
+                <p style="margin-top: 15px;">İkinci sayfa daha yoğun bilgi içerebilir ya da CV bir sayfada yoğunlaştırılabilir.</p>
+            </div>
+        </div>
+
+        <!-- AKSIYON PLANI -->
+        <h2>Aksiyon Planı</h2>
+        <div class="action-plan">
+            <div class="action-item critical">
+                <span class="action-label label-critical">KRİTİK</span>
+                <p><strong>Hedef rolü açık şekilde belirle ve CV başlığını ona göre revize et.</strong> "English–Turkish Translator & Interpreter | Production Supervisor" yerine, aday hangi yöne gitmek istiyorsa buna göre başlık düzenle. Güvenli başlık önerileri: "International Operations Coordinator with Language Background", "Production & Operations Coordinator", "English–Turkish Translator / Liaison Interpreter", veya "Production Supervisor | Cross-functional Communication". Hedef belirlemeden sonra, Professional Profile bölümünü bu hedef için keskin bir şekilde yazılmalıdır.</p>
+            </div>
+
+            <div class="action-item critical">
+                <span class="action-label label-critical">KRİTİK</span>
+                <p><strong>Shinheung ve TSK deneyimlerini ölçeklendir ve derinleştir.</strong> Her görevin kapsamını, sorumluluk seviyesini ve ölçülebilir çıktılarını ekle. Shinheung için: kaç kişilik ekip, kaç hat, vardiya sayısı, kalite metriklerinde iyileştirme, maliyet tasarrufu veya verimlilik artışı yüzdeleri. TSK için: gizlilik ve kurum kuralları izin verdiği ölçüde, toplantı türleri, yazılı/sözlü çeviri dengesi, terminoloji alanları ve uluslararası iletişim kapsamı daha genel ifadelerle görünür hale getirilebilir. Askeri/kurumsal gizlilik gereği bazı detaylar paylaşılamayabilir; bu durumda çeviri türü, iletişim kapsamı ve koordinasyon rolü genel ifadelerle yeterli olacaktır.</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Tarih bilgisine ay ekle.</strong> Tüm deneyim tarihleri "Ay 2022 – Ay 2025" şeklinde yazılmalı (ör: "Mart 2022 – Aralık 2025" veya "Mar 2022 – Dec 2025" İngilizce versiyonda). TSK görevinin başlangıç tarihi ve beklenen bitiş tarihi netleştirilmelidir. Bu, CV okuyucunun görev süresi ve güncelliğini hızlıca anlamasına yardımcı olur.</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Professional Profile bölümünü hedef role göre yeniden yaz.</strong> Şu an çok genel: "Dynamic English Translation and Interpreting graduate with professional experience in military interpreting..." Bunu adayın hedeflediği role göre yeniden odaklandır. Hedef "Operations Coordinator" ise, tercümanlık ve operasyon becerilerinin kesişim noktasını vurgula. Hedef "Translator" ise, TSK ve konferans deneyimini ön plana çıkar. Profil paragrafı 3-4 cümle olmalı ve birincil hedefi net kılmalıdır.</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Driving Licenses bölümünü sadeleştir.</strong> "M, A1, A2, A, B1, B, F" gibi tüm sınıfları yazmak yerine, hedef rol için gerekli sınıfları yazabilir (ör: "Driving License: Class B") ya da aktif sürüş önemliyse "Driving License: Class B / Active Driver" şeklinde yazabilirsin. Hedef rol için kritik değilse bu bölüm tamamen kaldırılabilir. "References available upon request" satırı da alan kazanmak için kaldırılabilir. Bu sayede birkaç satır alan kazanılır ve CV daha kompakt görünür.</p>
+            </div>
+
+            <div class="action-item low">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Core Competencies bölümünü hedef role göre önceliklendir.</strong> Şu an "Consecutive Interpreting, Written Translation, Cross-cultural Communication, Operational Coordination..." eşit ağırlıkta yazılmış. Aday hangi hedef seçerse, ilgili beceriler başa alınmalı. Operations odaklı ise "Operational Coordination, Leadership, Production Supervision, Cross-cultural Communication" önce. Translation odaklı ise "Consecutive Interpreting, Written Translation, Cross-cultural Communication, Multilingual Coordination" önce.</p>
+            </div>
+        </div>
+
+        <!-- KAPANIŞ -->
+        <div class="closing">
+            Bu raporun amacı mevcut deneyimlerin değerini sorgulamak değil, bu deneyimlerin daha stratejik ve hedef odaklı şekilde sunulabilmesine yardımcı olmaktır. Ali Kemal'in tercümanlık, uluslararası iletişim ve operasyon alanlarında gerçek ve değerli bir zemini vardır. Gelişim alanı, bu iki deneyim hattını hangi hedef role bağlayacağını netleştirmek ve her deneyimin kapsamını ve derinliğini görünür hale getirmektir. Bu iki alan düzeltildiğinde, aday çok daha güçlü ve hedeflenmiş bir profesyonel profil sunacaktır.
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="button-group">
+            <button class="btn-print" onclick="window.print()">📄 PDF olarak İndir</button>
+        </div>
+
+        <!-- BIONLUK BANNER -->
+        <div class="bionluk-banner">
+            <p>Daha detaylı kariyer stratejisi danışması veya mülakat anlatısı çalışması için ek destek alınabilir.</p>
+            <a href="https://bionluk.com/cvlunatic_tr" target="_blank">Ek Destek Al</a>
+        </div>
+    </div>
+</body>
+</html>
