@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Raporu - Atayağız Uslu</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HKX44LJVBM');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .hero {
+            padding: 40px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+        .hero-ring {
+            flex-shrink: 0;
+        }
+        .hero-ring svg {
+            width: 120px;
+            height: 120px;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .hero-content .subtitle {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 12px;
+        }
+        .hero-content p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+        .content-section {
+            padding: 40px;
+            border-bottom: 1px solid #333;
+        }
+        .content-section:last-of-type {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 22px;
+            margin-bottom: 24px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #4ade80;
+            font-weight: bold;
+        }
+        h4 {
+            font-size: 15px;
+            margin-bottom: 12px;
+            color: #e0e0e0;
+            font-weight: bold;
+        }
+        .general-eval p {
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .general-eval strong {
+            color: #4ade80;
+        }
+        .strength-item {
+            margin-bottom: 24px;
+        }
+        .strength-item h3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .strength-item h3::before {
+            content: "✓";
+            color: #4ade80;
+            font-size: 18px;
+        }
+        .strength-item p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #d0d0d0;
+        }
+        .subsection {
+            margin-bottom: 28px;
+        }
+        .subsection h4 {
+            margin-bottom: 12px;
+        }
+        .highlight-box {
+            border-left: 3px solid #fb923c;
+            background-color: rgba(251, 146, 60, 0.08);
+            padding: 16px;
+            margin: 16px 0;
+            font-size: 14px;
+            line-height: 1.6;
+            border-radius: 4px;
+        }
+        .subsection p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #d0d0d0;
+            margin-bottom: 12px;
+        }
+        .action-item {
+            margin-bottom: 20px;
+            padding: 16px;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-left: 3px solid #999;
+            border-radius: 4px;
+        }
+        .action-label {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .label-critical {
+            background-color: #f87171;
+            color: #000;
+        }
+        .label-medium {
+            background-color: #fb923c;
+            color: #000;
+        }
+        .label-low {
+            background-color: #60a5fa;
+            color: #000;
+        }
+        .action-item.critical {
+            border-left-color: #f87171;
+        }
+        .action-item.medium {
+            border-left-color: #fb923c;
+        }
+        .action-item.low {
+            border-left-color: #60a5fa;
+        }
+        .action-item p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #d0d0d0;
+        }
+        .action-item strong {
+            color: #e0e0e0;
+        }
+        .closing {
+            padding: 40px;
+            font-style: italic;
+            color: #b0b0b0;
+            font-size: 15px;
+            line-height: 1.6;
+            border-bottom: 1px solid #333;
+        }
+        .pdf-button {
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+        .pdf-button button {
+            background-color: #fb923c;
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .pdf-button button:hover {
+            background-color: #f59e0b;
+        }
+        .bionluk-banner {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            padding: 24px 40px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .bionluk-banner p {
+            font-size: 15px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .bionluk-banner a {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #7c3aed;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .bionluk-banner a:hover {
+            background-color: #f0f0f0;
+        }
+        .strengths {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 25px;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .strengths {
+                grid-template-columns: 1fr;
+            }
+            .content-section {
+                padding: 20px;
+            }
+        }
+        @media print {
+            body {
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .pdf-button, .bionluk-banner {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-ring">
+                <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#333" stroke-width="2"/>
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#fb923c" stroke-width="4" stroke-dasharray="169.05 282.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                    <text x="70" y="75" text-anchor="middle" font-size="28" font-weight="bold" fill="#fb923c">6.0</text>
+                </svg>
+            </div>
+            <div class="hero-content">
+                <h1>Atayağız Uslu</h1>
+                <p class="subtitle">Software Engineer | AI & Machine Learning Hedefi</p>
+                <p>CV'de yazılım geliştirme temeli güçlü. Ana gelişim alanı, AI hedefini somut proje ve ölçülebilir metriklerle desteklemek; CV sıralamasını teknik kanıtları öne çıkaracak şekilde düzenlemek.</p>
+            </div>
+        </div>
+
+        <div class="content-section general-eval">
+            <h2>Genel Değerlendirme</h2>
+            <p><strong>Aday yazılım geliştirme tarafında sağlam bir temele sahip.</strong> Full-stack geliştirme (React/Node.js), SAP danışmanlığı, QA testing ve Python/data science eğitimi gibi çeşitli teknoloji deneyimleri var. Mezun olmuş, birden fazla iş ve staj tecrübesi taşıyor, referansları da mevcut.</p>
+            <p><strong>Ancak CV'de AI & Machine Learning Engineer başlığı koymasına karşın, bu hedefi kanıtlayan proje, ölçülebilir metrik veya model çıktısı görülmüyor.</strong> Hatta CV'nin en güçlü deneyim kanıtları full-stack ve SAP tarafında. AI tarafı sertifikaları (California University, IntroAstro) profile düzeyinde kalıyor, somut projeler ve sonuçlar yok.</p>
+            <p>Buna ek olarak CV sıralaması (Education → Experience → Skills) mezun bir aday için optimal değildir. Referanslar aşırı alan kaplarken, AI projeleri veya teknik çıktıları gösteren bölüm hiç yok. Sonuç: yazılım geçmişi güçlü ama AI hedefi görünür değil.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Güçlü Yanlar</h2>
+            <div class="strengths">
+                <div class="strength-item">
+                    <h3>Full-Stack Geliştirme Geçmişi</h3>
+                    <p>Geniş Ekran'da (2025-2026) React frontend, Node.js/Express backend, REST API integration, database operations deneyimi. Reusable components, Agile methodology, Git tabanlı version control. Production ortamına yakın yazılım geliştirme pratiği.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Kurumsal Yazılım ve SAP Teması</h3>
+                    <p>Aegeansoft'ta 1.5 yıl SAP Fiori/Abap consultancy. Müşteri ihtiyaç analizi, business process optimization, kurumsal sistem customization deneyimi. Yazılım tarafının iş gereksinimleriyle bağlantısını gösteren değerli arka plan.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Python ve AI/ML Temel Araç Seti</h3>
+                    <p>California University intensive 3-ay program (data science, CNN/RNN, end-to-end workflows), Python, TensorFlow, PyTorch, SQL yetkinliği. IntroAstro 2025'te veri analizi ve araştırma metodolojileri. AI/ML temelinin var olduğunun göstergesi.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Veri Analizi ve Araştırma Deneyimi</h3>
+                    <p>IntroAstro 2025 (uluslararası workshop) ile astronomical dataset analysis, scientific paper yazım/okuma pratiği, international team collaboration ve academic research metodolojileri. Teorisi ve pratiği birleştirme yeteneği.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Farklı Teknik Ortamlara Uyum</h3>
+                    <p>SAP, full-stack web, QA testing, data science, Python, JavaScript, SQL, React, Node.js gibi çok çeşitli teknolojiler ve rollerle çalışma deneyimi. Teknolojiye çabuk adaptasyon yeteneği gösteriyor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>AI Hedefini Kanıtlayan Proje, Metrik ve Sıralama Eksikliği</h2>
+
+            <div class="subsection">
+                <h4>1. AI Proje Bölümü Eksik</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> CV'de "AI & Machine Learning Engineer" başlığı var ama somut bir AI projesi, model, dataset veya teknik çıktı bölümü yok. California University sertifika programı ve IntroAstro'dan çıkacak projeler (astronomical analysis, classification model, regression vb.) CV'de "Projects" başlığı altında gösterilmiş değil.
+                </div>
+                <p>AI hedefini güçlendirmek için, bu eğitimlerden çıkan somut projeler (hangi dataset, hangi model, sonuç nedir) açıkça listelenmelidir. Teknik okuyucu AI profilinizi bu projeler üzerinden değerlendirecektir.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>2. Deneyim Maddelerinde Metrik ve Çıktı Görünürlüğü Zayıf</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> Deneyimler çoğunlukla görev tanımı düzeyinde: "I worked as...", "I developed...", "I collaborated..." Ama sonuç/çıktı yok. Kaç component, hangi API, test coverage ne, model accuracy ne, hangi veri seti, kaç müşteri, kaç SAP modülü?
+                </div>
+                <p>Full-stack developer de olsanız, SAP consultant da olsanız, yazılım ve AI pozisyonlarında değerlendiriciler "ne yaptığını" değil "ne sonuç ürettiğini" görmek ister. Her deneyim maddesine kapsam, teknik detay ve ölçülebilir çıktı eklenmelidir.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>3. Education Bölümü Experience'dan Önce Geliyor</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> Aday mezun olmuş ve profesyonel deneyimi var. Education bölümü deneyim ve proje bölümlerinden sonra konumlandırılabilir. CV'nin başında Education yazılı olunca, okuyucu öğrenci profili gibi algılayabiliyor.
+                </div>
+                <p>Önerilen sıralama: Professional Summary / Profile → Professional Experience → Projects / AI Projects → Skills → Education → Languages. Bu sıralama, aday olarak sahip olduğunuz profesyonel ağırlığı daha iyi gösterir.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>4. Referanslar Gereksiz Yere Geniş Alan Kaplamış</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> 4 referans, ikinci sayfanın büyük bölümünü kaplamış. Bu aşamada referanslar genellikle talep edilir. Bu değerli alan, AI projeleri, GitHub bağlantısı, ölçülebilir proje sonuçları, model metrikleri veya backend/API çıktıları için kullanılmalıdır.
+                </div>
+                <p>Referansları kaldırın ya da talep edildiğinde ayrı dosya olarak gönderin. CV'de bu alan, teknik kanıtları daha görünür hale getirmek için kullanılmalıdır.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>5. Profile Bölümü Fazla Uzun ve Genel</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> Profile bölümü çok uzun ve "yazılım mühendis + data science + AI algorithms" gibi geniş bir alan tanımı yapıyor. Bunun yerine AI hedefini net şekilde söylemelidir.
+                </div>
+                <p>Profile bölümü 2–3 cümleye kısaltılmalıdır. Yazılım temeli, AI hedefi ve teknik yön tek bir net hikâyeye bağlanmalıdır. Böylece okuyucu adayın kariyer yönünü hızlıca anlayabilir.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Aksiyon Planı</h2>
+            <div class="action-item critical">
+                <span class="action-label label-critical">KRİTİK</span>
+                <p><strong>AI Projects / Selected Projects bölümü ekle:</strong> California University programı ve IntroAstro 2025'ten çıkan somut projeler listelenmelidir. Her projede problem tanımı, kullanılan veri seti, seçilen model mimarisi, değerlendirme metrikleri ve teknik çıktı görünür hale getirilmelidir. GitHub bağlantısı varsa eklenmelidir. Teknik okuyucu AI profilini bu projeler ve metrikler üzerinden değerlendirecektir.</p>
+            </div>
+            <div class="action-item critical">
+                <span class="action-label label-critical">KRİTİK</span>
+                <p><strong>Deneyim maddelerine metrik ve çıktı ekle:</strong> Her pozisyon için yapılan işin kapsamı, kullanılan teknoloji, proje çıktısı ve mümkünse ölçülebilir etki belirtilmelidir. Sadece "ne yaptığı" değil, hangi kapsamda yaptığı, hangi teknolojileri kullandığı ve nasıl bir sonuç ürettiği yazılmalıdır. Bu sayede okuyucu deneyimin derinliğini ve etkisini net şekilde anlayabilir.</p>
+            </div>
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>CV sıralamasını değiştir:</strong> Profile / Professional Summary → Professional Experience → Projects / AI Projects → Skills (AI/Backend/Tools olarak gruplandırılmış) → Education → Languages şeklinde düzenle. Referansları kaldır ya da talep edildiğinde ayrı paylaş.</p>
+            </div>
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Skills bölümünü kategorize ve genişlet:</strong> Şu an çok kısırlaştırılmış. Skills bölümü AI/ML, Backend, Frontend ve Tools gibi alt kategorilere ayrılmalıdır. Böylece adayın hem AI hedefi hem de full-stack yazılım temeli daha okunabilir hale gelir.</p>
+            </div>
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Profile bölümünü kısalt ve AI hedefini somutlaştır:</strong> Profile bölümü 2–3 cümleye indirilmelidir. Bu bölümde adayın yazılım geliştirme temeli, AI hedefi ve teknik yönü kısa ve net bir kariyer hikâyesine bağlanmalıdır.</p>
+            </div>
+            <div class="action-item low">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>GitHub ve portfolyo bağlantısını ekle:</strong> CV'nin üst kısmında veya ilgili projelerin yanında GitHub bağlantısı, kişisel web sitesi ya da Kaggle profili varsa ekleyin. Teknik mülakatta kodlar ve projelerin doğrulanması çok önemlidir.</p>
+            </div>
+        </div>
+
+        <div class="closing">
+            <p>"Yazılım geliştirme temelin güçlü; gelişim alanın, AI hedefini somut proje, metrik ve teknik çıktılarla daha görünür hale getirmek. Sertifika ve araştırma deneyimlerini somut proje çıktılarıyla destekle, CV'deki deneyimlere metrik ve çıktı ekle, sıralamayı teknik kanıtları öne çıkaracak şekilde düzenle. Bu düzenlemelerle profil, AI mühendisliği hedefi açısından daha güçlü ve güvenilir görünecektir."</p>
+        </div>
+
+        <div class="pdf-button">
+            <button onclick="window.print()">📄 Raporu PDF Olarak İndir</button>
+        </div>
+
+        <div class="bionluk-banner">
+            <p>Daha detaylı CV düzenleme, hedef role özel konumlandırma veya başvuru stratejisi için destek alabilirsin.</p>
+            <a href="https://bionluk.com/cvlunatic_tr" target="_blank">Bionluk Danışmanlığı →</a>
+        </div>
+    </div>
+</body>
+</html>
