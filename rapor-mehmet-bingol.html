@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehmet Bingöl - CV Raporu</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HKX44LJVBM');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .hero {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        .hero-ring {
+            flex-shrink: 0;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .hero-content .subtitle {
+            font-size: 16px;
+            color: #4ade80;
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+        .hero-content p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #d0d0d0;
+        }
+        section {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #333;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: #fff;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3::before {
+            content: "✓";
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        h4 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #fff;
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 12px;
+            color: #d0d0d0;
+            font-size: 14px;
+        }
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 16px;
+        }
+        .strength-item {
+            background-color: transparent;
+            padding: 0;
+        }
+        .strength-item p {
+            margin-top: 8px;
+        }
+        .highlight-box {
+            border-left: 4px solid #fb923c;
+            background-color: rgba(251, 146, 60, 0.08);
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+        .highlight-box h4 {
+            margin-bottom: 8px;
+        }
+        .highlight-box p {
+            margin-bottom: 8px;
+        }
+        .action-item {
+            border-left: 4px solid #fb923c;
+            background-color: rgba(251, 146, 60, 0.04);
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+        .action-item.critical {
+            border-left-color: #f87171;
+        }
+        .action-item.medium {
+            border-left-color: #fb923c;
+        }
+        .action-item.low {
+            border-left-color: #60a5fa;
+        }
+        .action-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        .label-critical {
+            background-color: rgba(248, 113, 113, 0.2);
+            color: #f87171;
+        }
+        .label-medium {
+            background-color: rgba(251, 146, 60, 0.2);
+            color: #fb923c;
+        }
+        .label-low {
+            background-color: rgba(96, 165, 250, 0.2);
+            color: #60a5fa;
+        }
+        .closing-note {
+            font-style: italic;
+            color: #c0c0c0;
+            line-height: 1.8;
+        }
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .btn-pdf {
+            background: linear-gradient(135deg, #4ade80, #fb923c);
+            color: #fff;
+        }
+        .btn-pdf:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(74, 222, 128, 0.3);
+        }
+        .btn-bionluk {
+            background: linear-gradient(135deg, #8b5cf6, #6366f1);
+            color: #fff;
+        }
+        .btn-bionluk:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(139, 92, 246, 0.3);
+        }
+        .banner {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(99, 102, 241, 0.1));
+            border-left: 4px solid #8b5cf6;
+            padding: 16px;
+            border-radius: 4px;
+            margin-top: 24px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .banner p {
+            margin-bottom: 8px;
+        }
+        .banner a {
+            color: #8b5cf6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .banner a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .strengths-grid {
+                grid-template-columns: 1fr;
+            }
+            .button-group {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+            .container {
+                padding: 24px;
+            }
+        }
+        @media print {
+            .btn, .banner {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <div class="hero-ring">
+                <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#333" stroke-width="8"/>
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#4ade80" stroke-width="8" 
+                            stroke-dasharray="211.025 282.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                    <text x="70" y="75" font-size="32" font-weight="bold" text-anchor="middle" fill="#4ade80">7.5</text>
+                </svg>
+            </div>
+            <div class="hero-content">
+                <h1>Mehmet Bingöl</h1>
+                <div class="subtitle">Mobile Application Developer / Flutter Specialist</div>
+                <p>Flutter ve Firebase odaklı mobil geliştirme tarafında güçlü ürün ve yayınlama sinyalleri göstermektedir. Dört adet Play Store uygulaması yayınlamış, WebRTC, video streaming, background playback ve uçtan uca geliştirme deneyimi açık. Ana gelişim alanı, bu deneyimin kullanıcı metrikleri, performans sinyalleri, portföy bağlantıları ve güncel hedef netliğiyle daha görünür hale getirilmesidir.</p>
+            </div>
+        </div>
+
+        <!-- GENEL DEĞERLENDİRME -->
+        <section>
+            <h2>Genel Değerlendirme</h2>
+            <p><strong>Bu CV'nin ana gelişim alanı mobil geliştirme deneyimi eksikliği değildir.</strong> Adayın Flutter, Firebase, WebRTC, Google Play Store yayınlama ve uçtan uca mobil uygulama geliştirme alanlarında güçlü sinyalleri vardır. Ancak bu deneyimlerin kullanıcı, performans, ürün ölçeği ve yayınlama metrikleriyle desteklenmemesi CV'nin etkisini azaltmaktadır.</p>
+            <p>Siden Ltd.'de 14 ay mobil uygulama geliştirmesi, dört adet Play Store uygulaması, Firebase entegrasyonu, WebRTC (ses/video araması), video streaming, background playback ve modüler mimari hakkında farkındalık göstermektedir. Ancak bu işlerin ölçeği (kaç kullanıcı, hangi performans iyileştirmesi, hangi release sayısı, kaç modül) ve mevcut portföy görünürlüğü (GitHub linki, Play Store indirme/rating, LinkedIn profili) net değildir.</p>
+            <p>Ek olarak, CV sıralaması (Education deneyimden önce), Soft Skills bölümünün jenerik kalması ve Ocak 2026 sonrası dönemin açıklanmaması adayın mobil geliştirici profilinin etkisini daha da azaltmaktadır.</p>
+        </section>
+
+        <!-- GÜÇLÜ YANLAR -->
+        <section>
+            <h2>Güçlü Yanlar</h2>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <h3>Flutter ve Firebase Odaklı Deneyim</h3>
+                    <p>Siden Ltd.'de 14 ay boyunca Flutter ve Firebase ile mobil uygulama geliştirme. Realtime Database, Cloud Firestore, Storage ve Authentication gibi Firebase hizmetlerinin entegrasyonu açık.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Play Store Yayınlama Sinyali</h3>
+                    <p>Dört adet mobil uygulama (Messenger, Vocabulary Learner, Video Streaming, YouTube Music Player) Google Play Store'da yayınlanmış. End-to-end yayınlama süreci (analiz, geliştirme, test, release) ile ilgili deneyim açık.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Teknik Olarak Değerli Mobil Özellikler</h3>
+                    <p>WebRTC (ses/video araması), video streaming, background playback (Kotlin Foreground Service), YouTube API entegrasyonu, JSON veri yönetimi, native player ve WebView desteği gibi ileri mobil özelliklerin uygulanması.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Uçtan Uca Geliştirme Sahipliği</h3>
+                    <p>Analiz, geliştirme, test, modüler tasarım ve Play Store release yönetimi dahil olmak üzere ürün geliştirme döngüsünün tamamında sorumluluk alması.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>İngilizce Eğitim ve B2 Seviyesi</h3>
+                    <p>Altınbaş Üniversitesi Software Engineering programını %100 İngilizce ortamda tamamlaması ve B2 Independent User (CEFR) seviyesinde İngilizce yetkinliği.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KRİTİK GELİŞİM ALANI -->
+        <section>
+            <h2>Kritik Gelişim Alanı</h2>
+            <h3 style="border-left: 4px solid #fb923c; padding-left: 12px; margin-left: -16px;">Mobil Ürün Etkisi, Portföy ve Metrik Görünürlüğü</h3>
+            
+            <div class="highlight-box">
+                <h4>Kullanıcı, Performans ve Ürün Metrikleri Yok</h4>
+                <p>Play Store projelerinde kullanıcı sayısı, indirme sayısı, app rating, crash rate, release sayısı, güncellenme süresi veya performans iyileştirmesi (örneğin başlangıç hızı, hafıza kullanımı) gibi bilgiler yok. Bu nedenle adayın yaptığı işin gerçek ölçeği ve etkisi belirsiz kalıyor. Teknik okuyucu "dört app yayınlanmış" yazısından bu uygulamaların kaç kişi tarafından kullanıldığı, hangi problem çözdüğü veya ne kadar stabilitesi olduğu anlaşamıyor.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Education Deneyimden Önce Geliyor</h4>
+                <p>Adayın mezun ve 14 ay profesyonel deneyimi var. Bu durumda Education bölümü CV'nin başında olmamalıdır. İşe alım uzmanı ilk olarak Siden deneyimi, Play Store projeleri ve teknik stack'i görmelidir; eğitim bilgisi ikinci planda kalmalıdır. Sıralama profesyonel profili zayıflatıyor.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Soft Skills Bölümü Jenerik Kalıyor</h4>
+                <p>"Strong focus on user experience", "clean code mindset", "continuous improvement", "attention to performance" gibi ifadeler iyi niyetli ama kanıtlanmadığında herkesin yazabileceği cümleler gibi duruyor. Bu alan ayrı bölüm olarak tutulmak yerine, proje ve deneyim maddelerine teknik davranış olarak yedirilirse (örn. "performance iyileştirmesi", "modular architecture" vb.) daha güçlü olur.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>GitHub, LinkedIn ve Play Store Linkleri Görünür Değil</h4>
+                <p>CV'de "GitHub | LinkedIn" yazısı görülüyor ancak bağlantılar tıklanabilir değil. Mobil geliştirici profili için GitHub, LinkedIn, Play Store ve varsa demo bağlantılarının doğrudan tıklanabilir olması önemlidir. Bu bağlantılar, teknik okuyucunun kod kalitesini, uygulamaları ve portföyü hızlıca inceleyebilmesini sağlar.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Ocak 2026 Sonrası Güncel Durum Net Değil</h4>
+                <p>CV'de Siden Ltd. deneyimi Ocak 2026'da bitmiş görülüyor. Güncel tarih Haziran 2026 kabul edilirse yaklaşık 5 aylık bir dönem açıklanmamış. Bu dönem freelance proje, portföy geliştirme, mobil çerçeve/teknoloji öğrenmesi, iş arama veya başka faaliyetse, CV'de kısa ve profesyonel şekilde görünür hale getirilmeli.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Projeler Önem Sırasına Göre Ayrışmıyor</h4>
+                <p>Messenger App, Vocabulary Learner, Video Streaming App ve YouTube Music Player hepsi iyi sinyal. Ancak aday açısından hangi proje en kapsamlı? Hangisinde en zor teknik problem çözüldü? Hangisinin hâlâ aktif kullanıcısı var? Bu ayrım CV'de yapılmıyor ve tüm projeler eşit ağırlıkta duruyor.</p>
+            </div>
+        </section>
+
+        <!-- AKSIYON PLANI -->
+        <section>
+            <h2>Aksiyon Planı</h2>
+            
+            <div class="action-item critical">
+                <span class="action-label label-critical">KRİTİK</span>
+                <p><strong>CV sıralamasını değiştir:</strong> Sıralama şöyle düzenlenmeli: Profile → Professional Experience → Key Projects / Published Apps → Technical Skills → Education → Languages. Soft Skills ve References bölümleri kaldırılabilir. Bu sıralama mobil geliştirici profili için teknik kanıtları hemen görünür hale getiriyor.</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Siden deneyimine ürün metrikleri ekle:</strong> Siden deneyiminde yapılan işin kapsamı, modül sayısı, işletme/kullanıcı ölçeği, release süreci ve varsa performans veya operasyonel etki görünür hale getirilmelidir.</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Play Store projelerine metrik ve teknik derinlik ekle:</strong> Play Store projelerinde yayın durumu, kullanıcı/indirme/rating bilgisi, teknik zorluk ve çözülen problem görünür hale getirilmelidir.</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>GitHub, LinkedIn ve Play Store linklerini tıklanabilir hale getir:</strong> CV'de bağlantı URL'leri doğrudan ve tıklanabilir olmalıdır. Yalnızca "GitHub | LinkedIn" yazmak yeterli değildir; bağlantılar gerçek URL olarak eklenmeli veya tıklanabilir hyperlink şeklinde verilmelidir. Mobil geliştirici değerlendirilirken teknik okuyucu GitHub'da kod kalitesi, commit geçmişi ve katkılar, Play Store'da uygulamaların performans metrikleri ve kullanıcı geri bildirimlerini direkt kontrol etmelidir.</p>
+            </div>
+
+            <div class="action-item low">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Soft Skills bölümünü kaldır veya proje/deneyim içine yedir:</strong> Ayrı bölüm tutmak yerine, deneyim ve proje maddelerine "clean architecture", "performance optimization", "modular design" gibi teknik davranış olarak yedirilirse daha somut ve kanıtlanabilir olur. Diğer taraftan bu alandan çıkarılan satırlar GitHub, Play Store metrikleri ve portföy bağlantılarına ayrılabilir.</p>
+            </div>
+
+            <div class="action-item low">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Ocak 2026 sonrası dönem açıkla:</strong> Son deneyiminden bu yana yapılan faaliyetler (devam eden mobil proje, öğrenilen teknoloji, iş arama, freelance çalışma vb.) kısa ve profesyonel şekilde görünür hale getirilmelidir. Bu dönem, belirsizlik yaratmaması için kısa ve profesyonel bir şekilde açıklanabilir.</p>
+            </div>
+        </section>
+
+        <!-- KAPANIŞ -->
+        <section>
+            <p class="closing-note">Mobil ürün geliştirme zemini güçlü; ancak ürünlerin gerçek etkisi, portföy bağlantıları ve güncel hedef netliği daha görünür hale getirilmeli. Bu düzenlemelerle Flutter ve mobil geliştirici profili daha güvenilir, somut ve çekici görünecektir.</p>
+        </section>
+
+        <!-- BUTTONS -->
+        <div class="button-group">
+            <button class="btn btn-pdf" onclick="window.print()">PDF İndir</button>
+            <a href="https://bionluk.com/cvlunatic_tr" class="btn btn-bionluk">Daha detaylı CV düzenleme, hedef role özel konumlandırma, başvuru stratejisi ve mülakat hazırlığı desteği için:<br><br>Bionluk'ta Devam Et</a>
+        </div>
+
+
+    </div>
+</body>
+</html>
