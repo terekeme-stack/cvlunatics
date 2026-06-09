@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recep Takak - CV Raporu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #333;
+        }
+
+        .score-ring {
+            flex-shrink: 0;
+        }
+
+        svg {
+            width: 120px;
+            height: 120px;
+        }
+
+        .circle-background {
+            fill: none;
+            stroke: #2a2a2a;
+            stroke-width: 8;
+        }
+
+        .circle-progress {
+            fill: none;
+            stroke: #4ade80;
+            stroke-width: 8;
+            stroke-linecap: round;
+            transform-origin: 60px 60px;
+            transform: rotate(-90deg);
+        }
+
+        .score-text {
+            text-anchor: middle;
+            dominant-baseline: middle;
+            fill: #4ade80;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .score-label {
+            text-anchor: middle;
+            dominant-baseline: middle;
+            fill: #a0a0a0;
+            font-size: 12px;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .header-content h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .header-content p {
+            font-size: 16px;
+            color: #b0b0b0;
+            line-height: 1.5;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            color: #b0b0b0;
+        }
+
+        .evaluation {
+            background-color: #151515;
+            border-left: 3px solid #4ade80;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+
+        .evaluation p {
+            margin-bottom: 10px;
+        }
+
+        .evaluation strong {
+            color: #4ade80;
+        }
+
+        .strengths {
+            margin-bottom: 30px;
+        }
+
+        .strength-item {
+            margin-bottom: 18px;
+        }
+
+        .strength-item h3 {
+            color: #4ade80;
+            margin-bottom: 8px;
+        }
+
+        .strength-item p {
+            font-size: 15px;
+            color: #c0c0c0;
+        }
+
+        .critical-section {
+            margin-bottom: 30px;
+        }
+
+        .critical-heading {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .subsection {
+            margin-bottom: 25px;
+        }
+
+        .subsection h4 {
+            font-size: 15px;
+            color: #b0b0b0;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background-color: #1a1a1a;
+            border-left: 3px solid #fb923c;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #d0d0d0;
+            line-height: 1.5;
+            font-family: 'Courier New', monospace;
+        }
+
+        .highlight-box strong {
+            color: #fb923c;
+        }
+
+        .action-plan {
+            margin-bottom: 30px;
+        }
+
+        .action-item {
+            background-color: #151515;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border-left: 3px solid #4ade80;
+        }
+
+        .action-item.critical {
+            border-left-color: #f87171;
+        }
+
+        .action-item.medium {
+            border-left-color: #fb923c;
+        }
+
+        .action-item.low {
+            border-left-color: #60a5fa;
+        }
+
+        .action-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 3px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .label-critical {
+            background-color: #f87171;
+            color: #ffffff;
+        }
+
+        .label-medium {
+            background-color: #fb923c;
+            color: #ffffff;
+        }
+
+        .label-low {
+            background-color: #60a5fa;
+            color: #ffffff;
+        }
+
+        .action-item p {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .closing {
+            background-color: #151515;
+            border-left: 3px solid #a78bfa;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-style: italic;
+            color: #c0c0c0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-print {
+            background-color: #4ade80;
+            color: #000000;
+        }
+
+        .btn-print:hover {
+            background-color: #22c55e;
+            transform: translateY(-2px);
+        }
+
+        .bionluk-banner {
+            background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            padding-top: 40px;
+        }
+
+        .bionluk-banner p {
+            color: #ffffff;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .bionluk-banner a {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #a855f7;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .bionluk-banner a:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+
+            .container {
+                background-color: #ffffff;
+                color: #000000;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .button-group {
+                display: none;
+            }
+
+            h1, h2, h3, h4 {
+                color: #000000;
+            }
+
+            .evaluation,
+            .action-item,
+            .highlight-box,
+            .closing {
+                background-color: #f5f5f5;
+                border-left-color: #333;
+            }
+
+            .evaluation strong,
+            .strength-item h3,
+            .action-label,
+            .highlight-box strong {
+                color: #000000;
+            }
+
+            .action-label {
+                background-color: #e0e0e0;
+                color: #000000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="header">
+            <div class="score-ring">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-background" cx="60" cy="60" r="50"></circle>
+                    <circle class="circle-progress" cx="60" cy="60" r="50" style="stroke-dasharray: 251.56; stroke-dashoffset: 0;"></circle>
+                    <text class="score-text" x="60" y="55">8</text>
+                    <text class="score-label" x="60" y="72">/10</text>
+                </svg>
+            </div>
+            <div class="header-content">
+                <h1>Recep Takak</h1>
+                <p>Junior seviye için teknik derinliği güçlü bir mühendis profili. IGA'daki gerçek operasyon ortamına temas eden computer vision ve ML çalışmaları, UAV projeleri ve ölçülebilir çıktılar güçlü bir temel oluşturuyor. Ancak CV'nin başında bu teknik deneyimi başvurulan pozisyona göre konumlandıran kısa bir Professional Summary eksik. Bu bölüm eklendiğinde, CV çok daha ikna edici hale gelecektir.</p>
+            </div>
+        </div>
+
+        <!-- GENEL DEĞERLENDİRME -->
+        <h2>Genel Değerlendirme</h2>
+        <div class="evaluation">
+            <p><strong>Recep'in CV'si junior seviye için teknik olarak güçlü. IGA'daki gerçek operasyon ortamına temas eden computer vision ve ML işleri, backend/systems deneyimleri, UAV/radar projeleri, Teknofest başarıları ve Erasmus+ deneyimi güçlü teknik sinyaller veriyor.</strong> Ayrıca CV'nin genelinde ölçülebilir çıktılar yer almaktadır. Teknik format temiz, tek sayfa, metrikler güçlü, GitHub bağlantısı ve IELTS Academic 7 / C1 İngilizce bilgisi uluslararası başvurular için destekleyici sinyaller sunmaktadır.</p>
+            <p style="margin-top: 15px;">Ana gelişim alanı ise şu: CV doğrudan Experience bölümü ile başlıyor. Adayın kendini hangi role göre konumlandırdığını açıklayan kısa bir Professional Summary bulunmadığı için, profil ilk bakışta geniş ve genel görünebilir. Ayrıca aday ML, Computer Vision, Backend, Systems ve Embedded alanlarına başvuruyorsa, her başvuru tipi için CV'nin hedef role özel versiyonlarını hazırlaması, başvuruların daha net ve hedefli okunmasına yardımcı olacaktır.</p>
+        </div>
+
+        <!-- GÜÇLÜ YANLAR -->
+        <h2>Güçlü Yanlar</h2>
+        <div class="strengths">
+            <div class="strength-item">
+                <h3>IGA Istanbul Airport'ta Gerçek Operasyon Ortamına Temas Eden Teknik Deneyim</h3>
+                <p>Aviation Systems Engineer olarak gerçek zamanlı computer vision tabanlı güvenlik sistemi geliştirmiş olması; 52 kamera akışı, günlük yaklaşık 30 tespit ve Kubernetes kullanımı gibi güçlü teknik sinyaller veriyor. Baggage wait-time ML service ve SQL stored procedures çalışmaları da adayın yalnızca proje değil, operasyonel ihtiyaçlara temas eden sistemler geliştirdiğini gösteriyor.</p>
+            </div>
+            <div class="strength-item">
+                <h3>Geniş ama Uygulamalı Teknik Deneyim</h3>
+                <p>ML/CV, Backend, Systems ve Embedded alanlarında uygulanmış deneyimleri bulunuyor. Water-usage forecasting model, planning tool, DSP processing ve BLE app gibi somut çıktılar, bu genişliğin yalnızca araç listesi seviyesinde kalmadığını gösteriyor. Staj ve projelerde yalnızca araç öğrenimi değil, somut teknik çıktı üretimi de görülüyor.</p>
+            </div>
+            <div class="strength-item">
+                <h3>Teknofest Başarıları ve Açık Kaynak Katkıları</h3>
+                <p>Firefighter UAV (1. yer, otonom misyon), Jammer UAV (finalist, otonom hedef takibi), Antenna-Radar mezuniyet projesi (FMCW DSP). GitHub'da r/Place visualization tool, ML tabanlı playlist sıralama, STM32 C projeleri. Baştan sona proje yönetimi ve sistem tasarımı gösteriyor.</p>
+            </div>
+            <div class="strength-item">
+                <h3>Ölçülebilir Sonuçlar</h3>
+                <p>Özellikle IGA deneyiminde 52 kamera akışı, günlük yaklaşık 30 tespit ve gerçek operasyon ortamına temas eden sistemler gibi güçlü ölçülebilir göstergeler var. Diğer staj ve projelerde de water-usage forecasting model, baggage detection systems, UAV otonom misyonları ve radar DSP processing gibi doğrulanabilir çıktılar mevcuttur.</p>
+            </div>
+            <div class="strength-item">
+                <h3>Uluslararası Deneyim ve Dil Bilgisi</h3>
+                <p>Erasmus+ Poznan University, C1 English (IELTS Academic 7), global tech stack bilgisi. Junior seviye için uluslararası teknik ekipler ve güçlü mühendislik kültürüne sahip şirketler açısından olumlu sinyal verir.</p>
+            </div>
+        </div>
+
+        <!-- KRİTİK GELİŞİM ALANI -->
+        <h2>Kritik Gelişim Alanı</h2>
+        <div class="critical-section">
+            <div class="critical-heading">Professional Summary Eksikliği ve Hedef Role Özel CV Konumlandırması</div>
+
+            <div class="subsection">
+                <h4>1. Professional Summary Bulunmaması</h4>
+                <p>CV, deneyim kısmı ile doğrudan başlıyor. Adayın kendini ML engineer mi, Backend engineer mi, Systems engineer mi, Embedded engineer mi olarak gördüğünü açıklayan 2-3 satırlık bir summary yok. İşe alım uzmanı, CV'yi hızlıca okuduğunda "bu aday teknik olarak güçlü ama hangi alana uzmanlaştığını açıklamıyor" diye düşünebilir.</p>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> CV'nin başında adayın kendini hangi role göre konumlandırdığını açıklayan kısa bir Professional Summary bulunmıyor.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h4>2. Başvurulan Pozisyona Göre CV Versiyonlama</h4>
+                <p>Aday birden fazla alana başvuruyorsa, her başvuru tipi için CV'nin versiyonları olmalı. Örneğin, ML rolüne başvururken, CV'nin başında ML ve CV deneyimleri başa alınmalı; Backend rolüne başvururken, FastAPI/Django/Kubernetes başa alınmalı.</p>
+                <div class="highlight-box">
+                    <strong>Şu an:</strong> Her deneyim eşit ağırlıkta, sıra rastgele.
+                    <br><strong>Hedef:</strong> Rol başvurusuna göre sıra ve vurgu değişmeli.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h4>3. Skills Bölümü Önceliklendirmesi</h4>
+                <p>Skills bölümü mevcut ("Languages: Python, C, C++...") ama tüm kategoriler eşit ağırlıkta. Başvurulan pozisyona göre sıralanmalı: ML rolü için ML & CV araçları, Backend rolü için Backend & Systems araçları öne alınmalı.</p>
+            </div>
+        </div>
+
+        <!-- AKSIYON PLANI -->
+        <h2>Aksiyon Planı</h2>
+        <div class="action-plan">
+            <div class="action-item critical">
+                <span class="action-label label-critical">KRİTİK</span>
+                <p><strong>CV'nin başına Professional Summary ekle.</strong> Başvurulan pozisyona göre 3 farklı özet versiyonu hazırla: ML/Computer Vision Engineer, Backend/Systems Engineer, Embedded/Robotics/Aviation Systems Engineer. Her başvuru tipi için uygun versiyonu seç ve CV başına ekle. Özet 2-3 cümle olmalı, teknik araç setini ve kariyer yönünü net bir şekilde açıklamalı.</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Her başvuru tipi için CV'nin hedef role özel versiyonlarını hazırla.</strong> Özet seçildikten sonra, ilgili deneyimler ve projeler öne çıkarılmalı. Örneğin, ML rolü için IGA, ISKI, graduation project başa; Backend rolü için AFPM, IGA, Aselsan başa. Skills bölümünde de ML/CV araçları veya Backend araçları sırasını değiştir.</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Skills bölümünü başvurulan pozisyona göre önceliklendir.</strong> Şu anda tüm kategoriler eşit. ML rolü için ML & CV araçları başa, Backend rolü için Backend & Systems araçları başa, Embedded rolü için Embedded & Systems başa. Tüm yetkinlikler korunabilir; ancak sıralama başvurulan pozisyona göre değişmelidir.</p>
+            </div>
+
+        </div>
+
+        <!-- KAPANIŞ -->
+        <div class="closing">
+            Bu raporun amacı Recep'in teknik becerilerini sorgulamak değildir. Format temiz, metrikler güçlü, gerçek operasyon ortamına temas eden deneyimler ve doğrulanabilir başarılar bulunmaktadır. Gelişim alanı, CV'nin başına başvurulan pozisyona göre konumlandırılmış kısa bir Professional Summary eklemek ve her başvuru tipi için CV'yi hedef role özel şekilde düzenlemektir. Bu iki adım, başvuruların daha hedefli ve ikna edici okunmasına yardımcı olacaktır.
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="button-group">
+            <button class="btn-print" onclick="window.print()">📄 PDF olarak İndir</button>
+        </div>
+
+        <!-- BIONLUK BANNER -->
+        <div class="bionluk-banner">
+            <p>Hedef role özel CV versiyonları, başvuru stratejisi veya mülakat anlatısı çalışması için destek alabilirsin.</p>
+            <a href="https://bionluk.com/cvlunatic_tr" target="_blank">Destek Al</a>
+        </div>
+    </div>
+</body>
+</html>
