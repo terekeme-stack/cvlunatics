@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Raporu - MEF 2028</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HKX44LJVBM');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .hero {
+            padding: 40px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+        .hero-ring {
+            flex-shrink: 0;
+        }
+        .hero-ring svg {
+            width: 120px;
+            height: 120px;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .hero-content .subtitle {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 12px;
+        }
+        .hero-content p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+        .content-section {
+            padding: 40px;
+            border-bottom: 1px solid #333;
+        }
+        .content-section:last-of-type {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 22px;
+            margin-bottom: 24px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #4ade80;
+            font-weight: bold;
+        }
+        h4 {
+            font-size: 15px;
+            margin-bottom: 12px;
+            color: #e0e0e0;
+            font-weight: bold;
+        }
+        .general-eval p {
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .general-eval strong {
+            color: #4ade80;
+        }
+        .strength-item {
+            margin-bottom: 24px;
+        }
+        .strength-item h3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .strength-item h3::before {
+            content: "✓";
+            color: #4ade80;
+            font-size: 18px;
+        }
+        .strength-item p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #d0d0d0;
+        }
+        .subsection {
+            margin-bottom: 28px;
+        }
+        .subsection h4 {
+            margin-bottom: 12px;
+        }
+        .highlight-box {
+            border-left: 3px solid #fb923c;
+            background-color: rgba(251, 146, 60, 0.08);
+            padding: 16px;
+            margin: 16px 0;
+            font-size: 14px;
+            line-height: 1.6;
+            border-radius: 4px;
+        }
+        .subsection p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #d0d0d0;
+            margin-bottom: 12px;
+        }
+        .action-item {
+            margin-bottom: 20px;
+            padding: 16px;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-left: 3px solid #999;
+            border-radius: 4px;
+        }
+        .action-label {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .label-critical {
+            background-color: #f87171;
+            color: #000;
+        }
+        .label-medium {
+            background-color: #fb923c;
+            color: #000;
+        }
+        .label-low {
+            background-color: #60a5fa;
+            color: #000;
+        }
+        .action-item.critical {
+            border-left-color: #f87171;
+        }
+        .action-item.medium {
+            border-left-color: #fb923c;
+        }
+        .action-item.low {
+            border-left-color: #60a5fa;
+        }
+        .action-item p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #d0d0d0;
+        }
+        .action-item strong {
+            color: #e0e0e0;
+        }
+        .closing {
+            padding: 40px;
+            font-style: italic;
+            color: #b0b0b0;
+            font-size: 15px;
+            line-height: 1.6;
+            border-bottom: 1px solid #333;
+        }
+        .pdf-button {
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+        .pdf-button button {
+            background-color: #4ade80;
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .pdf-button button:hover {
+            background-color: #22c55e;
+        }
+        .bionluk-banner {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            padding: 24px 40px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .bionluk-banner p {
+            font-size: 15px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .bionluk-banner a {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #7c3aed;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .bionluk-banner a:hover {
+            background-color: #f0f0f0;
+        }
+        .strengths {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 25px;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .strengths {
+                grid-template-columns: 1fr;
+            }
+            .content-section {
+                padding: 20px;
+            }
+        }
+        @media print {
+            body {
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .pdf-button, .bionluk-banner {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-ring">
+                <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#333" stroke-width="2"/>
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#4ade80" stroke-width="4" stroke-dasharray="211.025 282.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                    <text x="70" y="75" text-anchor="middle" font-size="28" font-weight="bold" fill="#4ade80">7.5</text>
+                </svg>
+            </div>
+            <div class="hero-content">
+                <h1>MEF 2028 - Yaz Stajı Adayı</h1>
+                <p class="subtitle">Computer Engineering | MLOps / HPC / Data Engineering</p>
+                <p>3. sınıf seviyesi için teknik proje zemini güçlü. Ana gelişim alanı, yaz stajı hedefini CV'nin başında netleştirmek ve projeleri MLOps, Data Engineering ve HPC hedeflerine göre konumlandırmak.</p>
+            </div>
+        </div>
+
+        <div class="content-section general-eval">
+            <h2>Genel Değerlendirme</h2>
+            <p><strong>Aday geç kalmış görünmüyor. Aksine, local LLM deployment, Rust/HPC sistem mimarisi, Supabase production deployment ve MIPS düşük seviye programlama projeleriyle güçlü teknik sinyaller veriyor.</strong> N-Body Engine'de 60+ FPS, 20,000 cisim simülasyonu, Barnes-Hut O(N log N) algoritması ve spatial hash grid implementasyonu; livestock operations sisteminde production'da iki ticari işletmeye hizmet eden multi-user database consistency; llama.cpp layer offloading ile 8GB VRAM'de 35B parameter MoE modellerini çalıştırma. Bunlar junior seviye için sağlam teknik kanıtlar.</p>
+            <p><strong>Ancak CV şu an "yaz stajı arıyor" mesajını net vermiyor.</strong> Professional Summary yok, CV Education bölümüyle başlıyor, MLOps/Data Engineering/HPC hedefleri açıkça vurgulanmıyor. Teknik okuyucu projelerden çıkarsama yapabilir ama işe alım uzmanı ilk bakışta "bu aday ne arıyor?" sorusunu cevaplayamıyor.</p>
+            <p>Sonuç: Teknik zemin güçlü ama sunum stratejisi ve hedef role uyum geliştirmesi lazım.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Güçlü Yanlar</h2>
+            <div class="strengths">
+                <div class="strength-item">
+                    <h3>HPC ve Sistem Programlama</h3>
+                    <p>N-Body Engine projesi; Rust/Bevy ECS ile 20,000+ cisim simülasyonu, Barnes-Hut O(N log N) algoritması, spatial hash grid implementasyonu ve Union-Find collision detection kullanımıyla 3. sınıf seviyesi için oldukça güçlü bir teknik profil sunuyor.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Local LLM ve AI Altyapısı</h3>
+                    <p>LLM deployment, llama.cpp VRAM optimization, Open WebUI entegrasyonu ve 8GB VRAM'de 35B parameter MoE modellerini çalıştırabilme hedef alanlarla doğrudan uyumlu. Inference optimization ve resource management açısından sağlam temele işaret ediyor.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Production'a Alınmış Yazılım Deneyimi</h3>
+                    <p>Livestock operations sistemi production'a alınmış, iki ticari işletmede aktif kullanılıyor. Supabase relational schema, multi-user consistency, InnoSetup standalone installer. 3. sınıf seviyesinde gerçek kullanıcıya temas etmiş olmak çok güçlü sinyal.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Hedef Teknik Araç Seti</h3>
+                    <p>Rust, C/C++, Python, SQL, Docker, Git, CMake, MIPS Assembly gibi MLOps/HPC/Data Engineering pozisyonlarında talep gören araçlar. Çok dilli yetkinlik ve sistem programlama deneyimi, adayın MLOps, HPC ve Data Engineering hattındaki teknik yönünü güçlendiriyor.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Doğrulanabilir GitHub</h3>
+                    <p>cumulonimbush GitHub hesabı gerçek ve projelerle uyumlu. README'ler, dokümantasyon ve demolar varsa bu teknik kanıtları daha güçlendirecektir.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Professional Summary Eksikliği ve Staj Hedefi Konumlandırması</h2>
+
+            <div class="subsection">
+                <h4>1. Professional Summary Yok</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> CV Education bölümüyle başlıyor. Adayın "yaz stajında ne arıyor", "hangi teknik alanlarda odaklanıyor", "MLOps mu, Data Engineering mi, HPC mi?" sorusunun cevabı ilk satırda görülmüyor.
+                </div>
+                <p>Bu kadar güçlü ve çeşitli proje portföyünde, CV'nin başında 2–3 satırlık bir özet bulunması okuyucuyu hemen doğru yöne yönlendirebilir. Bu özet; adayın yaz stajı aradığını, MLOps, Data Engineering, HPC alanlarına yöneldiğini ve teknik proje zemininin bu hedeflerle nasıl bağlantılı olduğunu netleştirmelidir.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>2. Yaz Stajı Hedefi Görünmüyor</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> CV'de "yaz stajı arıyor" yazmıyor. Bir startup işe alım uzmanı okuyunca, "bu aday staj / dönem içi çalışma / junior full-time ne arıyor?" sorusu ortaya çıkıyor. MLOps, Data Engineering, HPC başlıkları da açıkça vurgulanmıyor.
+                </div>
+                <p>Professional Summary'de hedef role, aranan pozisyon tipi (summer internship) ve teknik odağını bir cümleyle açıklamak, CV'nin ilk izlenimini güçlendirecektir.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>3. Proje Seçimi Hedef Role Göre Organize Değil</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> Tüm projeler eşit ağırlıkta, aynı detay seviyesinde sunuluyor. Startup işe alım uzmanı, adayın "MLOps mi, HPC mi, Data Engineering mi" alanında yöneldiğini ilk bakışta net şekilde göremeyebilir. Projeler hedef role göre yeterince ayrışmadığı için CV'nin ana yönü ilk izlenimde netleşmeyebilir.
+                </div>
+                <p>Hedef role özel CV versiyonları hazırlamak, her başvurunun bağlı olduğu pozisyon ve alan ile uyumlu olmasını sağlayacaktır. Aynı proje portföyü kullanılsa bile, hangi projelerin başa alındığı ve vurgu yapıldığı başvurulan role göre değişmelidir.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>4. CV Sıralaması Teknik Gücü Hızlı Göstermüyor</h4>
+                <div class="highlight-box">
+                    <strong>Şimdiki sıralama:</strong> Education → Technical Skills → Experience → Projects
+                    <br><strong>Önerilen sıralama:</strong> Professional Summary → Experience → Projects → Technical Skills → Education
+                </div>
+                <p>Yeni sıralama, production'a alınmış yazılım deneyimi ve güçlü projeleri education'dan önce ortaya koysun. 3. sınıf öğrenci olması zayıflık değil, bağımsız yazılım geliştirme deneyimi ve production sistemleri tasarlama yetkinliği çok önem taşıyor.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>5. Performans Metrikleri ve Benchmark Eksik</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> N-Body Engine'de "60+ FPS, 20,000 cisim" var ama memory usage, VRAM optimization, profiling sonuçları yok. Local LLM'de "35B parameter, 4-bit" var ama inference latency, throughput, model quantization detayları eksik.
+                </div>
+                <p>HPC ve AI altyapısı pozisyonlarında, performans metrikleri çok önemli. N-Body Engine projesine bellek kullanımı, profil çıkarma sonuçları, ölçeklenebilirlik analizi ve optimizasyon etkisi gibi performans göstergeleri eklenebilir. Local LLM projesine ise inference latency, throughput, quantization etkisi ve bellek kullanımı gibi ölçülebilir teknik göstergeler eklenebilir. Bu detaylar, projelerin teknik derinliğini ve üretim ortamına hazırlığını gösterir.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Aksiyon Planı</h2>
+            <div class="action-item critical">
+                <span class="action-label label-critical">KRİTİK</span>
+                <p><strong>CV'nin başına Professional Summary ekle:</strong> 2–3 satırlık bir özet bulunması okuyucuyu hemen doğru yöne yönlendirebilir. Bu özet; adayın yaz stajı aradığını, MLOps, Data Engineering, HPC alanlarına yöneldiğini ve teknik proje zemininin bu hedeflerle nasıl bağlantılı olduğunu netleştirmelidir. Summary, okuyucuyu adayın hedef alanlarına hızlıca yönlendirmeli ve teknik yönü vurgulamalıdır.</p>
+            </div>
+            <div class="action-item critical">
+                <span class="action-label label-critical">KRİTİK</span>
+                <p><strong>CV sıralamasını değiştir:</strong> Professional Summary → Experience → Projects → Technical Skills → Education şekline düzenle. Böylece production'a alınmış yazılım deneyimi (livestock operations) ve en güçlü projeleri (N-Body Engine, local LLM deployment) education'dan önce okuyucu görecektir.</p>
+            </div>
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Hedef role özel CV versiyonları hazırla:</strong> MLOps/AI Engineer hedefi = local LLM projesi ve AI altyapısı başa; HPC hedefi = N-Body Engine, Rust, sistem programlama başa; Data Engineering hedefi = livestock system, Supabase schema, database design başa. Her başvuru hedef rolle uyumlu olmalıdır.</p>
+            </div>
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>N-Body Engine'e performans metrikleri ekle:</strong> "60+ FPS, 20,000 bodies" vardır ama bellek kullanımı, VRAM optimizasyonu, profil çıkarma sonuçları ve ölçeklenebilirlik analizi gibi performans göstergeleri eklenmeli. Barnes-Hut O(N log N) ve spatial hash grid O(N) collision detection yapısı, optimizasyon stratejileri ve teknik derinliğini vurgulayan detayları eklemek, projenin düzeyini daha net gösterecektir.</p>
+            </div>
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Local LLM projesini inference/deployment diliyle yaz:</strong> VRAM tahsisi optimizasyonu, layer offloading, quantization stratejileri ve memory optimization gibi teknik detayları vurgula. "35B parameter MoE 8GB VRAM'de" çok iyi bir sinyal; bunu inference latency, throughput, quantization etkisi ve bellek kullanımı gibi ölçülebilir göstergelerle desteklemek, teknik derinliği daha net gösterecektir.</p>
+            </div>
+            <div class="action-item low">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>GitHub README'lerini güçlendir:</strong> N-Body engine, local LLM deployment, livestock system repolarında README'ler varsa, demo ekran görüntüleri, hızlı başlangıç rehberleri, kurulum yönergeleri ve benchmark sonuçlarını ekle. GitHub, CV'deki projeleri doğrulamak için kullanılıyor; dokümantasyon ve demolar teknik kanıtı güçlendirir.</p>
+            </div>
+        </div>
+
+        <div class="closing">
+            <p>"Geç kalmış değilsin. Teknik zeminin güçlü ama staj aradığını, hangi pozisyon tipini (summer internship) hedeflediğini ve hangi teknik hatta oturduğunu (MLOps vs HPC vs Data Engineering) CV'nin başında açıkça söylemelisin. CV, okuyucuyu adayın hedeflediği teknik staj alanlarına hızlıca yönlendirmelidir."</p>
+        </div>
+
+        <div class="pdf-button">
+            <button onclick="window.print()">📄 Raporu PDF Olarak İndir</button>
+        </div>
+
+        <div class="bionluk-banner">
+            <p>Daha detaylı CV düzenleme, hedef role özel konumlandırma veya başvuru stratejisi için destek alabilirsin.</p>
+            <a href="https://bionluk.com/cvlunatic_tr" target="_blank">Bionluk Danışmanlığı →</a>
+        </div>
+    </div>
+</body>
+</html>
