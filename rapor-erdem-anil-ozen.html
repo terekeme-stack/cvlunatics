@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erdem Anıl Özen - CV Raporu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #333;
+        }
+
+        .score-ring {
+            flex-shrink: 0;
+        }
+
+        svg {
+            width: 120px;
+            height: 120px;
+        }
+
+        .circle-background {
+            fill: none;
+            stroke: #2a2a2a;
+            stroke-width: 8;
+        }
+
+        .circle-progress {
+            fill: none;
+            stroke: #fb923c;
+            stroke-width: 8;
+            stroke-linecap: round;
+            transform-origin: 60px 60px;
+            transform: rotate(-90deg);
+        }
+
+        .score-text {
+            text-anchor: middle;
+            dominant-baseline: middle;
+            fill: #fb923c;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .score-label {
+            text-anchor: middle;
+            dominant-baseline: middle;
+            fill: #a0a0a0;
+            font-size: 12px;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .header-content h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .header-content p {
+            font-size: 16px;
+            color: #b0b0b0;
+            line-height: 1.5;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            color: #b0b0b0;
+        }
+
+        .evaluation {
+            background-color: #151515;
+            border-left: 3px solid #fb923c;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+
+        .evaluation p {
+            margin-bottom: 10px;
+        }
+
+        .evaluation strong {
+            color: #fb923c;
+        }
+
+        .strengths {
+            margin-bottom: 30px;
+        }
+
+        .strength-item {
+            margin-bottom: 18px;
+        }
+
+        .strength-item h3 {
+            color: #fb923c;
+            margin-bottom: 8px;
+        }
+
+        .strength-item p {
+            font-size: 15px;
+            color: #c0c0c0;
+        }
+
+        .critical-section {
+            margin-bottom: 30px;
+        }
+
+        .critical-heading {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .subsection {
+            margin-bottom: 25px;
+        }
+
+        .subsection h4 {
+            font-size: 15px;
+            color: #b0b0b0;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background-color: #1a1a1a;
+            border-left: 3px solid #fb923c;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #d0d0d0;
+            line-height: 1.5;
+        }
+
+        .highlight-box strong {
+            color: #fb923c;
+        }
+
+        .action-plan {
+            margin-bottom: 30px;
+        }
+
+        .action-item {
+            background-color: #151515;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border-left: 3px solid #fb923c;
+        }
+
+        .action-item.critical {
+            border-left-color: #f87171;
+        }
+
+        .action-item.medium {
+            border-left-color: #fb923c;
+        }
+
+        .action-item.low {
+            border-left-color: #60a5fa;
+        }
+
+        .action-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 3px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .label-critical {
+            background-color: #f87171;
+            color: #ffffff;
+        }
+
+        .label-medium {
+            background-color: #fb923c;
+            color: #ffffff;
+        }
+
+        .label-low {
+            background-color: #60a5fa;
+            color: #ffffff;
+        }
+
+        .action-item p {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .closing {
+            background-color: #151515;
+            border-left: 3px solid #a78bfa;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-style: italic;
+            color: #c0c0c0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-print {
+            background-color: #fb923c;
+            color: #000000;
+        }
+
+        .btn-print:hover {
+            background-color: #f97316;
+            transform: translateY(-2px);
+        }
+
+        .bionluk-banner {
+            background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            padding-top: 40px;
+        }
+
+        .bionluk-banner p {
+            color: #ffffff;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .bionluk-banner a {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #a855f7;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .bionluk-banner a:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+
+            .container {
+                background-color: #ffffff;
+                color: #000000;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .button-group {
+                display: none;
+            }
+
+            h1, h2, h3, h4 {
+                color: #000000;
+            }
+
+            .evaluation,
+            .action-item,
+            .highlight-box,
+            .closing {
+                background-color: #f5f5f5;
+                border-left-color: #333;
+            }
+
+            .evaluation strong,
+            .strength-item h3,
+            .action-label,
+            .highlight-box strong {
+                color: #000000;
+            }
+
+            .action-label {
+                background-color: #e0e0e0;
+                color: #000000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="header">
+            <div class="score-ring">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-background" cx="60" cy="60" r="50"></circle>
+                    <circle class="circle-progress" cx="60" cy="60" r="50" style="stroke-dasharray: 141.35; stroke-dashoffset: 0;"></circle>
+                    <text class="score-text" x="60" y="55">5</text>
+                    <text class="score-label" x="60" y="72">/10</text>
+                </svg>
+            </div>
+            <div class="header-content">
+                <h1>Erdem Anıl Özen</h1>
+                <p>Uluslararası Ticaret ve Lojistik eğitimi alan yeni mezun. SAP, Excel ve stok yönetimi becerilerine sahip; lojistik operasyon hedefine girmek için sağlam bir temel var. Ancak CV'nin mevcut formatı, yazım hataları ve bölümlerin yapısı adayın potansiyelini olduğundan zayıf gösteriyor. Ana gelişim alanı, CV'yi daha profesyonel bir sunuma taşımak.</p>
+            </div>
+        </div>
+
+        <!-- GENEL DEĞERLENDİRME -->
+        <h2>Genel Değerlendirme</h2>
+        <div class="evaluation">
+            <p><strong>Erdem'in CV'sinin temel gelişim alanı lojistik hedefinin yanlış olması değil, CV'nin formatı ve profesyonel sunumdur.</strong> Aday, Sakarya Uygulamalı Bilimler Üniversitesi Uluslararası Ticaret ve Lojistik bölümünden mezun olduğunu belirtmektedir. Excel ve SAP MM/SD sertifikaları almış, stok-envanter takibi ve sevkiyat planlama becerilerine sahiptir. KOBİ ihracatı üzerine akademik proje yürütmüş olması, lojistik ve dış ticaret alanına duyduğu ilgiyi göstermektedir.</p>
+            <p style="margin-top: 15px;">Ancak CV'nin mevcut formatı, mail/LinkedIn iletişim bilgilerindeki sorunlar, yazım ve büyük-küçük harf hataları, sertifika bölümünün karışık sunumu ve proje anlatımının zayıf yapılandırılması adayın bu potansiyelini olduğundan zayıf göstermektedir. Bir işe alım uzmanı, ilk bakışta CV'deki bu sorunları gördüğünde adayın profesyonel dikkat seviyesini sorgulayabilir. Bu nedenle rapor, CV'nin yapısal ve sunum sorunlarını adım adım ele almaktadır.</p>
+        </div>
+
+        <!-- GÜÇLÜ YANLAR -->
+        <h2>Güçlü Yanlar</h2>
+        <div class="strengths">
+            <div class="strength-item">
+                <h3>Lojistik Sektörüyle Uyumlu Eğitim ve Akademik Temel</h3>
+                <p>Sakarya Uygulamalı Bilimler Üniversitesi'nde Uluslararası Ticaret ve Lojistik bölümünden eğitim almış olması, adayın sektörel bilgi ve bakış açısı açısından iyi bir zemin oluşturmaktadır. Özellikle dış ticaret ve lojistik operasyonları konusundaki akademik anlayış, giriş seviyesi roller için değerli bir başlangıçtır.</p>
+            </div>
+            <div class="strength-item">
+                <h3>SAP Sertifikaları (MM ve SD) ile Teknik Sistem Bilgisi</h3>
+                <p>Material Management (SAP MM) ve Sales & Distribution (SAP SD) eğitimi almış olması, global lojistik operasyonlarında kullanılan temel sistemleri anlamaya başladığını gösterir. SAP bilgisi, özellikle büyük şirketlerde lojistik rolleri için iş başvurularında önemli bir avantajdır.</p>
+            </div>
+            <div class="strength-item">
+                <h3>Stok, Envanter ve Sevkiyat Planlama Becerilerinin Tanımlanması</h3>
+                <p>CV'de açık şekilde stok takibi, envanter yönetimi ve sevkiyat planlama becerilerinin belirtilmesi, adayın hangi operasyonel alanlarda ilgileneceğini göstermektedir. Bu beceriler lojistik koordinatör, warehouse assistant ve operasyon asistanı gibi entry-level rolleri için doğrudan uygulanabilir niteliktedir.</p>
+            </div>
+            <div class="strength-item">
+                <h3>KOBİ İhracatı Üzerine Akademik Proje</h3>
+                <p>Türkiye'nin E-Ticaret Ekosisteminde KOBİ'lerin İhracata Yönelik Faaliyetleri başlığı altında yapılan akademik çalışma, adayın dış ticaret, e-ticaret ve lojistik operasyonlarının kesişim noktasında çalışma yürütmüş olduğunu göstermektedir. Bu proje, lojistik hedefiyle doğrudan bağlantılı bir akademik araştırma çalışmasıdır.</p>
+            </div>
+        </div>
+
+        <!-- KRİTİK GELİŞİM ALANI -->
+        <h2>Kritik Gelişim Alanı</h2>
+        <div class="critical-section">
+            <div class="critical-heading">CV Formatı ve Profesyonel Güvenilirlik</div>
+
+            <div class="subsection">
+                <h4>1. Format ve İlk İzlenim</h4>
+                <p>CV'nin genel formatı sade ve yapısız görülmektedir. Yazı boyutları tutarsız, başlık hiyerarşisi net değil, boşluk kullanımı dengesiz. İlk bakışta CV'nin hızlı ve profesyonel olmayan bir şekilde hazırlandığı izlenimi oluşmaktadır. Lojistik sektöründe başvuru yapan bir aday, CV'nin temiz, düzenli ve profesyonel bir şablonda sunulmasını sağlamalıdır.</p>
+                <div class="highlight-box">
+                    <strong>Hedef:</strong> CV'yi standart bir Word şablonuna taşı. Başlıkları tutarlı boyutla, boşlukları dengeli şekilde, yazı tipi ve boyutunu profesyonel bir düzeyde ayarla (Arial/Calibri, 10-12pt).
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h4>2. İletişim Bilgileri ve Teknoloji Hataları</h4>
+                <p>CV'de iletişim bilgilerinde iki temel sorun görülmektedir. İlk olarak, e-mail adresi "@erdemanilozen@gmail.com" şeklinde yazıldığı için profesyonel e-mail formatına uygun görünmemektedir; doğru format "erdemanilozen@gmail.com" olmalıdır. E-mail adresinde "@" işareti yalnızca bir kez, kullanıcı adından sonra yer almalıdır. İkinci olarak, LinkedIn linki "nttDs://www.linkedi n.com/in/erdemanilözen" şeklinde bozuk yazılmıştır (yazım hatası, boşluk ve yanlış protokol). Bu durum linkin tıklanabilirliğini ve profesyonel algıyı ciddi şekilde zayıflatır.</p>
+                <div class="highlight-box">
+                    <strong>Hedef:</strong> E-mail adresi "@" işareti ile başlamadan "erdemanilozen@gmail.com" formatında yazılmalı. LinkedIn URL'si LinkedIn profiline girerek adres çubuğundan doğrudan kopyalanıp yapıştırılmalı (tıklanabilir ve hatasız olması kritiktir). CV'nin başında ad-soyad, e-mail, telefon ve LinkedIn bilgileri ayrı satırda, açık ve kontrol edilmiş şekilde gösterilmelidir.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h4>3. Yazım, Noktalama ve Büyük-Küçük Harf Hataları</h4>
+                <p>CV'de çok sayıda yazım hatası ve büyük-küçük harf tutarsızlığı görülmektedir. Örneğin: "Sakarya uygulamalı bilimler üniversitesi" yerine "Sakarya Uygulamalı Bilimler Üniversitesi" yazılmalı. Benzer şekilde, bazı bölüm başlıkları küçük harfle başlamış ("lojistik"), bazıları büyük harfle başlamıştır ("Stok"). Noktalama işaretlerinin ve Türkçe karakterlerin tutarsız kullanımı da gözlenmektedir.</p>
+                <div class="highlight-box">
+                    <strong>Hedef:</strong> CV'nin tamamını Türkçe yazım kurallarına ve büyük-küçük harf standartlarına göre düzelt. Üniversite adları, bölüm adları, beceri başlıkları hep büyük harfle başlamalı. Cümlelerde noktalama işaretleri tutarlı olmalı.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h4>4. "Hakkında" Bölümünün Güçlendirilmesi</h4>
+                <p>Mevcut "Hakkında" bölümü çok sade ve muğlaktır: "Lojistik ve operasyon alanında kendimi geliştirebileceğim bir pozisyonda çalışmayı hedefliyorum." Bu ifade çok genel ve adayın hangi rollerde çalışmak istediğini, ne tür operasyonel sorumlulukları almak istediğini göstermiyor. Ayrıca "kendimi geliştirebileceğim" ifadesi, iş bulma motivasyonunun belirsiz olduğu izlenimini verebilir.</p>
+                <div class="highlight-box">
+                    <strong>Hedef:</strong> "Hakkında" bölümünü şöyle revize et: "Sakarya Uygulamalı Bilimler Üniversitesi'nden Uluslararası Ticaret ve Lojistik alanında mezun olmuş giriş seviyesi aday. Excel, SAP MM/SD ve stok-envanter yönetimi üzerine sertifikalı. Lojistik operasyon, sevkiyat planlama, envanter takibi ve dış ticaret süreçlerinde operasyonel sorumluluk alarak deneyim kazanmayı hedefliyorum."
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h4>5. Proje ve Sertifika Bölümlerinin Yapılandırılması</h4>
+                <p>Proje bölümü paragraf şeklinde yazılmış ve okunması zor. Sertifika bölümü ise Udemy/kurs başlıklarının uzun hali olarak sunulmakta, anlaşılması ve aranan sertifikaların hızlıca bulunması güçleşmektedir. Bu iki bölüm ayrı olarak tanımlanmış olsa bile, birbiriyle ilişkili (beceriler + kanıt) şekilde yapılandırılmalıdır.</p>
+                <div class="highlight-box">
+                    <strong>Hedef:</strong> Proje bölümünü şöyle yeniden yap: başlık + madde işaretleriyle kapsam + lojistik bağlantısı. Sertifikaları uzun Udemy başlıkları yerine kısa, özet formda yaz (örn: "Excel ile Veri Analizi ve Raporlama", "SAP MM - Material Management Temel Seviye" vs). Beceriler ve sertifikalar arasında net bir ilişki kur.
+                </div>
+            </div>
+        </div>
+
+        <!-- AKSIYON PLANI -->
+        <h2>Aksiyon Planı</h2>
+        <div class="action-plan">
+            <div class="action-item critical">
+                <span class="action-label label-critical">KRİTİK</span>
+                <p><strong>CV formatını profesyonel bir şablona taşı.</strong> CV'nin mevcut yapısı zayıf ve tutarsız. Yeni bir Word şablonu (veya Google Docs) aç, standart başlık hiyerarşisi kur, yazı tipi ve boyutunu tutarlı yap, boşlukları dengeli kullan. Her bölüm (Eğitim, Beceriler, Deneyim, Sertifikalar, Projeler) net başlıklarla ve tutarlı biçimlendirmeyle sunulmalı. CV'nin tamamı bir sayfa veya maksimum 1.5 sayfaya sığmalı.</p>
+            </div>
+
+            <div class="action-item critical">
+                <span class="action-label label-critical">KRİTİK</span>
+                <p><strong>İletişim bilgileri ve LinkedIn linkini düzelt.</strong> CV'nin başında (üst kısım) "Ad Soyad", "E-mail", "Telefon", "LinkedIn" bilgilerini açık ve hatasız şekilde sunulmalıdır. E-mail adresi "@erdemanilozen@gmail.com" şeklinde yazılmıştır ancak doğru format "erdemanilozen@gmail.com" olmalıdır; "@" işareti sadece bir kez, kullanıcı adından sonra yer almalı. LinkedIn URL'sini LinkedIn profiline girerek adres çubuğundan direkt kopyalayıp yapıştır (tıklanabilir ve hatasız olması önemli). Mail, telefon ve LinkedIn bilgileri CV'nin başında ayrı satırda, kontrol edilmiş şekilde gösterilmelidir.</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Tüm yazım, noktalama ve büyük-küçük harf hatalarını düzelt.</strong> CV'nin tamamını satır satır gözden geçir. Üniversite adı, bölüm adı, beceri başlıkları, sertifika başlıkları tutarlı şekilde yazılmalı (hep büyük harfle başlayacak). Türkçe karakterler (@, ş, ç, ğ, ı, ö, ü) doğru şekilde gösterilmeli. Cümlelerin sonunda nokta, madde işaretlerinin sonunda nokta (veya olmayacak) tutarlı olmalı.</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>"Hakkında" bölümünü lojistik hedefine göre yeniden yaz.</strong> Şu an çok muğlak. Bunun yerine profesyonel ve somut bir örnek: "Sakarya Uygulamalı Bilimler Üniversitesi Uluslararası Ticaret ve Lojistik mezunu giriş seviyesi aday. Excel, SAP MM/SD, stok-envanter takibi ve sevkiyat planlama alanlarında temel bilgiye sahip. Lojistik operasyon, envanter takibi ve dış ticaret süreçlerinde operasyonel sorumluluk alarak deneyim kazanmayı hedefliyorum." Mezuniyet durumunun net olmasını sağla (2026 mezunu veya yaklaşan mezuniyet belirtilmeli).</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Proje bölümünü yeniden yapılandır.</strong> Uzun paragraf yerine madde işaretleriyle sun: (1) Proje adı, (2) Amaç/Kapsam, (3) Analiz edilen konu, (4) Lojistik/Dış Ticaret bağlantısı. Örneğin: "KOBİ İhracatı Projesi: Sakarya'daki KOBİ'lerin e-ticaret kullanarak ihracat yapma süreçlerini inceledim. Dış ticaret, lojistik ve operasyon süreçlerinin KOBİ ihracat stratejisine etkisini analiz ettim."</p>
+            </div>
+
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Sertifikaları sadeleştir ve becerilerle entegre et.</strong> "Sıfırdan Zirveye Excel Eğitimi..." gibi uzun Udemy başlıkları yerine kısa, özet formda yazılmalı. "Teknik Yetkinlikler" başlığı altında: Excel (Formüller, Grafikler, Pivot Tablolar), SAP MM (Malzeme Yönetimi - Giriş Seviyesi), SAP SD (Satış ve Dağıtım - Giriş Seviyesi) şeklinde organize et. Sertifikalar ayrı bölüm olarak kalabilir, ancak başlıkları kısa ve anlaşılır olmalı.</p>
+            </div>
+
+            <div class="action-item low">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>İngilizce B2 seviyesini vurgula ve proje bölümüne dış ticaret bağlamını ekle.</strong> Dili "DİLLER" başlığı altında bırak, ancak "İngilizce B2" ek bir açıklama (ör: "Sertifikalı" veya "Yazılı ve Sözlü") yapabilirsin. Proje bölümünde KOBİ ihracatı çalışmanın, dış ticaret ve global lojistik operasyonlar bağlamında neden önemli olduğunu kısaca belirt.</p>
+            </div>
+        </div>
+
+        <!-- KAPANIŞ -->
+        <div class="closing">
+            Bu raporun amacı mevcut potansiyelini sorgulamak değil, bu potansiyelin daha profesyonel ve güvenilir bir şekilde sunulabilmesine yardımcı olmaktır. Erdem'in lojistik sektörü hedefi net, eğitim ve sertifika temeli sağlam, akademik proje çalışması değerli. Gelişim alanı tamamen CV'nin formatı, yapısı ve sunumudur. Bu adımlar atıldığında, Logistics Coordinator, Warehouse Assistant, Operasyon Asistanı gibi entry-level lojistik rolleri için çok daha güçlü bir başvuru dosyası oluşacaktır.
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="button-group">
+            <button class="btn-print" onclick="window.print()">📄 PDF olarak İndir</button>
+        </div>
+
+        <!-- BIONLUK BANNER -->
+        <div class="bionluk-banner">
+            <p>CV'nin profesyonel bir şablona taşınması ve baştan düzenlenmesi için ek destek alınabilir.</p>
+            <a href="https://bionluk.com/cvlunatic_tr" target="_blank">CV Düzenleme Desteği Al</a>
+        </div>
+    </div>
+</body>
+</html>
