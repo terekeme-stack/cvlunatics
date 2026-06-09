@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mert Olgun - CV Raporu</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HKX44LJVBM');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .hero {
+            padding: 40px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+        .hero-ring {
+            flex-shrink: 0;
+        }
+        .hero-ring svg {
+            width: 120px;
+            height: 120px;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .hero-content .subtitle {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 12px;
+        }
+        .hero-content p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+        .content-section {
+            padding: 40px;
+            border-bottom: 1px solid #333;
+        }
+        .content-section:last-of-type {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 22px;
+            margin-bottom: 24px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #4ade80;
+            font-weight: bold;
+        }
+        h4 {
+            font-size: 15px;
+            margin-bottom: 12px;
+            color: #e0e0e0;
+            font-weight: bold;
+        }
+        .general-eval p {
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .general-eval strong {
+            color: #4ade80;
+        }
+        .strength-item {
+            margin-bottom: 24px;
+        }
+        .strength-item h3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .strength-item h3::before {
+            content: "✓";
+            color: #4ade80;
+            font-size: 18px;
+        }
+        .strength-item p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #d0d0d0;
+        }
+        .subsection {
+            margin-bottom: 28px;
+        }
+        .subsection h4 {
+            margin-bottom: 12px;
+        }
+        .highlight-box {
+            border-left: 3px solid #fb923c;
+            background-color: rgba(251, 146, 60, 0.08);
+            padding: 16px;
+            margin: 16px 0;
+            font-size: 14px;
+            line-height: 1.6;
+            border-radius: 4px;
+        }
+        .subsection p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #d0d0d0;
+            margin-bottom: 12px;
+        }
+        .action-item {
+            margin-bottom: 20px;
+            padding: 16px;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-left: 3px solid #999;
+            border-radius: 4px;
+        }
+        .action-label {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .label-critical {
+            background-color: #f87171;
+            color: #000;
+        }
+        .label-medium {
+            background-color: #fb923c;
+            color: #000;
+        }
+        .label-low {
+            background-color: #60a5fa;
+            color: #000;
+        }
+        .action-item.critical {
+            border-left-color: #f87171;
+        }
+        .action-item.medium {
+            border-left-color: #fb923c;
+        }
+        .action-item.low {
+            border-left-color: #60a5fa;
+        }
+        .action-item p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #d0d0d0;
+        }
+        .action-item strong {
+            color: #e0e0e0;
+        }
+        .closing {
+            padding: 40px;
+            font-style: italic;
+            color: #b0b0b0;
+            font-size: 15px;
+            line-height: 1.6;
+            border-bottom: 1px solid #333;
+        }
+        .pdf-button {
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+        .pdf-button button {
+            background-color: #4ade80;
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .pdf-button button:hover {
+            background-color: #22c55e;
+        }
+        .bionluk-banner {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            padding: 24px 40px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .bionluk-banner p {
+            font-size: 15px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .bionluk-banner a {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #7c3aed;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .bionluk-banner a:hover {
+            background-color: #f0f0f0;
+        }
+        @media print {
+            body {
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .pdf-button, .bionluk-banner {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-ring">
+                <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#333" stroke-width="2"/>
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#4ade80" stroke-width="4" stroke-dasharray="212.03 282.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                    <text x="70" y="75" text-anchor="middle" font-size="28" font-weight="bold" fill="#4ade80">7.5</text>
+                </svg>
+            </div>
+            <div class="hero-content">
+                <h1>Mert Olgun</h1>
+                <p class="subtitle">Computer Engineering | AI/LLM Applications</p>
+                <p>Yeni mezun seviye için güçlü AI ve LLM proje çıktıları sunuyor. Özellikle RAG, agent systems, fine-tuning ve document processing alanlarında teknik derinlik görülüyor. Ana gelişim alanı, bu yoğun teknik içeriği hedef role göre daha sadeleştirmek ve stratejik şekilde konumlandırmak.</p>
+            </div>
+        </div>
+
+        <div class="content-section general-eval">
+            <h2>Genel Değerlendirme</h2>
+            <p><strong>Mert'in CV'si teknik derinlik açısından güçlü; özellikle AI/LLM projeleri junior seviye için oldukça dikkat çekici.</strong> LangGraph orchestration, LoRA fine-tuning, RAG sistemleri, document processing pipeline'lar ve OCR, ses işleme, doküman işleme gibi farklı veri türlerine temas eden AI projeleri gibi modern AI araç setinin pek çok katmanında güçlü proje çıktıları var. Metrikler de güçlü: 4,491 eğitim örneği, 84% classifier accuracy, 86% overall performance, 90% answer quality, 10% WER, 7.4% CER gibi sayısal kanıtlar kullanılmış.</p>
+            <p>Ancak CV şu an çok proje-yoğun, çok teknik ve yapısı açısından dağınık görünüyor. Professional Summary yok, deneyim kısmı çok genel yazılmış, proje anlatımları aşırı uzun ve detaylı. Bu durum, teknik okuyucu için iyi olsa da, işe alım uzmanı veya hızlı tarama yapan hiring manager için yorucu olabiliyor. Ayrıca CV şu an "AI Engineer", "LLM Engineer", "Data Scientist" alanlarında eşit şekilde görünüyor; hedef role göre ayrıştırılmamış.</p>
+            <p>Ana sorun teknik yetersizlik değil, bu yoğun teknik içeriğin hedef role göre daha seçici, daha okunabilir ve daha stratejik şekilde sunulması.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Güçlü Yanlar</h2>
+            <div class="strength-item">
+                <h3>Modern AI/LLM Araç Seti ve Üretim Ortamına Yakın Proje Yapısı</h3>
+                <p>LangGraph, LangChain, RAG, PEFT/LoRA, vector databases, fine-tuning, voice pipelines, MLOps araçları (MLflow, DVC, Evidently) gibi üretim ortamına yakın araçları kullanarak projeler geliştirmiş. Özellikle Legal Mock Deposition Simulator'da GTX 1650 (4GB VRAM) bütçe optimizasyonu, 178 test ve CI green status, üretim ortamına dönük yaklaşım gibi gerçek mühendislik pratiğinin izleri görülüyor.</p>
+            </div>
+            <div class="strength-item">
+                <h3>RAG, Agent Systems ve Fine-Tuning Alanlarında Güçlü Derinlik</h3>
+                <p>Legal RAG System'de multi-phase retrieval pipeline, hybrid BM25+vector search, multi-LLM orchestration (Claude + Gemini), 100% semantic precision gibi teknik detaylar dikkat çekici. Email Agent (Maia)'da uçtan uca geliştirme (React/TypeScript + Flask), hibrit LLM sistemi (Claude+GPT), explainable AI reasoning engine. Fine-tuning projesinde 4,491 örnek, LoRA adapter, bitsandbytes optimization, 150 değerlendirme örneğinde uydurma çıktı üretmemesi — bu, prompt engineering'den çok daha derin bir seviye.</p>
+            </div>
+            <div class="strength-item">
+                <h3>Geniş ML/DL ve Document AI Altyapısı</h3>
+                <p>Classification, regression, forecasting, NLP, OCR/document processing, vision models (Florence-2, LayoutLMv3, Surya) gibi çok geniş bir teknik setiyle proje yapılmış. Bitcoin forecasting, apple leaf classification, building energy prediction, depression severity prediction gibi klasik ML projelerinin yanında, Document Processing Pipeline'da per-line handwriting detection, 17-stage post-processing, 7-signal hallucination detection gibi sofistike sistemler kurulmuş.</p>
+            </div>
+            <div class="strength-item">
+                <h3>Metriklerle Desteklenen Teknik Başarılar</h3>
+                <p>Çok sayıda projesinde somut ölçüm ve değerlendirme metrikleri kullanılmış: 84% accuracy, 86-90% performance, 10% WER, 7.4% CER, 93.75% pass rate, 150 değerlendirme örneğinde uydurma çıktı üretmemesi gibi. Bu, projelerin yalnızca "yapıldı" değil "doğru şekilde yapıldığı" ve "ölçüldüğü" sinyali veriyor.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Teknik Derinlik ve Hedef Rol Görünürlüğü</h2>
+
+            <div class="subsection">
+                <h4>1. Professional Summary Eksikliği</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> CV Education ile başlıyor. LangGraph, RAG, fine-tuning, document processing, MLOps gibi çok farklı alanlarda proje var; ancak adayın kendini "AI Engineer mi, LLM Engineer mi, Data Scientist mi, Applied ML Engineer mi?" olarak konumlandırdığı ilk bakışta net değil.
+                </div>
+                <p>Bu kadar yoğun ve çeşitli AI proje içeriğinde, başında 3-4 satırlık bir özet, adayın kariyer yönünü ve hedefini hızlıca açıklayabilir. Özellikle "AI Engineer" ve "Data Scientist" hedefleri için ayrı versiyonlar hazırlanması, CV'nin odağını güçlendirecektir.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>2. Proje Anlatımının Fazla Yoğun ve Detaylı Olması</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> İlk 4 proje (Legal Deposition, Email Agent, Legal RAG, Document Processing) 4-6 satırda anlatılmış. Teknik detaylar güçlü (LangGraph node count, LoRA examples, WER/CER metriği vb.) ama CV için çok detaylı. İşe alım uzmanı bu kadar teknik derinliği ilk okumada tamamlamakta güçlük çekebiliyor.
+                </div>
+                <p>En güçlü 3-4 proje seçilerek ana vurgu yapılması, diğer projelerin daha kısa tutulması CV'nin okunabilirliğini artıracaktır. Teknik detaylar cover letter veya mülakat sırasında açıklanabilir.</p>
+            </div>
+
+            <div class="subsection">
+                <h4>3. AI Engineer vs Data Scientist Hedef Ayrımı</h4>
+                <div class="highlight-box">
+                    <strong>Sorun:</strong> CV şu an her iki hedef için de eşit şekilde görünüyor. Ancak teknik yetkinlikler gözden geçirildiğinde, mevcut CV klasik Data Scientist profilinden çok AI Engineer / LLM Engineer / Applied ML Engineer çizgisine daha yakın duruyor. Data Scientist hedefi için, Bitcoin prediction, apple leaf classification, building energy prediction, depression severity gibi klasik ML projeleri daha öne alınmalı.
+                </div>
+                <p>Başvuruda AI Engineer rolüne gidiyorsa, CV'nin LLM, RAG, agent, fine-tuning başa alacak şekilde yeniden organize edilmesi gerekir. Data Scientist rolüne gidiyorsa, klasik ML projeleri başa alınmalı, Skills bölümünde "Machine Learning, Predictive Modeling, Statistical Analysis" vurgusu artırılmalı.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Aksiyon Planı</h2>
+            <div class="action-item critical">
+                <span class="action-label label-critical">KRİTİK</span>
+                <p><strong>CV başına Professional Summary ekle.</strong> Başvurulan role göre 3 farklı özet versiyonu hazırla: (1) AI Engineer / LLM Engineer hedefi, (2) Applied ML Engineer hedefi, (3) Data Scientist hedefi. Her özet 3–4 satır olmalı, teknik yetkinlikleri ve hedef rolü net şekilde konumlandırmalıdır. Örnek: "AI Engineer olarak LangGraph, RAG, fine-tuning ve document processing sistemleri geliştirmiş yeni mezun. Python, Flask, GCP ve MLOps araçlarına hâkimiyet."</p>
+            </div>
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>En güçlü 3-4 AI projesini seç; diğerlerini daha kısa tut.</strong> Legal Mock Deposition Simulator, Legal RAG, Document Processing ve Email Agent gibi en güçlü projeleri 3-4 satırla tutması, Bitcoin, apple leaf classification, energy prediction vb. diğer projeleri 1-2 satırla tutması CV'yi daha okunabilir kılacaktır. Teknik detay (metrik, model adı, optimizasyon detayları) tutulabilir ama sözdizimi kısaltılmalı.</p>
+            </div>
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Başvurulan role göre CV'nin farklı versiyonlarını hazırla.</strong> AI Engineer versiyonunda LLM, RAG, agent, fine-tuning projeleri başa; Data Scientist versiyonunda forecasting, classification, regression projeleri başa. Yetkinlikler bölümü de hedef role göre yeniden sıralanmalı: AI Engineer için "LangGraph, RAG, Fine-Tuning, LLM Apps" başa, Data Scientist için "Machine Learning, Predictive Modeling, XGBoost, Scikit-learn" başa.</p>
+            </div>
+            <div class="action-item medium">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Skills bölümünü kategorize et ve sadeleştir.</strong> Şu an "Technical, Language, Additional Skills" kategorisi var ama Technical kategorisi çok kalabalık. "AI/LLM Frameworks (LangGraph, Langchain, RAG...), ML Libraries (PyTorch, TensorFlow, Scikit-learn...), Cloud & DevOps (GCP, Docker, MLflow...), Languages & Misc" gibi alt kategoriler eklemek okunabilirliği artıracaktır.</p>
+            </div>
+            <div class="action-item low">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Staj deneyimlerini somutlaştır.</strong> Şu an "Limak Teknoloji" ve "Gelişimpark" stajları çok genel yazılmış (collaborated with team, gained experience, applied best practices). Ne projede çalıştığı, ne teknoloji kullanıldığı, ne çıktı verildiği belli değil. Örneğin: "Web application oluşturduk, Flask/React kullandık, 3 feature geliştirdim" gibi daha somut bilgi eklemek staj deneyimlerinin değerini artıracaktır.</p>
+            </div>
+        </div>
+
+        <div class="closing">
+            <p>Mert'in CV'si teknik açıdan güçlü ve yeni mezun seviyesi için oldukça etkileyici. Sorun, bu yoğun teknik içeriğin bilinçli şekilde hedef role göre sadeleştirilip konumlandırılması. Professional Summary eklemek, en güçlü projeleri öne çıkarmak ve Yetkinlikler bölümünü kategorize etmek, CV'nin hem okunabilirliğini hem de hedef role özel odağını artıracaktır. LLM, RAG ve fine-tuning alanındaki güçlü deneyim, aday için sağlam bir temel oluşturuyor. Bu temelin daha seçici, okunabilir ve hedef role uygun bir hikâyeyle sunulması CV'nin etkisini artıracaktır.</p>
+        </div>
+
+        <div class="pdf-button">
+            <button onclick="window.print()">📄 Raporu PDF Olarak İndir</button>
+        </div>
+
+        <div class="bionluk-banner">
+            <p>Professional Summary versiyonları, hedef role özel CV düzenlemeleri veya mülakat hazırlığı için destek alabilirsin.</p>
+            <a href="https://bionluk.com/cvlunatic_tr" target="_blank">Destek Al</a>
+        </div>
+    </div>
+</body>
+</html>
