@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silanur Canbülbül - CV Raporu</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HKX44LJVBM');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .hero {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        .hero-ring {
+            flex-shrink: 0;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .hero-content .subtitle {
+            font-size: 16px;
+            color: #fb923c;
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+        .hero-content p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #d0d0d0;
+        }
+        section {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #333;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: #fff;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3::before {
+            content: "✓";
+            color: #fb923c;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        h4 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #fff;
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 12px;
+            color: #d0d0d0;
+            font-size: 14px;
+        }
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 16px;
+        }
+        .strength-item {
+            background-color: transparent;
+            padding: 0;
+        }
+        .strength-item p {
+            margin-top: 8px;
+        }
+        .highlight-box {
+            border-left: 4px solid #fb923c;
+            background-color: rgba(251, 146, 60, 0.08);
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+        .highlight-box h4 {
+            margin-bottom: 8px;
+        }
+        .highlight-box p {
+            margin-bottom: 8px;
+        }
+        .action-item {
+            border-left: 4px solid #fb923c;
+            background-color: rgba(251, 146, 60, 0.04);
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+        .action-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        .label-medium {
+            background-color: rgba(251, 146, 60, 0.2);
+            color: #fb923c;
+        }
+        .label-low {
+            background-color: rgba(96, 165, 250, 0.2);
+            color: #60a5fa;
+        }
+        .closing-note {
+            font-style: italic;
+            color: #c0c0c0;
+            line-height: 1.8;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .strengths-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 24px;
+            }
+        }
+        @media print {
+            .cta-banner {
+                display: none;
+            }
+        }
+        .btn-pdf {
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-pdf:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(74, 222, 128, 0.3);
+        }
+        .cta-banner {
+            display: block;
+            border: 2px solid #7c3aed;
+            border-radius: 12px;
+            padding: 24px 20px;
+            margin: 24px auto 0;
+            max-width: 500px;
+            background-color: rgba(99, 102, 241, 0.08);
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .cta-banner:hover {
+            background-color: rgba(99, 102, 241, 0.12);
+            border-color: #a855f7;
+            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.3);
+        }
+        .cta-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .cta-content h3 {
+            font-size: 16px;
+            color: #fff;
+            margin: 0 0 6px 0;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        .cta-content h3::before {
+            content: "";
+        }
+        .cta-content p {
+            font-size: 13px;
+            color: #b0b0b0;
+            margin: 0 0 16px 0;
+            line-height: 1.4;
+        }
+        .cta-btn {
+            background: linear-gradient(135deg, #a855f7, #9333ea);
+            color: #fff;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+        .cta-banner:hover .cta-btn {
+            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <div class="hero-ring">
+                <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#333" stroke-width="8"/>
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#fb923c" stroke-width="8" 
+                            stroke-dasharray="183.755 282.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                    <text x="70" y="75" font-size="32" font-weight="bold" text-anchor="middle" fill="#fb923c">6.5</text>
+                </svg>
+            </div>
+            <div class="hero-content">
+                <h1>Silanur Canbülbül</h1>
+                <div class="subtitle">Makine Mühendisliği / Tasarım & Analiz</div>
+                <p>CV'nin temel gelişim alanı deneyim eksikliği değildir. Silanur'un makine mühendisliği, otomotiv laboratuvarı, TEKNOFEST analiz ekibi, üretim/döküm stajları ve CAD/CAE araçları üzerinden tasarım ve analiz hattına bağlanabilecek değerli teknik sinyalleri vardır. Ancak CV'nin mevcut yapısında bu hedef ilk bakışta yeterince görünür değildir.</p>
+            </div>
+        </div>
+
+        <!-- GENEL DEĞERLENDİRME -->
+        <section>
+            <h2>Genel Değerlendirme</h2>
+            <p><strong>Silanur'un CV'si makine mühendisliğinde tasarım ve analiz odaklı uzun dönem staj hedefi için değerli teknik sinyaller taşımaktadır.</strong> Dokuz Eylül Üniversitesi Makine Mühendisliği bölümü, Otomotiv Laboratuvarı deneyimi, kinematic optimization ve structural analysis üzerine yürütülen proje, TEKNOFEST Unmanned Underwater Systems finalistliği ve analiz ekibi sorumluluğu, üretim/döküm stajları ile SolidWorks, AutoCAD, Ansys ve 3D modelleme yetkinlikleri bu hedefi desteklemektedir.</p>
+            <p>Ancak CV'nin mevcut yapısında bu hedef ilk bakışta yeterince net görünmemektedir. Summary eğitim geçmişi üzerinden kurulmuş, Personal Information bölümü (Criminal Record, doğum tarihi, medeni durum) teknik CV'de değer katmamakta, tasarım/analiz deneyimleri (Otomotiv Lab, TEKNOFEST) üretim stajlarıyla aynı ağırlıkta durmakta, Skills bölümü 40+ madde karışık şekilde kategorisiz verilmekte ve yan deneyimler (Language Mentor, Media Translator) ana hikâyeyi biraz dağıtmaktadır.</p>
+            <p>Bunun dışında, teknik projelerde kapsam, kullanılan araçlar, analiz türü ve elde edilen çıktılar daha net tanımlanmalıdır. Örneğin "Kinematic Optimization and Structural Analysis" projesi kapsamında hangi analiz yapıldı (FEA, modal analysis, stress analysis vb.), ne tür bir tasarım optimizasyonu yapıldı, sonuçlar nelerdi ve bu bilgiler daha görünür olmalıdır.</p>
+        </section>
+
+        <!-- GÜÇLÜ YANLAR -->
+        <section>
+            <h2>Güçlü Yanlar</h2>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <h3>Otomotiv Lab ve Kinematic/Structural Analysis Deneyimi</h3>
+                    <p>Dokuz Eylül Üniversitesi Otomotiv Laboratuvarında yürütülen "Kinematic Optimization and Structural Analysis of the Steering Mechanism for a 4x4 Special Purpose Mobile Chassis Platform" projesi doğrudan tasarım ve analiz hedefine oturmaktadır. Üniversite-sanayi iş birliği (ÇUMİTAŞ) çerçevesinde gerçekleştirilmiş.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>TEKNOFEST Finalistliği ve Analiz Ekibi Sorumluluğu</h3>
+                    <p>Unmanned Underwater Systems kategorisinde finalist olup analiz ekibine liderlik etmesi, teknik çalışma, proje yönetimi ve mühendislik problem-çözme yetkinliğini göstermektedir.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Üretim, Döküm ve Otomotiv Sektörü Deneyimi</h3>
+                    <p>NEMAK'taki aluminum casting deneyimi (HPDC, gravity casting, engine blocks, cylinder heads) ve Akon Hidrolik'teki shell moulding, gray/ductile iron, hydraulic components döküm deneyimi malzeme, kalite, üretilebilirlik ve üretim kısıtları hakkında sağlam bilgi tabanı oluşturmaktadır.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>CAD/CAE Araçları Yetkinliği</h3>
+                    <p>SolidWorks, AutoCAD, Ansys, Rhinoceros 3D, SketchUp gibi tasarım ve analiz araçları bilgisi; 3D modelleme, Industrial Design, Design for Manufacturing yetkinlikleri tasarım/analiz hedefini desteklemektedir.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>İngilizce Yetkinliği ve Disiplinler Arası Deneyim</h3>
+                    <p>C1 Advanced İngilizce seviyesi uluslararası işbirliği ve dokümantasyon için avantaj sağlamaktadır. Ayrıca, eğitim (Language Mentor) ve çevirmen deneyimi (Media Translator) iletişim becerisi ve kültürler arası anlayış göstermektedir.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KRİTİK GELİŞİM ALANI -->
+        <section>
+            <h2>Kritik Gelişim Alanı</h2>
+            <h3 style="border-left: 4px solid #fb923c; padding-left: 12px; margin-left: -16px;">Tasarım & Analiz Hedefinin CV'de Daha Net Konumlandırılması</h3>
+            
+            <div class="highlight-box">
+                <h4>1. Summary Bölümü Hedef Role Göre Yeniden Kurulmalı</h4>
+                <p>Şu an summary ilkokul, ortaokul, üniversiteye başlama gibi eğitim geçmişi anlatmaktadır. Uzun dönem staj arayan makine mühendisliği öğrencisi için CV'nin başında "ben hangi alana yöneliyorum?" (tasarım, analiz, CAD/CAE, otomotiv R&D) cevabı daha net olmalıdır.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>2. Personal Information Bölümü Çıkarılmalı</h4>
+                <p>Criminal Record, Date of Birth, Marital Status gibi bilgiler teknik CV'de standart değildir ve değer katmamaktadır. Bu alan tasarım/analiz projeleri, teknik araçlar veya staj hedefi açıklaması için kullanılabilir.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>3. Otomotiv Lab ve TEKNOFEST Deneyimleri Ana Kanıt Olarak Daha Görünür Yapılmalı</h4>
+                <p>Bu iki deneyim CV'nin en değerli bölümleridir ve tasarım/analiz hedefinin doğrudan kanıtıdır. Ancak mevcut sıralamada üretim stajlarıyla aynı ağırlıkta durmaktadırlar. Başvuru hedefine göre, bu deneyimler daha erken ve daha detaylı sunulmalıdır.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>4. Skills Bölümü Kategorize Edilmeli</h4>
+                <p>Şu an 40+ yetkinlik kategorisiz tek listede verilmektedir: CAD/CAE, Analiz, Üretim/Kalite, Proje Yönetimi, Veri/AI, İletişim karışmıştır. SolidWorks, Ansys, AutoCAD, 3D modelleme, Structural Analysis, Design for Manufacturing gibi hedefle en ilişkili yetkinlikler öne alınmalıdır. Bu kategorilendirme okuyucunun tasarım-analiz odağını hızlı görmesine yardımcı olacaktır.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>5. Teknik Projelerde Kapsam, Araçlar, Analiz Türü ve Çıktı Açıklanmalı</h4>
+                <p>"Kinematic Optimization and Structural Analysis" projesi hangi analiz türlerini içeriyordu (FEA, modal, stress, topology)? Hangi malzemeler incelendi? AutoCAD ve Ansys hangi amaçla kullanıldı? Sonuçlar nelerdi? "Design and Optimization" ifadeleri bu şekilde spesifikleştirilmelidir.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>6. Yan Deneyimler Kısaltılmalı veya Arka Plana Alınmalı</h4>
+                <p>Language Mentor ve Media Translator deneyimleri iletişim becerisi açısından değerlidir ancak makine tasarım/analiz stajı hedefinde ana rol oynamamaktadır. Bu bölümler "Additional Experience" altında tutulabilir veya çok kısaltılabilir; böylece ana teknik hikâye daha net okunur hale gelecektir.</p>
+            </div>
+        </section>
+
+        <!-- AKSIYON PLANI -->
+        <section>
+            <h2>Aksiyon Planı</h2>
+            
+            <div class="action-item">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Summary bölümünü uzun dönem staj hedefiyle hizala:</strong> Summary bölümü adayın uzun dönem staj hedefini, tasarım/analiz yönelimini, CAD/CAE araçlarına temasını ve otomotiv/R&D ilgisini kısa ve net şekilde göstermelidir.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Personal Information bölümünü kaldır veya minimize et:</strong> Criminal Record, doğum tarihi, medeni durum bu CV'de değer katmamaktadır. Kaldırılabilir veya Dokuz Eylül Üniversitesi, bölüm, başlama/mezuniyet tarihleri (seneye mezun) kısaca eklenebilir.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Otomotiv Lab ve TEKNOFEST deneyimlerini daha öne al ve detaylandır:</strong> Bu iki deneyim ana hikâyedir. Steering mechanism projesi için analiz türü (FEA, modal, stress), yazılım araçları (Ansys, SolidWorks), malzemeler, spesifikasyonlar ve sonuçlar daha görünür olmalıdır. TEKNOFEST analiz ekibi sorumlulukları (hangi analizler yürütüldü, takımın kaç kişisinden oluştuğu) belirtilmelidir.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Skills bölümünü kategorize et:</strong> CAD/CAE (SolidWorks, AutoCAD, Ansys, 3D modelleme), Analysis (FEA, Structural Analysis, Kinematic Analysis), Manufacturing/Quality (Statistical Process Control, FMEA, PPAP), Project Management (Gantt, Project Charter) şeklinde kategorilere ayırılmalıdır. Hedefle en ilişkili yetkinlikler öne alınmalıdır.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Üretim ve döküm stajlarını tasarım/analiz hedefini destekleyecek şekilde konumlandır:</strong> NEMAK ve Akon deneyimleri malzeme seçimi, kalite kontrolü, üretilebilirlik ve üretim kısıtları hakkında bilgi tabanı oluşturduğunun kanıtı olarak sunulmalıdır. Bu bağlantı açıkça yapılırsa, bu stajlar tasarım/analiz hedefiyle daha iyi hizalanacaktır.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Yan deneyimleri kısalt veya "Additional Experience" altına al:</strong> Language Mentor ve Media Translator bölümleri iletişim becerisi göstermektedir ancak makine tasarım/analiz hedefini dağıtmaktadır. Bu bölümler çok kısaltılabilir veya sayfa sonuna "Additional Experience" başlığı altında taşınabilir.</p>
+            </div>
+        </section>
+
+        <!-- KAPANIŞ -->
+        <section>
+            <p class="closing-note">Bu raporun amacı Silanur'un deneyim veya teknik yetkinliğini sorgulamak değildir. CV tasarım ve analiz odaklı uzun dönem staj hedefi için kullanılabilecek değerli teknik sinyaller taşımaktadır. Otomotiv Lab, TEKNOFEST analiz ekibi, üretim/döküm stajları ve CAD/CAE yetkinlikleri hedefi destekleyen gerçek sinyallerdir. Gelişim alanı, bu sinyalleri CV'nin başında daha net konumlandırmak, tasarım/analiz deneyimlerini daha görünür ve stratejik hale getirmektir. Başvurular sırasında CV şablonu değiştirilmeden de, hedef şirkete veya pozisyona göre küçük değişiklikler yapılması, özellikle Summary ve Skills sıralaması üzerinden başvuru etkisini artırabilir.</p>
+        </section>
+
+        <!-- CTA SECTION -->
+        <div style="text-align: center; margin-top: 40px;">
+            <button class="btn-pdf" onclick="window.print()" style="margin-bottom: 24px;">PDF İndir</button>
+            
+            <a href="https://bionluk.com/cvlunatic_tr" class="cta-banner">
+                <div class="cta-content">
+                    <h3>CV'ni güncellerken yardım ister misin?</h3>
+                    <p>Bire bir danışmanlık ve hızlı dönüş için</p>
+                    <button class="cta-btn" type="button">Bionluk'ta Görüş →</button>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
