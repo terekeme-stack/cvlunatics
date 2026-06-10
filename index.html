@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>CV Analizi — cvlunatic.com</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1964808502991439" crossorigin="anonymous"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfT_QgtAAAAAIAxyhV7IAH0ZQLiZpR0kC3fWgqS"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0b0b0b; color: #f0f0f0;
+      font-family: 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh; padding: 32px 16px 60px;
+    }
+    .wrap { max-width: 520px; margin: 0 auto; }
+    .brand { text-align: center; margin-bottom: 32px; }
+    .brand-tag { font-size: 11px; font-weight: 800; color: #FF4500; letter-spacing: 0.2em; text-transform: uppercase; }
+    .brand-title { font-size: 26px; font-weight: 900; margin: 8px 0 4px; letter-spacing: -0.5px; }
+    .brand-sub { font-size: 13px; color: #555; line-height: 1.6; }
+    .card {
+      background: #141414; border: 1px solid #242424;
+      border-radius: 18px; padding: 28px 24px; margin-bottom: 14px;
+      animation: fadeUp 0.4s ease forwards;
+    }
+    .section-label {
+      font-size: 11px; font-weight: 800; letter-spacing: 0.15em;
+      text-transform: uppercase; color: #FF4500; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: #1e1e1e; }
+    .tiers { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .tier {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 14px; border-radius: 10px; border: 1px solid;
+    }
+    .tier.free { border-color: #22c55e33; background: #0a1a0a; }
+    .tier.ad   { border-color: #fb923c33; background: #1a0e00; }
+    .tier.paid { border-color: #a78bfa33; background: #100a1a; }
+    .tier-icon { font-size: 20px; flex-shrink: 0; }
+    .tier-text { flex: 1; }
+    .tier-title { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .tier.free .tier-title { color: #4ade80; }
+    .tier.ad .tier-title { color: #fb923c; }
+    .tier.paid .tier-title { color: #a78bfa; }
+    .tier-desc { font-size: 11px; color: #666; }
+    .field { margin-bottom: 18px; }
+    label {
+      display: block; font-size: 12px; font-weight: 700;
+      color: #888; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;
+    }
+    input[type="email"], textarea {
+      width: 100%; background: #0b0b0b; border: 1px solid #2a2a2a;
+      border-radius: 10px; color: #f0f0f0; font-size: 15px;
+      padding: 13px 16px; font-family: inherit; outline: none;
+    }
+    input:focus, textarea:focus { border-color: #FF4500; box-shadow: 0 0 0 3px rgba(255,69,0,.1); }
+    textarea { resize: vertical; min-height: 90px; line-height: 1.5; }
+    .file-zone {
+      border: 2px dashed #2a2a2a; border-radius: 12px;
+      padding: 32px 20px; text-align: center; cursor: pointer;
+    }
+    .file-zone:hover, .file-zone.drag { border-color: #FF4500; background: #1a0800; }
+    .file-zone input { display: none; }
+    .info-box {
+      background: #0f0f0f; border: 1px solid #1e1e1e; border-radius: 10px;
+      padding: 14px 16px; font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 18px;
+    }
+    .info-box strong { color: #aaa; }
+    .btn-primary {
+      width: 100%; padding: 15px; background: #FF4500; color: #fff;
+      border: none; border-radius: 12px; font-size: 16px; font-weight: 800;
+      cursor: pointer; transition: opacity 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.9; }
+    .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+    .kvkk-label {
+      display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
+      text-transform: none; letter-spacing: 0; font-size: 13px; color: #888; font-weight: 400;
+    }
+    .kvkk-label input {
+      width: 18px; height: 18px; margin-top: 1px;
+      flex-shrink: 0; accent-color: #FF4500; cursor: pointer;
+    }
+    .kvkk-label a { color: #FF4500; text-decoration: underline; font-weight: 700; }
+    .error-msg {
+      background: #1a0808; border: 1px solid #7f1d1d; color: #f87171;
+      border-radius: 8px; padding: 10px 14px; font-size: 13px; margin-top: 12px; display: none;
+    }
+    .footer { text-align: center; color: #2a2a2a; font-size: 11px; margin-top: 24px; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner {
+      width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff; border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      display: inline-block; vertical-align: middle; margin-right: 8px;
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-HKX44LJVBM");
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand">
+    <div class="brand-tag">r/LinkedinLunaticsTR</div>
+    <div class="brand-title">CV Analizi</div>
+    <div class="brand-sub">CV'ni yükle, uzman gözden geçirsin.<br>2-3 iş günü içinde raporun hazır.</div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Rapor İçeriği</div>
+    <div class="tiers">
+      <div class="tier free">
+        <div class="tier-icon">🎁</div>
+        <div class="tier-text">
+          <div class="tier-title">Genel Değerlendirme — Ücretsiz</div>
+          <div class="tier-desc">Genel skor, ilk izlenim, özet yorum</div>
+        </div>
+      </div>
+      <div class="tier ad">
+        <div class="tier-icon">▶️</div>
+        <div class="tier-text">
+          <div class="tier-title">Bölüm Puanları — Reklam İzle</div>
+          <div class="tier-desc">ATS, yapı, içerik, doğrulanabilirlik skorları</div>
+        </div>
+      </div>
+      <div class="tier ad">
+        <div class="tier-icon">▶️</div>
+        <div class="tier-text">
+          <div class="tier-title">Kritik Eksikler — Reklam İzle</div>
+          <div class="tier-desc">Ne yanlış, neden yanlış, nasıl düzeltilir</div>
+        </div>
+      </div>
+      <div class="tier paid">
+        <div class="tier-icon">⚡</div>
+        <div class="tier-text">
+          <div class="tier-title">Aksiyon Planı — Tümünü Aç</div>
+          <div class="tier-desc">Önceliklendirilmiş adım adım aksiyon listesi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="text-align:center;padding:16px 24px;border-color:#a78bfa33;background:linear-gradient(135deg,#1a0a1a,#100a1a)">
+    <div style="font-size:12px;color:#888;margin-bottom:8px">Öncelikli inceleme ve hızlı dönüş için</div>
+    <a href="https://bionluk.com/cvlunatic_tr" target="_blank" style="display:inline-block;padding:10px 24px;background:#a78bfa;color:#fff;border-radius:8px;font-size:14px;font-weight:800;text-decoration:none">Hızlı Dönüş Paketi → bionluk</a>
+  </div>
+
+  <div class="card" id="form-card">
+    <div class="section-label">Başvuru Formu</div>
+    <div style="text-align:center;padding:20px 0">
+      <div style="font-size:36px;margin-bottom:16px">📋</div>
+      <div style="font-size:17px;font-weight:900;margin-bottom:10px">Bu Ayki Ücretsiz Kontenjan Doldu</div>
+      <div style="font-size:14px;color:#888;line-height:1.7;margin-bottom:8px">
+        Temmuz ayında ücretsiz incelemeler tekrar açılacak.
+      </div>
+      <div style="font-size:13px;color:#555">
+        Hemen inceleme yaptırmak için yukarıdaki ücretli seçeneği kullanabilirsin.
+      </div>
+    </div>
+  </div>
+
+  <!-- Subreddit Banner -->
+  <a href="https://www.reddit.com/r/LinkedinLunaticsTR/" target="_blank" style="display:block;margin-bottom:14px;border-radius:14px;overflow:hidden;text-decoration:none;">
+    <img src="/banner.png" alt="r/LinkedinLunaticsTR" style="width:100%;display:block;border-radius:14px;">
+  </a>
+
+  <div class="footer">cvlunatic.com • r/LinkedinLunaticsTR</div>
+</div>
+
+<script>
+  // Form kapalı - Temmuz'da açılacak
+</script>
+</body>
+</html>
