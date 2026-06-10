@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasan Berk Surmeli - CV Raporu</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HKX44LJVBM');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .hero {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        .hero-ring {
+            flex-shrink: 0;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .hero-content .subtitle {
+            font-size: 16px;
+            color: #4ade80;
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+        .hero-content p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #d0d0d0;
+        }
+        section {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #333;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: #fff;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3::before {
+            content: "✓";
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        h4 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #fff;
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 12px;
+            color: #d0d0d0;
+            font-size: 14px;
+        }
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 16px;
+        }
+        .strength-item {
+            background-color: transparent;
+            padding: 0;
+        }
+        .strength-item p {
+            margin-top: 8px;
+        }
+        .highlight-box {
+            border-left: 4px solid #4ade80;
+            background-color: rgba(74, 222, 128, 0.08);
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+        .highlight-box h4 {
+            margin-bottom: 8px;
+        }
+        .highlight-box p {
+            margin-bottom: 8px;
+        }
+        .action-item {
+            border-left: 4px solid #fb923c;
+            background-color: rgba(251, 146, 60, 0.04);
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+        .action-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        .label-medium {
+            background-color: rgba(251, 146, 60, 0.2);
+            color: #fb923c;
+        }
+        .label-low {
+            background-color: rgba(96, 165, 250, 0.2);
+            color: #60a5fa;
+        }
+        .closing-note {
+            font-style: italic;
+            color: #c0c0c0;
+            line-height: 1.8;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .strengths-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 24px;
+            }
+        }
+        @media print {
+            .cta-banner {
+                display: none;
+            }
+        }
+        .btn-pdf {
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-pdf:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(74, 222, 128, 0.3);
+        }
+        .cta-banner {
+            display: block;
+            border: 2px solid #7c3aed;
+            border-radius: 12px;
+            padding: 24px 20px;
+            margin: 24px auto 0;
+            max-width: 500px;
+            background-color: rgba(99, 102, 241, 0.08);
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .cta-banner:hover {
+            background-color: rgba(99, 102, 241, 0.12);
+            border-color: #a855f7;
+            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.3);
+        }
+        .cta-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .cta-content h3 {
+            font-size: 16px;
+            color: #fff;
+            margin: 0 0 6px 0;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        .cta-content h3::before {
+            content: "";
+        }
+        .cta-content p {
+            font-size: 13px;
+            color: #b0b0b0;
+            margin: 0 0 16px 0;
+            line-height: 1.4;
+        }
+        .cta-btn {
+            background: linear-gradient(135deg, #a855f7, #9333ea);
+            color: #fff;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+        .cta-banner:hover .cta-btn {
+            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <div class="hero-ring">
+                <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#333" stroke-width="8"/>
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#4ade80" stroke-width="8" 
+                            stroke-dasharray="238.225 282.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                    <text x="70" y="75" font-size="32" font-weight="bold" text-anchor="middle" fill="#4ade80">8.5</text>
+                </svg>
+            </div>
+            <div class="hero-content">
+                <h1>Hasan Berk Surmeli</h1>
+                <div class="subtitle">Senior Software Engineer / Backend & Platform</div>
+                <p>CV'nin temel gelişim alanı deneyim veya teknik yetkinlik eksikliği değildir. Hasan, backend, platform, authentication/authorization, API gateway, data migration, DevOps ve enterprise sistem geliştirme alanlarında güçlü senior seviye deneyimi taşımaktadır. Ancak CV şu an genel bir versiyon gibi durduğu için, başvurulan role göre vurgu ve sıralama stratejisiyle daha net konumlandırılmalıdır.</p>
+            </div>
+        </div>
+
+        <!-- GENEL DEĞERLENDİRME -->
+        <section>
+            <h2>Genel Değerlendirme</h2>
+            <p><strong>Hasan Berk'in CV'si senior seviye yazılım mühendisliği açısından güçlü sinyaller taşımaktadır.</strong> Paraşüt, Orion Innovation, Internative ve Ludens deneyimleri; backend geliştirme, platform mimarisi, identity/auth, API gateway, data migration, DevOps ve enterprise sistem geliştirme alanlarında ciddi bir teknik birikim göstermektedir. Özellikle Paraşüt'teki API gateway monetization, Keycloak migration, OAuth2 flows ve 1M+ kullanıcı/veri ölçeğindeki migration çalışmaları senior seviye için değerli göstergelerdir.</p>
+            <p>Bununla birlikte CV şu an daha çok genel bir senior software engineer CV'si gibi okunmaktadır. Bu kötü değildir; ancak aktif iş arayışında başvurulan role göre CV'nin optimize edilmesi daha etkili olur. Senior Backend Engineer, Platform Engineer, Backend Infrastructure Engineer veya AI-enabled Backend Engineer başvurularında aynı deneyimler farklı önceliklerle sunulmalıdır.</p>
+            <p>Ayrıca mevcut sıralamada Technical Skills bölümünün Professional Experience'dan önce gelmesi, CV'nin en güçlü tarafı olan iş deneyimlerinin biraz geç görünmesine neden olabilir. Daha güçlü sıralama: Professional Summary → Professional Experience → Technical Skills → Education → Certifications şeklinde olmalıdır.</p>
+        </section>
+
+        <!-- GÜÇLÜ YANLAR -->
+        <section>
+            <h2>Güçlü Yanlar</h2>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <h3>Senior Backend & Platform Deneyimi</h3>
+                    <p>Paraşüt deneyimi; Go, Ruby, Kong, Keycloak, OAuth2, API gateway, usage tracking, migration ve platform güvenliği gibi güçlü backend/platform sinyalleri içeriyor.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Ölçekli Sistem & Migration Deneyimi</h3>
+                    <p>1M+ kullanıcı migration ve yaklaşık 1M kullanıcı kredi kaydı transferi, adayın yalnızca feature geliştirmediğini; kritik veri ve kimlik yönetimi süreçlerine temas ettiğini gösteriyor.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>DevOps & Distributed Team Pratiği</h3>
+                    <p>Azure DevOps, Docker, GitHub Actions, Terraform, AWS SQS/SNS ve remote/distributed team deneyimi, modern yazılım geliştirme süreçlerine uyum gösteriyor.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>AI/ML Destekli Backend Deneyimi</h3>
+                    <p>Orion Innovation'da LLM tabanlı training platform, Azure Service Bus, prompt engineering ve ML PoC deneyimi, backend profilini güncel AI/ML uygulamalarıyla destekliyor.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Domain Çeşitliliği</h3>
+                    <p>Finans, muhasebe/SaaS, tax reporting, logistics, healthcare tourism ve robo-advisory gibi farklı alanlarda backend geliştirme deneyimi vardır.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KRİTİK GELİŞİM ALANI -->
+        <section>
+            <h2>Kritik Gelişim Alanı</h2>
+            <h3 style="border-left: 4px solid #4ade80; padding-left: 12px; margin-left: -16px;">Başvurulan Role Göre CV Optimizasyonu ve Sıralama</h3>
+            
+            <div class="highlight-box">
+                <h4>1. CV Sıralaması Sorunu</h4>
+                <p>Technical Skills, Professional Experience'dan önce geliyor. Bu adayda asıl değer deneyimlerde olduğu için deneyim bölümü daha erken görünmeli. Önerilen sıra: Professional Summary → Professional Experience → Technical Skills → Education → Certifications.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>2. Genel/Master CV Hissi</h4>
+                <p>CV güçlü ama master CV gibi duruyor. Senior Backend, Platform, Infrastructure veya AI-enabled Backend başvurularında aynı CV'nin farklı versiyonlarla optimize edilmesi gerekir. Her başvuru için rol odaklı vurgu yapılmalı.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>3. Summary Fazla Genel</h4>
+                <p>"Results-oriented", "innovative", "leadership record" gibi ifadeler yerine backend/platform derinliği, ölçekli sistem deneyimi ve hedef rol daha net vurgulanmalı. Açıklamalar spesifik başarılarla desteklenmelidir.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>4. Başlık Daha Hedefli Olabilir</h4>
+                <p>"Software Engineer" genel bir başlık. Başvurulan role göre "Senior Backend Engineer", "Senior Platform Engineer" veya "Backend / Infrastructure Engineer" gibi daha hedefli başlıklar daha iyi çalışabilir.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>5. Paraşüt Deneyimi Ana Omurga Olmalı</h4>
+                <p>En güncel ve en güçlü senior deneyim burada. API gateway monetization, Keycloak migration, OAuth2 flows, data migration ve upsell mechanism gibi maddeler CV'nin en yüksek değerli kısmı olarak hızlı görünmeli.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>6. Technical Skills Hedef Role Göre Önceliklendirilmeli</h4>
+                <p>Backend/platform başvurularında Go, Ruby, .NET, PostgreSQL, Redis, Docker, Kong, Keycloak, OAuth2, Azure DevOps öne alınmalı. AI/ML odaklı başvurularda ML.NET, scikit-learn, XGBoost ve LLM platform deneyimi daha görünür yapılabilir.</p>
+            </div>
+        </section>
+
+        <!-- AKSIYON PLANI -->
+        <section>
+            <h2>Aksiyon Planı</h2>
+            
+            <div class="action-item">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>CV sıralamasını değiştir:</strong> Technical Skills bölümünü deneyimden sonra konumlandır. Önerilen sıra: Professional Summary → Professional Experience → Technical Skills → Education → Certifications.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>CV'yi başvurulan role göre versiyonla:</strong> Senior Backend başvurularında Paraşüt ve backend/platform işleri; Platform Engineer başvurularında API gateway, identity, OAuth2, DevOps ve migration işleri; AI-enabled Backend başvurularında Orion'daki LLM/ML platform deneyimi öne çıkarılmalı.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Summary bölümünü daha hedefli hale getir:</strong> Genel sıfatlar yerine backend, platform, API gateway, identity/auth, data migration ve distributed systems deneyimi merkeze alınmalı. Açıklamalar Paraşüt'teki ölçekli başarılarla desteklenmelidir.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Başlık ve alt başlığı hedef role göre uyarla:</strong> "Software Engineer" yerine başvurulan role göre "Senior Backend Engineer", "Senior Platform Engineer" veya "Backend Infrastructure Engineer" gibi başlıklar daha etkili olur.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Technical Skills bölümünü önceliklendir:</strong> Teknolojileri yalnızca listelemek yerine, başvurulan role en yakın teknolojileri daha görünür hale getir. Backend başvurularında Go, Ruby, .NET, Docker, Kong, Keycloak; AI/ML odaklılarda ML.NET, XGBoost, LLM vurgusunu artır.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Paraşüt deneyimini daha görünür hale getir:</strong> En güçlü senior deneyim burası. API gateway monetization, Keycloak 1M user migration, OAuth2 flows ve upsell mechanism maddelerini ilk bakışta hızlı taranacak şekilde yapılandır.</p>
+            </div>
+        </section>
+
+        <!-- KAPANIŞ -->
+        <section>
+            <p class="closing-note">Bu raporun amacı Hasan Berk'in teknik deneyimini sorgulamak değildir. CV güçlü bir senior mühendislik zemini sunuyor. Gelişim alanı, bu güçlü zemini başvurulan role göre daha net konumlandırmak, deneyimleri daha erken görünür hale getirmek ve CV'yi hızlı taramada daha etkili okunacak şekilde düzenlemektir. Hedef role özel versiyonlarla başvuru başarısı artırılabilir.</p>
+        </section>
+
+        <!-- CTA SECTION -->
+        <div style="text-align: center; margin-top: 40px;">
+            <button class="btn-pdf" onclick="window.print()" style="margin-bottom: 24px;">PDF İndir</button>
+            
+            <a href="https://bionluk.com/cvlunatic_tr" class="cta-banner">
+                <div class="cta-content">
+                    <h3>CV'ni güncellerken yardım ister misin?</h3>
+                    <p>Bire bir danışmanlık ve hızlı dönüş için</p>
+                    <button class="cta-btn" type="button">Bionluk'ta Görüş →</button>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
