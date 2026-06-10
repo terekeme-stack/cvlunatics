@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enis Özgür - CV Raporu</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HKX44LJVBM');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .hero {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        .hero-ring {
+            flex-shrink: 0;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .hero-content .subtitle {
+            font-size: 16px;
+            color: #4ade80;
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+        .hero-content p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #d0d0d0;
+        }
+        section {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #333;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: #fff;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3::before {
+            content: "✓";
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        h4 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #fff;
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 12px;
+            color: #d0d0d0;
+            font-size: 14px;
+        }
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 16px;
+        }
+        .strength-item {
+            background-color: transparent;
+            padding: 0;
+        }
+        .strength-item p {
+            margin-top: 8px;
+        }
+        .highlight-box {
+            border-left: 4px solid #4ade80;
+            background-color: rgba(74, 222, 128, 0.08);
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+        .highlight-box h4 {
+            margin-bottom: 8px;
+        }
+        .highlight-box p {
+            margin-bottom: 8px;
+        }
+        .action-item {
+            border-left: 4px solid #60a5fa;
+            background-color: rgba(96, 165, 250, 0.04);
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+        .action-item.medium {
+            border-left-color: #4ade80;
+        }
+        .action-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        .label-low {
+            background-color: rgba(96, 165, 250, 0.2);
+            color: #60a5fa;
+        }
+        .label-medium {
+            background-color: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+        }
+        .closing-note {
+            font-style: italic;
+            color: #c0c0c0;
+            line-height: 1.8;
+        }
+        .btn-pdf {
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-pdf:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(74, 222, 128, 0.3);
+        }
+        .cta-banner {
+            display: block;
+            border: 2px solid #7c3aed;
+            border-radius: 12px;
+            padding: 24px 20px;
+            margin: 24px auto 0;
+            max-width: 500px;
+            background-color: rgba(99, 102, 241, 0.08);
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .cta-banner:hover {
+            background-color: rgba(99, 102, 241, 0.12);
+            border-color: #a855f7;
+            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.3);
+        }
+        .cta-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .cta-content h3 {
+            font-size: 16px;
+            color: #fff;
+            margin: 0 0 6px 0;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        .cta-content p {
+            font-size: 13px;
+            color: #b0b0b0;
+            margin: 0 0 16px 0;
+            line-height: 1.4;
+        }
+        .cta-btn {
+            background: linear-gradient(135deg, #a855f7, #9333ea);
+            color: #fff;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+        .cta-banner:hover .cta-btn {
+            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .strengths-grid {
+                grid-template-columns: 1fr;
+            }
+            .button-group {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+            .container {
+                padding: 24px;
+            }
+        }
+        @media print {
+            .cta-banner {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <div class="hero-ring">
+                <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#333" stroke-width="8"/>
+                    <circle cx="70" cy="70" r="65" fill="none" stroke="#4ade80" stroke-width="8" 
+                            stroke-dasharray="238.225 282.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                    <text x="70" y="75" font-size="32" font-weight="bold" text-anchor="middle" fill="#4ade80">8.5</text>
+                </svg>
+            </div>
+            <div class="hero-content">
+                <h1>Enis Özgür</h1>
+                <div class="subtitle">Cross-Functional FinTech & Operations Leader</div>
+                <p>Güçlü cross-functional FinTech deneyimi, ölçülebilir başarı metrikleri ve uluslararası uzaktan çalışma deneyimi taşıyan bir CV. Temel gelişim alanı deneyim veya metrik eksikliği değildir; bu güçlü içeriğin format, boşluk tutarlılığı, başvurulan role göre vurgu ayarları ve sunuş netliğiyle daha profesyonel ve kompakt hale getirilmesidir.</p>
+            </div>
+        </div>
+
+        <!-- GENEL DEĞERLENDİRME -->
+        <section>
+            <h2>Genel Değerlendirme</h2>
+            <p><strong>Enis'in CV'si, ölçülebilir başarılar ve uluslararası FinTech deneyimi açısından güçlü bir profesyonel temel sunuyor.</strong> Katmanlı deneyim ($210M+ funded, 600+ broker onboarding, 50+ campaign launch, market expansion 4→40 states), compliance/regulatory bilgisi, project coordination yetkinliği ve uluslararası uzaktan çalışma deneyimini göstermektedir.</p>
+            <p>Kariyer yolu ilk bakışta dağınık görünebilir, ancak gerçekte bu adayın cross-functional bir profil olduğunun sinyalidir. FinTech, digital banking, operations, regulatory compliance, stakeholder coordination ve growth — bunlar sektöre özgü bağlantılı alanlar. Adayın farklı fonksiyonlara temas etmesi işletme bütünlüğünü anlayan bir profesyonel profili gösterir.</p>
+            <p>Bu raporun amacı içeriğin değerini sorgulamak değildir. Amaç, zaten yüksek değerli bu CV'nin format, boşluk tutarlılığı, başvurulan role göre vurgu optimizasyonu ve sunuş netliğiyle daha profesyonel görünmesini sağlamaktır.</p>
+        </section>
+
+        <!-- GÜÇLÜ YANLAR -->
+        <section>
+            <h2>Güçlü Yanlar</h2>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <h3>Cross-Functional FinTech Deneyimi</h3>
+                    <p>Thunderbird, World Business Lenders, bunq ve NMQ gibi ölçeklenen şirket / FinTech ortamlarında compliance, project management, digital marketing ve growth operations taraflarına temas. Her fonksiyon birbiriyle bağlı (compliance onboarding → customer acquisition → operations optimization → market expansion). Bu cross-functional derinlik, işletme bütünlüğünü anlayan bir profesyonel göstergesi.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Ölçülebilir Başarı Metrikleri</h3>
+                    <p>$210M+ fonlanan işlem hacmi (6 ay), 600+ broker onboarding, 50+ campaign launch, 4 state → 40 state expansion etkisi, AI-powered market research. Finansal ve operasyonel etki somut ve kanıtlanmış.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Compliance & Digital Banking Operations</h3>
+                    <p>bunq'ta AML, KYC, transaction monitoring (Dutch/EU regulations) deneyimi. FINRA, CFPB portal familiarity, regulatory reporting, fraud investigation. Operations automation ve process improvement tarafına güçlü temas.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Growth & Digital Marketing Temas</h3>
+                    <p>NMQ Digital'de Philips LATAM 110+ region kampanyası yönetimi. SEO, content management, campaign optimization deneyimi. Growth tarafına operational excellence'la temas.</p>
+                </div>
+                <div class="strength-item">
+                    <h3>Uluslararası Remote & Europe Mobility</h3>
+                    <p>EU citizen, 100% Europe mobility, multiple remote/international roles (US, Turkey, Global). FinTech/ölçeklenen şirket ortamında uluslararası stakeholder management deneyimi.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KRİTİK GELİŞİM ALANI -->
+        <section>
+            <h2>Kritik Gelişim Alanı</h2>
+            <h3 style="border-left: 4px solid #4ade80; padding-left: 12px; margin-left: -16px;">Sunum Netliği ve Format Cilası</h3>
+            
+            <div class="highlight-box">
+                <h4>1. Bullet Spacing ve Visual Hierarchy Tutarsızlığı</h4>
+                <p>CV'de role açıklamaları, bullet listeleri ve Tools satırları arasındaki boşluklar tutarlılığı değişken. Standardize spacing uygulanması okunabilirliği ve profesyonel görünümü artırır.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>2. Tools ve Certifications Bilgisi Dağınık Sunuluyor</h4>
+                <p>Monday.com, Jira, Power BI, Google Analytics, QuickBase gibi tools her role'ün altında tekil. Bu iyi sinyal; ama tüm tools'u "Tools & Technologies" bölümü altında derli toplu gösterilirse, CV tarama (ATS, manual screening) daha kolay olur ve teknik profil daha net görülür.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>3. Bazı Bullet'lar Çok Yoğun, Okunabilirlik Azalıyor</h4>
+                <p>Thunderbird tarafında bazı bullet'lar çok uzun. Çok uzun bullet'lar daha kısa ve okunabilir hale getirilebilir. İlk madde yapılan işi, ikinci madde ise ölçülebilir etkiyi gösterecek şekilde yapılandırılabilir.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>4. Tarih Formatı Standardizasyon</h4>
+                <p>"06.2024 – Present" vs "06.2023 – 3.2024" (tek haneli ay). Tutarlılık için tüm tarihler "MM.YYYY – MM.YYYY" formatına (örn. 03.2024 – 06.2024). Detay ufak ama profesyonel görünümü artırır.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>5. "Co-managed / Led / Supported" Ayrımı Bazı Maddelerde Netleştirilebilir</h4>
+                <p>"Co-managed marketing, IT projects" yazısı rol seviyesini biraz belirsiz bırakır. Diğer taraftan aynı section'da "led communications strategy", "managed staffing", "conducted market research" gibi daha güçlü ownership ifadeleri var. Bazı maddelerde lead vs. support rolü daha net ayrıştırılırsa (örn. "Spearheaded..." vs "Supported..."), adayın sahiplik alanları daha belirgin görülür.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>6. Başvurulan Role Göre Küçük Vurgu Ayarları</h4>
+                <p>CV genel/master CV formatında — bu avantaj. Ancak başvuru yaparken: Project Manager rolü için Thunderbird PM maddeleri (process coordination, stakeholder management) öne, compliance detayları arka planda. Compliance rolü için bunq/WBL (AML, KYC, regulatory) vurgulanır, marketing detayları arka planda. Growth rolü için Philips kampanya metrikleri ön plana. Hedef role özel varyasyonlar başvuru dönüşlerini artırabilir.</p>
+            </div>
+        </section>
+
+        <!-- AKSIYON PLANI -->
+        <section>
+            <h2>Aksiyon Planı</h2>
+            
+            <div class="action-item">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Bullet spacing ve section boşluklarını standardize et:</strong> Role açıklamaları, bullet listeleri ve Tools satırları arasındaki boşluklar tutarlı hale getirilmelidir. Bu düzenleme CV'yi daha okunabilir ve profesyonel hale getirir.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Tools ve Certificates derli toplu göster:</strong> CV'nin sonuna (Education'dan sonra) küçük bir "Tools & Technologies" bölümü ekle. Monday.com, Jira, Power BI, Google Analytics, QuickBase, docusign, FINRA/CFPB Portals vb. düzenli şekilde. ATS ve manuel CV taramasında faydalı.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-low">DÜŞÜK</span>
+                <p><strong>Uzun bullet'ları daha okunabilir hale getir:</strong> Çok uzun bullet'lar daha kısa ve okunabilir hale getirilebilir. İlk madde yapılan işi, ikinci madde ise ölçülebilir etkiyi gösterecek şekilde yapılandırılabilir.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Tarih formatlarını standardize et:</strong> Tüm rollerde "MM.YYYY – MM.YYYY" formatını kullan. Örneğin "06.2023 – 3.2024" → "06.2023 – 03.2024". Detay küçük ama CV'nin profesyonel görünümünü artırıyor.</p>
+            </div>
+
+            <div class="action-item">
+                <span class="action-label label-medium">ORTA</span>
+                <p><strong>Başvurulan role göre küçük vurgu ayarları yap:</strong> Master CV olarak güçlü. Ancak başvuru yaparken: (1) Project Management pozisyonu için Thunderbird PM bullet'larını ön plana al, compliance detayları arka planda. (2) Compliance rolü için bunq/WBL (AML, KYC, regulatory) vurgula, marketing tarafı arka planda. (3) Growth/Customer Acquisition rolü için Philips/broker onboarding metrikleri ön plana al. Hedef role özel varyasyonlar başvuru dönüşlerini artırabilir.</p>
+            </div>
+        </section>
+
+        <!-- KAPANIŞ -->
+        <section>
+            <p class="closing-note">Enis'in CV'si metrik, deneyim ve sektörel bilgi açısından güçlü ve rekabetçi bir profil sunuyor. Yukarıdaki aksiyon planı uygulanırsa, zaten güçlü olan bu CV daha profesyonel, okunabilir ve hedef role göre optimize edilmiş hale gelir. FinTech, project management, compliance ve growth rollerine başvurularda rekabet avantajı sağlayabilir.</p>
+        </section>
+
+        <!-- CTA SECTION -->
+        <div style="text-align: center; margin-top: 40px;">
+            <button class="btn btn-pdf" onclick="window.print()" style="margin-bottom: 24px;">PDF İndir</button>
+            
+            <a href="https://bionluk.com/cvlunatic_tr" class="cta-banner">
+                <div class="cta-content">
+                    <h3>CV'ni güncellerken yardım ister misin?</h3>
+                    <p>Bire bir danışmantlık ve hızlı dönüş için</p>
+                    <button class="cta-btn" type="button">Bionluk'ta Görüş →</button>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
