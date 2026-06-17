@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Raporu - Mert Keleş</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HKX44LJVBM');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            padding: 50px;
+            border-radius: 8px;
+        }
+        .hero {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: flex-start;
+        }
+        .score-ring {
+            width: 140px;
+            height: 140px;
+            flex-shrink: 0;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .hero-content .subtitle {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 15px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+        }
+        section:last-child { border-bottom: none; }
+        h2 {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 700;
+        }
+        .bullet {
+            margin: 12px 0 12px 25px;
+            padding-left: 0;
+            position: relative;
+        }
+        .bullet::before {
+            content: "✓";
+            position: absolute;
+            left: -25px;
+            color: #4ade80;
+            font-weight: bold;
+        }
+        .highlight-box {
+            background-color: #2a2a2a;
+            border-left: 4px solid #fb923c;
+            padding: 16px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .highlight-box-title {
+            font-weight: 600;
+            color: #fbbf24;
+            margin-bottom: 8px;
+        }
+        .highlight-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+        .action-item {
+            margin: 18px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .action-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .action-label.yuksek {
+            background-color: #f87171;
+            color: #fff;
+        }
+        .action-label.orta {
+            background-color: #fb923c;
+            color: #0d0d0d;
+        }
+        .action-label.dusuk {
+            background-color: #60a5fa;
+            color: #0d0d0d;
+        }
+        .action-item::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #999;
+        }
+        .closing {
+            font-style: italic;
+            color: #aaa;
+            line-height: 1.8;
+        }
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, rgba(99, 102, 241, 0.08) 100%);
+            border: 2px solid #7c3aed;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 50px;
+            text-align: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-banner a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .cta-banner h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .cta-banner p {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 14px;
+        }
+        .cta-banner .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .cta-banner:hover {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.20) 0%, rgba(99, 102, 241, 0.15) 100%);
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.2);
+        }
+        .cta-banner:hover .btn {
+            transform: translateY(-2px);
+        }
+        @media print {
+            .cta-banner { display: none; }
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <svg class="score-ring" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="3"/>
+                <circle cx="60" cy="60" r="54" fill="none" stroke="#4ade80" stroke-width="3" 
+                    stroke-dasharray="237.7 339.3" stroke-dashoffset="0" 
+                    transform="rotate(-90 60 60)" stroke-linecap="round"/>
+                <text x="60" y="60" text-anchor="middle" dy="0.3em" font-size="32" font-weight="bold" fill="#4ade80">7.0</text>
+                <text x="60" y="75" text-anchor="middle" font-size="12" fill="#999">/10</text>
+            </svg>
+            <div class="hero-content">
+                <h1>Mert Keleş</h1>
+                <div class="subtitle">CV Değerlendirme Raporu</div>
+                <p><strong>Rapor Tarihi:</strong> Haziran 2026</p>
+                <p><strong>Profil:</strong> Backend / AI Automation, Software Engineer</p>
+                <p><strong>Özet:</strong> Teknik temel sağlam. Deneyimlerin daha net, kısa ve hedef odaklı sunulması gerekiyor.</p>
+            </div>
+        </div>
+
+        <section>
+            <h2>Genel Değerlendirme</h2>
+            <p>Mert'in CV'sindeki temel gelişim alanı deneyim eksikliği değildir. Node.js, Express.js, microservice yapıları, Docker, MongoDB, teknik dokümantasyon ve AI-powered automation alanlarında değerli deneyimleri vardır. Hedef yazılım sektörü için doğru sinyaller mevcut: backend, RESTful API, microservices, Linux temaları ile birlikte LangChain, OpenAI API ve GPT-4 ile geliştirilen Swagger automation projesi öne çıkıyor.</p>
+            <p>Ancak mevcut CV, bu deneyimleri daha kısa, hedef odaklı ve ölçülebilir şekilde sunmakta zorlanıyor. Deneyim bölümleri uzun bloklar halinde, aynı şirketteki farklı dönemler birbirine karışıyor, summary tek paragrafta çok fazla başlık taşıyor ve projelerin katkı/çıktı netliği zayıf kalıyor.</p>
+            <p>Özetle, temel sorun teknik eksiklikten çok sunuş netliğidir. Deneyimler hedef role göre daha keskin paketlendiğinde bu CV'nin etkisi belirgin şekilde artabilir.</p>
+        </section>
+
+        <section>
+            <h2>Güçlü Yanlar</h2>
+            <div class="bullet">Backend ve API Deneyimi Hedefle Uyumlu: Node.js, Express.js, RESTful API, microservices, Postman, MongoDB ve Docker doğrudan backend ve software engineer rollerine bağlanıyor.</div>
+            <div class="bullet">AI Automation Tarafı Güncel ve Değerli: LangChain, OpenAI ve GPT-4 ile geliştirilen Swagger documentation automation projesi iyi bir farklılaşma noktasıdır. Aday klasik backend dışında AI-assisted developer tools ve automation tarafına da açılabiliyor.</div>
+            <div class="bullet">Aynı Şirkette Devamlılık Sinyali: Konzek Teknoloji'de 2023, 2024 ve 2025 dönemleri görünüyor. Bu, adayın şirket tarafından tekrar değerlendirildiğini ve teknik ortama adapte olduğunu gösteren olumlu bir devamlılık işaretidir.</div>
+            <div class="bullet">Industry 4.0 / MES Nişi: Hermes MES, OEE calculation, downtime management, production monitoring başlıkları yazılım deneyimini endüstriyel dijitalleşme bağlamına taşıyor ve iyi bir uzmanlık alanı oluşturuyor.</div>
+        </section>
+
+        <section>
+            <h2>Kritik Gelişim Alanları</h2>
+            <div class="highlight-box">
+                <div class="highlight-box-title">CV Yoğun ve Blok Halinde</div>
+                <p>Özellikle deneyim bölümleri uzun paragraflar gibi duruyor. İşe alım uzmanı CV'yi hızlı tararken katkı, kullanılan teknoloji ve sonuçları birbirinden ayırmakta zorlanabilir. Daha kısa ve ayrıştırılmış bir yapı okunabilirliği artırır.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Aynı Şirketteki Dönemler Daha Hiyerarşik Ayrıştırılmalı</div>
+                <p>Konzek'teki üç farklı dönem değerli bir devamlılık sinyalidir, ancak bazı işler birbirine benziyor (documentation, API testing, microservices, debugging, developer communication). Bu dönemler her birinin kendi katkısını ve seviyesini gösterecek şekilde daha net ayrıştırıldığında, ilerleme ve büyüme hikayesi daha açık görünür.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Summary Biraz Uzun</div>
+                <p>Özet iyi başlıklar içeriyor ama tek paragrafta çok fazla şey anlatıyor: REST API, microservices, AI automation, analytics, Industry 4.0, Docker, MongoDB, Linux. Daha keskin ve hedef odaklı bir hikaye kurulmalı. AI automation iddiası korunmalı ancak adayı saf bir AI Engineer gibi değil, backend ile AI automation birleşimi olarak konumlandırmak daha doğru olur.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Projeler Bölümü Zayıf Kalıyor</div>
+                <p>Hermes güçlü görünüyor ama adayın tam katkısı, kullanılan stack, proje kapsamı ve sonuçlar net değil. Dental hospital ve hotel management projeleri ise hedef backend/AI CV'sinde daha düşük ağırlıkta kalmalı; en güçlü işlere alan açılmalı.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Eğitim Bölümünde Küçük Hijyen Sorunları</div>
+                <p>GPA yazılmış ama format biraz dağınık. Üniversite lokasyonları ve tarihler daha temiz ve tutarlı bir biçimde sunulabilir.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Aksiyon Planı</h2>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>CV'nin hedefini netleştir.</strong> Backend Developer, Junior Software Engineer veya Backend ile AI Automation birleşimi çizgisinden birini öne çıkar. Bu seçim hem CV'yi güçlendirecek hem de başvuru stratejisini netleştirecektir.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>Summary bölümünü daha kısa ve hedef odaklı hale getir.</strong> Tek paragrafta tüm teknolojileri saymak yerine, en güçlü ve hedefle en uyumlu sinyalleri öne çıkaran daha keskin bir özet kur.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>Konzek dönemlerini katkı, teknoloji ve çıktı mantığıyla yeniden düzenle.</strong> Tekrar eden işleri sadeleştir, her dönemin kendine özgü katkısını ve seviyesini görünür kıl. Hermes MES ve Swagger automation gibi en güçlü işleri öne çıkar.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label orta">ORTA</span>
+                <p><strong>Projeler bölümünü teknoloji stack, rol ve çıktı mantığıyla yapılandır.</strong> Hedef dışı veya daha eski projeleri kısalt; en güçlü backend ve AI projelerine alan aç.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label orta">ORTA</span>
+                <p><strong>Linkleri temiz ve tıklanabilir hale getir.</strong> GitHub özellikle daha görünür olmalı; projeler için varsa repo veya canlı link eklenmeli.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label dusuk">DÜŞÜK</span>
+                <p><strong>Eğitim bölümünü format ve tutarlılık açısından düzenle.</strong> GPA, lokasyon ve tarih formatını tutarlı hale getir.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Kapanış</h2>
+            <p class="closing">Bu raporun amacı Mert'in teknik altyapısını sorgulamak değil, mevcut sağlam deneyimin daha net ve hedef odaklı sunulabilmesine yardımcı olmaktır. Backend, microservice ve AI automation tarafında gerçek ve güncel sinyaller var. Sorun yazılım deneyiminin olmaması değil; deneyimlerin biraz dağınık, uzun ve hedef role göre yeterince keskin paketlenmemiş olmasıdır. Daha kısa, ayrıştırılmış ve ölçülebilir bir sunumla bu CV'nin etkisi belirgin şekilde artabilir. Başarılar, Mert.</p>
+        </section>
+
+        <div class="cta-banner">
+            <a href="https://bionluk.com/cvlunatic_tr">
+                <h3>CV'ni güncellerken yardım ister misin?</h3>
+                <p>Bire bir danışmanlık ve hızlı dönüş için</p>
+                <div class="btn">Bionluk'ta Görüş →</div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>cvlunatic.com<br><a href="https://www.reddit.com/r/LinkedinLunaticsTR/" style="color: #666; text-decoration: none;">r/LinkedinLunaticsTR</a></p>
+        </div>
+    </div>
+</body>
+</html>
