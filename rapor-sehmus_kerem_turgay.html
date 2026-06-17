@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Raporu - Şehmus Kerem Turğay</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HKX44LJVBM');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            padding: 50px;
+            border-radius: 8px;
+        }
+        .hero {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: flex-start;
+        }
+        .score-ring {
+            width: 140px;
+            height: 140px;
+            flex-shrink: 0;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .hero-content .subtitle {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 15px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+        }
+        section:last-child { border-bottom: none; }
+        h2 {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 700;
+        }
+        .bullet {
+            margin: 12px 0 12px 25px;
+            padding-left: 0;
+            position: relative;
+        }
+        .bullet::before {
+            content: "✓";
+            position: absolute;
+            left: -25px;
+            color: #4ade80;
+            font-weight: bold;
+        }
+        .highlight-box {
+            background-color: #2a2a2a;
+            border-left: 4px solid #fb923c;
+            padding: 16px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .highlight-box-title {
+            font-weight: 600;
+            color: #fbbf24;
+            margin-bottom: 8px;
+        }
+        .highlight-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+        .action-item {
+            margin: 18px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .action-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .action-label.yuksek {
+            background-color: #f87171;
+            color: #fff;
+        }
+        .action-label.orta {
+            background-color: #fb923c;
+            color: #0d0d0d;
+        }
+        .action-label.dusuk {
+            background-color: #60a5fa;
+            color: #0d0d0d;
+        }
+        .action-item::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #999;
+        }
+        .closing {
+            font-style: italic;
+            color: #aaa;
+            line-height: 1.8;
+        }
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, rgba(99, 102, 241, 0.08) 100%);
+            border: 2px solid #7c3aed;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 50px;
+            text-align: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-banner a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .cta-banner h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .cta-banner p {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 14px;
+        }
+        .cta-banner .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .cta-banner:hover {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.20) 0%, rgba(99, 102, 241, 0.15) 100%);
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.2);
+        }
+        .cta-banner:hover .btn {
+            transform: translateY(-2px);
+        }
+        @media print {
+            .cta-banner { display: none; }
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <svg class="score-ring" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="3"/>
+                <circle cx="60" cy="60" r="54" fill="none" stroke="#fb923c" stroke-width="3" 
+                    stroke-dasharray="183.455 282.7" stroke-dashoffset="0" 
+                    transform="rotate(-90 60 60)" stroke-linecap="round"/>
+                <text x="60" y="60" text-anchor="middle" dy="0.3em" font-size="32" font-weight="bold" fill="#fb923c">6.5</text>
+                <text x="60" y="75" text-anchor="middle" font-size="12" fill="#999">/10</text>
+            </svg>
+            <div class="hero-content">
+                <h1>Şehmus Kerem Turğay</h1>
+                <div class="subtitle">CV Değerlendirme Raporu</div>
+                <p><strong>Rapor Tarihi:</strong> Haziran 2026</p>
+                <p><strong>Profil:</strong> Android Developer, Lisans Öğrencisi</p>
+                <p><strong>Özet:</strong> Teknik altyapı güçlü. CV yapılandırması ve sunuş kalitesi düzeltilmeli.</p>
+            </div>
+        </div>
+
+        <section>
+            <h2>Genel Değerlendirme</h2>
+            <p>Şehmus Kerem'in CV'sindeki en güçlü sinyal, Android Developer rolü için kullanılabilir bir teknik altyapı sunmasıdır. Kotlin, Jetpack Compose, MVVM, Dagger Hilt, WebSocket, REST API, RoomDB, MySQL, Express.js ve en önemlisi yayınlanmış bir Google Play Store uygulaması. Bunlar junior Android Developer ilanlarında karşılığı olan gerçek beceriler.</p>
+            <p>Ancak CV şu an bu malzemeyi profesyonel, düzenli ve doğrulanabilir şekilde sunmakta zorlanıyor. Başlık seçimleri (Full Stack Developer vs Android Developer hedefi), bölüm adlandırmaları (Publications bir yayınlanmış uygulama için yanlış kelime), özet paragrafının iddiaları (junior aday için biraz büyük), adres alanının temizliği ve proje çıktılarının eksik bilgileri, CV'nin teknik gücünü gölgeliyor.</p>
+            <p>Özetle, temel sorun teknik eksiklikten çok sunuş kalitesidir. Doğru yapılandırmayla bu CV daha güçlü bir etki yaratabilir.</p>
+        </section>
+
+        <section>
+            <h2>Güçlü Yanlar</h2>
+            <div class="bullet">Android Teknolojileri Hedefle Uyumlu: Kotlin, Jetpack Compose, MVVM, Dagger Hilt, Coroutines, RoomDB, AdMob gibi teknolojiler Android Developer ilanlarında aranan becerilerle uyumludur.</div>
+            <div class="bullet">Play Store Yayını Kanıtı: "Aklımdaki Hediye" uygulamasını Google Play Store'da yayınlamış olmak önemli. Junior adaylarda canlı, yayınlanmış ürün gösterebilmek rekabet avantajıdır.</div>
+            <div class="bullet">Backend ve API Teması: WebSocket, RESTful API, Express.js, MySQL, stored procedure kullanımı adayın sadece UI tarafında kalmadığını, full-stack düşüncesiyle hareket ettiğini gösteriyor.</div>
+            <div class="bullet">TÜBİTAK 1001 Proje Deneyimi: Grup chat, WebSocket, REST API, database integration gibi işlerde yer almak teknik olarak anlatılabilir ve işveren açısından ciddi sayılan bir projedir.</div>
+        </section>
+
+        <section>
+            <h2>Kritik Gelişim Alanları</h2>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Hedef Başlık ile Deneyim Başlıkları Arasında Netlik</div>
+                <p>CV'deki TÜBİTAK 1001 projesi "Full Stack Developer" olarak başlık alıyor. Hedef Android Developer ise, TÜBİTAK 1001 projesindeki başlık veya açıklama mobil geliştirme katkısını daha görünür hale getirecek şekilde düzenlenebilir. Bu şekilde okuyucu adayın temel hedefini daha açık bir şekilde algılayabilecektir.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Publications Bölümü Yanlış Adlandırılmış</div>
+                <p>"Aklımdaki Hediye" yayınlanmış bir uygulamadır; akademik bir yayın değildir. "Publications" yerine bu uygulamayı "Published Apps" veya "Deployed Projects" altında göstermesi daha doğru olur.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Özet Paragraf İddiaları Erken Kariyer İçin Biraz Büyük</div>
+                <p>Özet kısmındaki "proven track record", "architecting scalable systems", "full-stack mobile solutions" gibi ifadeler güçlü ama junior aday için biraz iddialı. Özet paragrafı daha somut ve kanıt odaklı hale getirilmeli; genel iddialar yerine Play Store yayını, kullanılan teknolojiler ve proje çıktıları öne çıkarılmalı. Bu şekilde daha ölçülü bir ton oluşacaktır.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Adres Alanı Temizliği ve Education Bilgileri</div>
+                <p>Adres şu anda tekrarlanmış görünüyor. Sadece "Osmaniye, Türkiye" yeterli. Education bölümünde başlama tarihi, bitirme tarihi, derece gibi bilgiler netleştirilmeli.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Aksiyon Planı</h2>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>Başlık ve bölüm adlandırmalarını Android Developer hedefiyle hizala.</strong> TÜBİTAK 1001 projesindeki başlık ve açıklamada mobil geliştirme katkısını daha görünür hale getir. "Publications" yerine "Published Apps & Projects" başlığını kullanması daha doğru olur. CV'nin Android Developer hedefini ilk bakışta daha net göstermesini sağla.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>Özet paragrafı daha somut ve ölçülü hale getir.</strong> Genel ve büyük iddialar yerine, Play Store yayını, kullanılan Android teknolojileri, TÜBİTAK 1001 proje deneyimi ve proje çıktıları gibi doğrulanabilir sinyalleri öne çıkar. İddiaların CV'deki somut kanıtlarla desteklenmesi, profilin daha güvenilir görünmesini sağlar.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>Her proje için GitHub ve Play Store linklerini ekle.</strong> "Aklımdaki Hediye" için direkt Play Store link, TÜBİTAK 1001 için GitHub repo linki, Earthquake Assistant için durum notu (development/beta/live).</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label orta">ORTA</span>
+                <p><strong>Adres alanını temizle ve Education bilgilerini tamamla.</strong> Adres "Osmaniye, Türkiye" olacak şekilde kısalt. Education bölümüne başlama tarihi, beklenen mezuniyet ekle.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label orta">ORTA</span>
+                <p><strong>Aklımdaki Hediye'nin Play Store metriklerini ekle.</strong> Kaç indirme, kaç rating, kaç yorum varsa CV'ye ekle. Bu rakamlar proje çıktısını ciddi kılar.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Kapanış</h2>
+            <p class="closing">Bu raporun amacı Şehmus Kerem'in teknik altyapısını sorgulamak değil, mevcut iyi altyapının profesyonel şekilde sunulabilmesine yardımcı olmaktır. Kotlin, Jetpack Compose, Play Store yayını, TÜBİTAK 1001 deneyimi, bunlar junior Android Developer rolleri için gerçekten değerli sinyallerdir. Doğru paketlendiğinde, bu CV'nin etkisi ciddi şekilde artacaktır. Başarılar, Şehmus Kerem.</p>
+        </section>
+
+        <div class="cta-banner">
+            <a href="https://bionluk.com/cvlunatic_tr">
+                <h3>CV'ni güncellerken yardım ister misin?</h3>
+                <p>Bire bir danışmanlık ve hızlı dönüş için</p>
+                <div class="btn">Bionluk'ta Görüş →</div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>cvlunatic.com<br><a href="https://www.reddit.com/r/LinkedinLunaticsTR/" style="color: #666; text-decoration: none;">r/LinkedinLunaticsTR</a></p>
+        </div>
+    </div>
+</body>
+</html>
