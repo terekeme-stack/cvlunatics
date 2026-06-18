@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Raporu - Hüseyin Onur Buharalı</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HKX44LJVBM');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            padding: 50px;
+            border-radius: 8px;
+        }
+        .hero {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: flex-start;
+        }
+        .score-ring {
+            width: 140px;
+            height: 140px;
+            flex-shrink: 0;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .hero-content .subtitle {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 15px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+        }
+        section:last-child { border-bottom: none; }
+        h2 {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 700;
+        }
+        .bullet {
+            margin: 12px 0 12px 25px;
+            padding-left: 0;
+            position: relative;
+        }
+        .bullet::before {
+            content: "✓";
+            position: absolute;
+            left: -25px;
+            color: #4ade80;
+            font-weight: bold;
+        }
+        .highlight-box {
+            background-color: #2a2a2a;
+            border-left: 4px solid #fb923c;
+            padding: 16px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .highlight-box-title {
+            font-weight: 600;
+            color: #fbbf24;
+            margin-bottom: 8px;
+        }
+        .highlight-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+        .action-item {
+            margin: 18px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .action-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .action-label.yuksek {
+            background-color: #f87171;
+            color: #fff;
+        }
+        .action-label.orta {
+            background-color: #fb923c;
+            color: #0d0d0d;
+        }
+        .action-label.dusuk {
+            background-color: #60a5fa;
+            color: #0d0d0d;
+        }
+        .action-item::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #999;
+        }
+        .closing {
+            font-style: italic;
+            color: #aaa;
+            line-height: 1.8;
+        }
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, rgba(99, 102, 241, 0.08) 100%);
+            border: 2px solid #7c3aed;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 50px;
+            text-align: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-banner a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .cta-banner h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .cta-banner p {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 14px;
+        }
+        .cta-banner .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .cta-banner:hover {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.20) 0%, rgba(99, 102, 241, 0.15) 100%);
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.2);
+        }
+        .cta-banner:hover .btn {
+            transform: translateY(-2px);
+        }
+        @media print {
+            .cta-banner { display: none; }
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <svg class="score-ring" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="3"/>
+                <circle cx="60" cy="60" r="54" fill="none" stroke="#4ade80" stroke-width="3" 
+                    stroke-dasharray="237.5 339.3" stroke-dashoffset="0" 
+                    transform="rotate(-90 60 60)" stroke-linecap="round"/>
+                <text x="60" y="60" text-anchor="middle" dy="0.3em" font-size="32" font-weight="bold" fill="#4ade80">7.0</text>
+                <text x="60" y="75" text-anchor="middle" font-size="12" fill="#999">/10</text>
+            </svg>
+            <div class="hero-content">
+                <h1>Hüseyin Onur Buharalı</h1>
+                <div class="subtitle">CV Değerlendirme Raporu</div>
+                <p><strong>Rapor Tarihi:</strong> Haziran 2026</p>
+                <p><strong>Profil:</strong> Industrial Engineer, Supply Chain / Operations / PM</p>
+                <p><strong>Özet:</strong> Deneyim güçlü. CV'nin ana hedef hikayesi netleştirilmeli ve yapı sadeleştirilmeli.</p>
+            </div>
+        </div>
+
+        <section>
+            <h2>Genel Değerlendirme</h2>
+            <p>Hüseyin Onur'un CV'sindeki temel sorun deneyim eksikliği değildir. Arvato Bertelsmann'da Mango, ZARA, Trendyol Tech ve Samsung e-commerce logistics operasyonlarında çalışma, 924 pallet high rack kurulumu, 2.000 pallet relocation, YAZAKI'da %4.9 productivity artışı, SAP/Excel/Python/PowerBI teknik araçları ve tutarlı supply chain kariyer yolu güçlü sinyallerdir.</p>
+            <p>Ancak iş arama sürecinin baskısıyla hedefin fazla genişlediği görülmektedir. CV aynı anda project management, supply chain, process development, data analysis ve operational excellence gibi birçok alana konuşuyor. Bu alanlar birbiriyle ilişkili olsa da, CV tek bir hedef hikayeye bağlanmadığında odak dağılıyor. Data tarafındaki yetkinlikler (Python, SQL, PowerBI, VBA) değerli; ancak bunlar ana kariyer ekseni olarak değil, supply chain ve operasyon deneyimini güçlendiren analitik bir destek katmanı olarak konumlandırıldığında daha güçlü çalışır.</p>
+            <p>Özetle, temel sorun eksiklik değil netliktir. Supply chain, operations ve project management ekseninde, data destekli bir endüstri mühendisi profili kurulduğunda bu CV'nin etkisi belirgin şekilde artabilir.</p>
+        </section>
+
+        <section>
+            <h2>Güçlü Yanlar</h2>
+            <div class="bullet">Arvato Bertelsmann Deneyimi Güçlü: Mango, ZARA, Trendyol Tech, Samsung gibi büyük markalarla e-commerce logistics implementation deneyimi; 924 pallet high rack kurulumu, 2.000 pallet relocation, ZARA pallet tunnel installation gibi somut proje çıktıları supply chain ve proje yönetimi için önemli sinyallerdir.</div>
+            <div class="bullet">Supply Chain Kariyer Yolu Tutarlı: Arvato, YAZAKI, LC Waikiki/Taha Giyim ve Sunparadise deneyimleri supply chain, planning ve operasyon tarafında sürekli bir kariyer çizgisi oluşturuyor. Bu tutarlılık işverenler açısından güçlü bir sinyaldir.</div>
+            <div class="bullet">Ölçülebilir Sonuçlar Var: YAZAKI'da %4.9 productivity artışı, Arvato'da 924 pallet ve 2.000 pallet gibi rakamlar CV'nin "sadece staj yaptım" ötesinde somut iş etkisi gösterebilen bir profil olduğunu ortaya koyuyor.</div>
+            <div class="bullet">Teknik Araçlar Destekleyici: SAP, Excel Advanced, Python, SQL, VBA, PowerBI, MS Project, AutoCAD gibi araçlar supply chain ve operasyon rolleri için güçlü bir destekleyici analitik altyapı sunuyor.</div>
+            <div class="bullet">Eğitim Profili Güçlü: YTÜ Endüstri Mühendisliği yüksek lisansı (devam), Sakarya Üni. lisans (3.08), Erasmus+ deneyimi (Polonya, Management, 3.34) ve Stanford Code in Place katılımı eğitim tarafında sağlam bir profil oluşturuyor.</div>
+        </section>
+
+        <section>
+            <h2>Kritik Gelişim Alanları</h2>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Hedef Hikaye Fazla Geniş; Tek Bir Eksene Bağlanmalı</div>
+                <p>About bölümünde project management, planning supply chain, process development, data analysis ve operational excellence aynı anda duruyor. Bunlar ilişkili alanlar ama hepsi aynı ağırlıkta sunulduğunda okuyucu adayın ana hedefini anlamakta zorlanabilir. En güçlü konumlandırma "Supply Chain / Operations / Project Management + Data Analytics destekli profil" şeklinde olabilir. "Data Analyst" olarak merkezlenmek yerine, supply chain ve operasyon içinde data kullanan bir endüstri mühendisi olarak konumlanmak mevcut deneyimle çok daha uyumludur.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">ATS ve Okunabilirlik Riski</div>
+                <p>CV tek sayfaya sığdırılmaya çalışılmış; ancak bu tercih içerik hiyerarşisini zayıflatmaktadır. İki kolonlu ve yoğun yapı görsel olarak tamamen kötü görünmese de, bazı ATS sistemlerinde bölüm sırası ve içerik bağlamı doğru okunmayabilir. Ayrıca işe alım uzmanı açısından da asıl güçlü alanlar olan Arvato, YAZAKI ve supply chain / proje yönetimi deneyimleri yeterince hızlı öne çıkmamaktadır. Bu profil için tek sayfada kalmak zorunlu değildir. Daha sade, tek kolonlu veya daha ferah iki sayfalık bir yapı; en güçlü deneyimleri daha net gösterebilir.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Sol Kolonda Destekleyici İçerik Fazla Yer Kaplıyor</div>
+                <p>Languages, Soft Skills, Certificates, Courses, Hobbies, Volunteer Organizations ve References bölümleri sol tarafta çok yer kaplıyor. Bunların bir kısmı (References, Hobbies) supply chain CV'sinde gereksiz alan işgal ediyor; bir kısmı ise (Soft Skills: Excellent Communication, Problem Solving, Time Management) genel ve ayırt edici değil. Bu alanlar ya kaldırılmalı ya da ciddi şekilde kısaltılmalı; açılan alan asıl güçlü sinyallere (Arvato, YAZAKI, projeler) verilmeli.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Dil ve Yazım Temizliği</div>
+                <p>CV'de birleşik yazım hataları ve dilbilgisi sorunları dikkat çekiyor. "planning supply chain", "Helped to the preparation", "acrossOPEX", "ExcelDashboard", "VolunteerParticipator" gibi yerler profesyonel görünümü düşürmektedir. İngilizce CV'de bu tür detaylar özellikle dikkatle kontrol edilmeli.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Aksiyon Planı</h2>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>CV'nin ana hedef hikayesini netleştir.</strong> About bölümünü supply chain, operations ve project management ekseninde, data destekli bir endüstri mühendisi profili olarak yeniden kur. Her alana eşit ağırlık vermek yerine, en güçlü deneyim eksenini öne çıkar.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>CV'yi tek sayfaya sıkıştırma zorunluluğunu bırak.</strong> Daha sade ve ferah bir yapıya geç. References, Hobbies kaldırılabilir; Soft Skills bölümü ya kaldırılmalı ya da ciddi şekilde kısaltılmalı. Açılan alan Arvato ve YAZAKI deneyimlerine ve proje detaylarına verilmeli.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>Dil ve yazım hatalarını temizle.</strong> İngilizce CV'de birleşik yazım hataları ve dilbilgisi sorunları profesyonel görünümü doğrudan etkiler. CV teslim edilmeden önce detaylı bir dil kontrolü yapılmalı.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label orta">ORTA</span>
+                <p><strong>Data yetkinliklerini destekleyici analitik katman olarak konumlandır.</strong> Python, SQL, PowerBI, VBA ve regression/genetic algorithm projeleri değerli; ancak bunlar "Data Analyst" ana ekseni yerine, supply chain ve operasyon deneyimini güçlendiren analitik bir destek olarak sunulduğunda daha güçlü çalışır.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label orta">ORTA</span>
+                <p><strong>Başvurulan rolleri netleştir.</strong> Bu profil Supply Chain Specialist, Planning Specialist, PMO Specialist, Operations Specialist, Logistics Project Specialist, Reporting & Planning Specialist veya data destekli supply chain / operations rolleri gibi pozisyonlara daha mantıklı konuşur. Her başvurudan önce hedef role göre CV'deki vurguları uyarla.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Kapanış</h2>
+            <p class="closing">Bu raporun amacı Hüseyin Onur'un deneyimini sorgulamak değil, mevcut güçlü supply chain ve operasyon deneyiminin daha net bir hedef hikayeyle sunulmasına yardımcı olmaktır. İş arama sürecinde hedefin genişlemesi anlaşılır bir durumdur; ancak CV'nin güçlü çalışması için ana eksenin supply chain, operations ve project management tarafında kalması, data yetkinliklerinin ise bu ekseni destekleyen analitik güç olarak sunulması daha doğru olur. Arvato Bertelsmann, YAZAKI ve LC Waikiki deneyimleri, somut proje çıktıları ve teknik araçlar bu profili güçlü kılmaktadır. Doğru yapılandırmayla bu CV'nin etkisi belirgin şekilde artabilir. Başarılar, Hüseyin Onur.</p>
+        </section>
+
+        <div class="cta-banner">
+            <a href="https://bionluk.com/cvlunatic_tr">
+                <h3>CV'ni güncellerken yardım ister misin?</h3>
+                <p>Bire bir danışmanlık ve hızlı dönüş için</p>
+                <div class="btn">Bionluk'ta Görüş →</div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>cvlunatic.com<br><a href="https://www.reddit.com/r/LinkedinLunaticsTR/" style="color: #666; text-decoration: none;">r/LinkedinLunaticsTR</a></p>
+        </div>
+    </div>
+</body>
+</html>
