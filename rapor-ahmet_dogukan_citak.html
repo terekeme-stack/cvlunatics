@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Raporu - Ahmet Doğukan Çıtak</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKX44LJVBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HKX44LJVBM');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            padding: 50px;
+            border-radius: 8px;
+        }
+        .hero {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: flex-start;
+        }
+        .score-ring {
+            width: 140px;
+            height: 140px;
+            flex-shrink: 0;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .hero-content .subtitle {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 15px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+        }
+        section:last-child { border-bottom: none; }
+        h2 {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 700;
+        }
+        .bullet {
+            margin: 12px 0 12px 25px;
+            padding-left: 0;
+            position: relative;
+        }
+        .bullet::before {
+            content: "✓";
+            position: absolute;
+            left: -25px;
+            color: #4ade80;
+            font-weight: bold;
+        }
+        .highlight-box {
+            background-color: #2a2a2a;
+            border-left: 4px solid #fb923c;
+            padding: 16px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .highlight-box-title {
+            font-weight: 600;
+            color: #fbbf24;
+            margin-bottom: 8px;
+        }
+        .highlight-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+        .action-item {
+            margin: 18px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .action-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .action-label.yuksek {
+            background-color: #f87171;
+            color: #fff;
+        }
+        .action-label.orta {
+            background-color: #fb923c;
+            color: #0d0d0d;
+        }
+        .action-label.dusuk {
+            background-color: #60a5fa;
+            color: #0d0d0d;
+        }
+        .action-item::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #999;
+        }
+        .closing {
+            font-style: italic;
+            color: #aaa;
+            line-height: 1.8;
+        }
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, rgba(99, 102, 241, 0.08) 100%);
+            border: 2px solid #7c3aed;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 50px;
+            text-align: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-banner a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .cta-banner h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .cta-banner p {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 14px;
+        }
+        .cta-banner .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .cta-banner:hover {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.20) 0%, rgba(99, 102, 241, 0.15) 100%);
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.2);
+        }
+        .cta-banner:hover .btn {
+            transform: translateY(-2px);
+        }
+        @media print {
+            .cta-banner { display: none; }
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <svg class="score-ring" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="3"/>
+                <circle cx="60" cy="60" r="54" fill="none" stroke="#4ade80" stroke-width="3" 
+                    stroke-dasharray="254.5 339.3" stroke-dashoffset="0" 
+                    transform="rotate(-90 60 60)" stroke-linecap="round"/>
+                <text x="60" y="60" text-anchor="middle" dy="0.3em" font-size="32" font-weight="bold" fill="#4ade80">7.5</text>
+                <text x="60" y="75" text-anchor="middle" font-size="12" fill="#999">/10</text>
+            </svg>
+            <div class="hero-content">
+                <h1>Ahmet Doğukan Çıtak</h1>
+                <div class="subtitle">CV Değerlendirme Raporu</div>
+                <p><strong>Rapor Tarihi:</strong> Haziran 2026</p>
+                <p><strong>Profil:</strong> Senior Software Engineer, Backend / Full-Stack / AI Systems</p>
+                <p><strong>Özet:</strong> Profil güçlü. CV daha sade, hedefli ve lider firmalara uygun şekilde seçici hale getirilmeli.</p>
+            </div>
+        </div>
+
+        <section>
+            <h2>Genel Değerlendirme</h2>
+            <p>Ahmet Doğukan'ın CV'si, yazılım sektöründe güçlü teknik deneyime sahip bir senior profil sunmaktadır. Paraşüt/Mikrogrup, SEM, ONO Software ve ONOX tarafındaki deneyimler; backend, full-stack, ödeme altyapıları, API gateway, AI-powered reporting, blockchain, cloud/infrastructure ve ekip liderliği gibi farklı alanlara temas etmektedir.</p>
+            <p>CV'de özellikle Paraşüt/Mikrogrup deneyimindeki subscription ve payment infrastructure çalışmaları, yeni payment architecture katkısı ve ölçülebilir iş sonuçları güçlü sinyaller oluşturmaktadır. SEM tarafında dijital dönüşüm, automation tool geliştirme, operational efficiency ve revenue impact gibi çıktılar da profilin iş etkisi tarafını desteklemektedir.</p>
+            <p>Ancak mevcut CV, "yazılım sektöründeki lider firmalarda görev alma" hedefi için biraz fazla uzun, fazla geniş ve yer yer fazla iddialı görünmektedir. Sorun deneyim eksikliği değildir; sorun, güçlü teknik geçmişin lider teknoloji firmalarının beklediği sade, hedefli ve kanıt odaklı yapıya yeterince indirgenmemiş olmasıdır.</p>
+        </section>
+
+        <section>
+            <h2>Güçlü Yanlar</h2>
+            <div class="bullet">Güçlü Senior Yazılım Deneyimi: Paraşüt/Mikrogrup'ta Senior Full-Stack Software Engineer olarak subscription ve payment infrastructure gibi kritik sistemlerde çalışılması, lider firmalar için önemli bir sinyaldir.</div>
+            <div class="bullet">Ölçülebilir Teknik ve İş Etkisi: Payment architecture çalışması sonrası ortaya çıkan ölçülebilir sonuçlar, sadece kod yazma değil iş sonucuna katkı üretme kapasitesini göstermektedir.</div>
+            <div class="bullet">AI / LLM Tarafında Güncel Deneyim: AI-powered reporting module, agentic architecture patterns, OpenAI API, Langfuse, Google Agent Development Kit ve LLM-based system design gibi başlıklar, güncel teknoloji trendleriyle uyumludur.</div>
+            <div class="bullet">Backend, Platform ve Infrastructure Kapsamı: Ruby on Rails, Ember.js, API Gateway / Kong, service orchestration, observability, Docker, Redis, RabbitMQ, AWS, GCP gibi araç ve alanlar teknik derinlik sinyali verir.</div>
+            <div class="bullet">Dijital Dönüşüm ve Liderlik Deneyimi: SEM ve ONO tarafındaki consultant, team lead ve digital transformation çalışmaları; teknik liderlik, süreç iyileştirme ve cross-functional çalışma kapasitesini desteklemektedir.</div>
+        </section>
+
+        <section>
+            <h2>Kritik Gelişim Alanları</h2>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Objective Bölümü Fazla Uzun ve Fazla İddialı</div>
+                <p>Mevcut Objective bölümü güçlü bir profil anlatmak istiyor; ancak "groundbreaking opportunities", "thought leadership", "propel your organization to new heights of success" gibi ifadeler lider yazılım firmalarında fazla pazarlama dili gibi algılanabilir. Senior yazılım CV'sinde daha sade, teknik, kanıt odaklı ve doğrudan bir Professional Summary daha güçlü çalışır.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">CV 3 Sayfaya Uzanıyor; Sayfa Ekonomisi Zayıf</div>
+                <p>CV genel format açısından okunabilir durumdadır; ancak içerik dağılımı daha verimli hale getirilebilir. Üçüncü sayfaya yalnızca Languages bölümü (4 satır) sarkıyor. Bu kadarlık bir içerik ikinci sayfaya rahatlıkla sığdırılabilir. Senior yazılım profili için 2 sayfalık CV yeterlidir; üçüncü sayfaya uzayan kısa bir kuyruk görünümü, ana teknik deneyimin etkisini zayıflatabilir.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Teknik Kapsam Çok Geniş; Hedef Rol Netliği Azalıyor</div>
+                <p>CV aynı anda backend, full-stack, AI/LLM, blockchain, cloud, security, process improvement ve engineering leadership alanlarına konuşuyor. Bu genişlik güçlü bir profil göstergesi olabilir; ancak lider firmalara başvururken her teknoloji ve deneyimin aynı ağırlıkta sunulması odak kaybı yaratabilir.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">CV Tek Versiyon Olmak Zorunda Değil</div>
+                <p>Ahmet Doğukan'ın deneyimi Senior Backend, Full-Stack, AI/LLM Systems, Platform/Infrastructure ve Engineering Lead gibi farklı rollere temas etmektedir. Ancak her rol farklı teknik vurgular ve farklı başarı kanıtları ister. Bu nedenle başvurulacak role göre CV versiyonlamak, tek genel CV ile tüm ilanlara gitmekten daha güçlü bir strateji olabilir.</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">Skills Bölümü Hedef Role Göre Ağırlıklandırılmalı</div>
+                <p>Skills bölümü çok geniş ve güçlü; ancak her beceri aynı seviyede ve aynı önemde görünmemelidir. Lider firmalar için teknoloji listesi yalnızca "çok şey biliyorum" mesajı vermemeli; hedef role göre teknik odak göstermelidir.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Aksiyon Planı</h2>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>Objective bölümünü sadeleştir ve Professional Summary'ye çevir.</strong> Uzun ve pazarlama dili yüksek Objective yerine, adayın senior yazılım deneyimini, ana teknik odağını ve ölçülebilir etkisini hızlıca gösteren daha doğrudan bir özet kullanılmalıdır.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>CV'yi 2 sayfaya indir.</strong> Üçüncü sayfaya sarkan Languages bölümü (4 satır) ikinci sayfaya rahatlıkla sığdırılabilir. Bu küçük düzenleme CV'nin daha kompakt ve profesyonel görünmesini sağlar.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label yuksek">YÜKSEK</span>
+                <p><strong>Başvurulan role göre CV versiyonla.</strong> Senior Backend, Full-Stack, AI/LLM Systems, Platform/Infrastructure veya Engineering Lead başvuruları için aynı CV'nin farklı vurgularla uyarlanması daha doğru olacaktır.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label orta">ORTA</span>
+                <p><strong>En güçlü sonuçları daha görünür hale getir.</strong> CV'de yer alan ölçülebilir sonuçlar daha görünür hale getirilmeli; teknik katkılar yalnızca görev tanımı olarak değil, iş etkisi ve sonuç odağıyla sunulmalıdır.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label orta">ORTA</span>
+                <p><strong>Skills bölümünü hedef role göre ağırlıklandır.</strong> Skills bölümü başvurulan role göre ağırlıklandırılmalı. Her teknoloji aynı önemde görünmemeli; hedef role en yakın teknik alanlar daha üstte ve daha görünür konumlandırılmalıdır.</p>
+            </div>
+            <div class="action-item">
+                <span class="action-label dusuk">DÜŞÜK</span>
+                <p><strong>ONO / ONOX deneyimlerini netleştir.</strong> ONO Software ve ONOX Space & Hi-Tech Products deneyimleri tarihsel olarak paralel göründüğü için, rollerin birbirinden nasıl ayrıldığı ve hangi ürün/sistem kapsamına hizmet ettiği daha açık sunulabilir.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Kapanış</h2>
+            <p class="closing">Bu raporun amacı Ahmet Doğukan'ın teknik seviyesini sorgulamak değil, güçlü senior yazılım deneyiminin lider firmalar için daha sade, hedefli ve kanıt odaklı sunulmasına yardımcı olmaktır. CV'de değerli teknik deneyim, güncel teknoloji kullanımı, ölçülebilir iş etkisi ve liderlik sinyalleri bulunmaktadır. Temel iş, CV'yi "her şeyi anlatan geniş senior profil" olmaktan çıkarıp, başvurulan role göre seçici biçimde yapılandırılmış bir senior software engineering CV'sine dönüştürmektir. Doğru sadeleştirme ve role-specific versiyonlama ile bu CV'nin etkisi belirgin şekilde artabilir.</p>
+        </section>
+
+        <div class="cta-banner">
+            <a href="https://bionluk.com/cvlunatic_tr">
+                <h3>CV'ni güncellerken yardım ister misin?</h3>
+                <p>Bire bir danışmanlık ve hızlı dönüş için</p>
+                <div class="btn">Bionluk'ta Görüş →</div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>cvlunatic.com<br><a href="https://www.reddit.com/r/LinkedinLunaticsTR/" style="color: #666; text-decoration: none;">r/LinkedinLunaticsTR</a></p>
+        </div>
+    </div>
+</body>
+</html>
